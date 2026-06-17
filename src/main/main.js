@@ -376,6 +376,250 @@ ipcMain.handle('write-file', async (event, filePath, content) => {
     }
 });
 
+// ============================================
+// 🚀 অ্যাপ অটোমেশন - যেকোনো অ্যাপ কন্ট্রোল
+// ============================================
+
+const { exec, spawn } = require('child_process');
+const robot = require('robotjs'); // মাউস ও কীবোর্ড কন্ট্রোল
+
+// অ্যাপ খোলা
+ipcMain.handle('open-app', async (event, appName) => {
+    try {
+        log.info(`Opening app: ${appName}`);
+        
+        if (process.platform === 'win32') {
+            // Windows - অ্যাপ নাম দিয়ে খোলা
+            exec(`start ${appName}`, (error) => {
+                if (error) {
+                    log.error('Open app error:', error);
+                }
+            });
+            return { success: true, message: `${appName} খোলা হচ্ছে...` };
+        } else if (process.platform === 'darwin') {
+            exec(`open -a "${appName}"`, (error) => {
+                if (error) log.error('Open app error:', error);
+            });
+            return { success: true, message: `${appName} খোলা হচ্ছে...` };
+        }
+        return { success: true };
+    } catch (error) {
+        log.error('Open app error:', error);
+        return { error: error.message };
+    }
+});
+
+// WhatsApp/মেসেঞ্জার খোলা এবং মেসেজ পাঠানো
+ipcMain.handle('send-message-to-app', async (event, appName, message) => {
+    try {
+        log.info(`Sending message to ${appName}: ${message}`);
+        
+        // প্রথমে অ্যাপ খুলি
+        if (process.platform === 'win32') {
+            exec(`start ${appName}`, async (error) => {
+                if (error) {
+                    log.error('Open app error:', error);
+                    return;
+                }
+                
+                // 3 সেকেন্ড অপেক্ষা অ্যাপ খোলার জন্য
+                await new Promise(resolve => setTimeout(resolve, 3000));
+                
+                // মেসেজ টাইপ করা
+                robot.typeString(message);
+                
+                // Enter প্রেস করা
+                robot.keyTap('enter');
+            });
+        }
+        
+        return { success: true, message: `${appName}-এ মেসেজ পাঠানো হচ্ছে...` };
+    } catch (error) {
+        log.error('Send message error:', error);
+        return { error: error.message };
+    }
+});
+
+// মাউস ক্লিক
+ipcMain.handle('mouse-click', async (event, x, y) => {
+    try {
+        robot.moveMouse(x, y);
+        robot.mouseClick();
+        return { success: true };
+    } catch (error) {
+        return { error: error.message };
+    }
+});
+
+// মাউস মুভ
+ipcMain.handle('mouse-move', async (event, x, y) => {
+    try {
+        robot.moveMouse(x, y);
+        return { success: true };
+    } catch (error) {
+        return { error: error.message };
+    }
+});
+
+// ডাবল ক্লিক
+ipcMain.handle('mouse-double-click', async (event, x, y) => {
+    try {
+        robot.moveMouse(x, y);
+        robot.mouseClick('left', true);
+        return { success: true };
+    } catch (error) {
+        return { error: error.message };
+    }
+});
+
+// কীবোর্ড টাইপ
+ipcMain.handle('type-text', async (event, text) => {
+    try {
+        robot.typeString(text);
+        return { success: true };
+    } catch (error) {
+        return { error: error.message };
+    }
+});
+
+// কী প্রেস
+ipcMain.handle('press-key', async (event, key, modifiers = []) => {
+    try {
+        if (modifiers.length > 0) {
+            modifiers.forEach(mod => robot.keyToggle(mod, 'down'));
+        }
+        robot.keyTap(key);
+        if (modifiers.length > 0) {
+            modifiers.forEach(mod => robot.keyToggle(mod, 'up'));
+        }
+        return { success: true };
+    } catch (error) {
+        return { error: error.message };
+    }
+});
+
+// স্ক্রিনশট
+ipcMain.handle('take-screenshot', async () => {
+    try {
+        const screenshot = robot.screen.capture();
+        if (screenshot) {
+            return {
+                success: true,
+                image: screenshot.image.toString('base64'),
+                width: screenshot.width,
+                height: screenshot.height
+            };
+        }
+        return { error: 'স্ক্রিনশট নেওয়া যায়নি' };
+    } catch (error) {
+        log.error('Screenshot error:', error);
+        return { error: error.message };
+    }
+});
+
+// স্ক্রিন রেজোলিউশন
+ipcMain.handle('get-screen-size', async () => {
+    try {
+        const size = screen.getPrimaryDisplay().size;
+        return { width: size.width, height: size.height };
+    } catch (error) {
+        return { error: error.message };
+    }
+});
+
+// টেক্সট কপি
+ipcMain.handle('copy-text', async (event, text) => {
+    try {
+        // Clipboard-এ কপি
+        const { clipboard } = require('electron');
+        clipboard.writeText(text);
+        return { success: true };
+    } catch (error) {
+        return { error: error.message };
+    }
+});
+
+// URL খোলা (ব্রাউজারে)
+ipcMain.handle('open-url', async (event, url) => {
+    try {
+        if (process.platform === 'win32') {
+            exec(`start ${url}`);
+        } else if (process.platform === 'darwin') {
+            exec(`open ${url}`);
+        }
+        return { success: true, message: `${url} খোলা হচ্ছে...` };
+    } catch (error) {
+        return { error: error.message };
+    }
+});
+
+// URL-এ যাওয়া এবং তথ্য নেওয়া
+ipcMain.handle('browse-and-extract', async (event, url, selector = 'body') => {
+    try {
+        // BrowserWindow-এ লোড করা
+        if (mainWindow) {
+            await mainWindow.loadURL(url);
+            await new Promise(resolve => setTimeout(resolve, 2000));
+            
+            // DOM থেকে কন্টেন্ট নেওয়া
+            const content = await mainWindow.webContents.executeJavaScript(`
+                document.querySelector('${selector}')?.innerText || 
+                document.body.innerText.substring(0, 5000)
+            `);
+            
+            return { success: true, content, url };
+        }
+        return { error: 'Window not available' };
+    } catch (error) {
+        log.error('Browse error:', error);
+        return { error: error.message };
+    }
+});
+
+// WhatsApp সরাসরি মেসেজ পাঠানো
+ipcMain.handle('whatsapp-send', async (event, phoneNumber, message) => {
+    try {
+        // WhatsApp Web ব্যবহার করে
+        const waUrl = `https://web.whatsapp.com/send?phone=${phoneNumber}&text=${encodeURIComponent(message)}`;
+        
+        if (mainWindow) {
+            await mainWindow.loadURL(waUrl);
+            await new Promise(resolve => setTimeout(resolve, 5000)); // WhatsApp লোড হতে সময়
+            
+            // সেন্ড বাটনে ক্লিক
+            await mainWindow.webContents.executeJavaScript(`
+                document.querySelector('[data-testid="send-button"]')?.click();
+            `);
+            
+            return { success: true, message: 'WhatsApp-এ মেসেজ পাঠানো হচ্ছে...' };
+        }
+        return { error: 'Window not available' };
+    } catch (error) {
+        log.error('WhatsApp error:', error);
+        return { error: error.message };
+    }
+});
+
+// স্ক্রোল
+ipcMain.handle('scroll', async (event, direction, amount = 10) => {
+    try {
+        if (direction === 'up') {
+            for (let i = 0; i < amount; i++) {
+                robot.keyTap('up', 'control');
+                await new Promise(r => setTimeout(r, 50));
+            }
+        } else {
+            for (let i = 0; i < amount; i++) {
+                robot.keyTap('down', 'control');
+                await new Promise(r => setTimeout(r, 50));
+            }
+        }
+        return { success: true };
+    } catch (error) {
+        return { error: error.message };
+    }
+});
+
 // App lifecycle
 app.commandLine.appendSwitch('no-sandbox');
 app.commandLine.appendSwitch('disable-gpu');
