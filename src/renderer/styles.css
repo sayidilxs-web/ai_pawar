@@ -1490,3 +1490,64 @@ html, body {
 .wake-indicator.active span {
     color: var(--green);
 }
+
+/* ========================================
+   PASSWORD MODAL
+   ======================================== */
+.password-modal-content {
+    max-width: 400px;
+    width: 90%;
+    text-align: center;
+}
+
+.password-input-container {
+    display: flex;
+    gap: 10px;
+    margin: 20px 0;
+}
+
+.password-input-container input {
+    flex: 1;
+    padding: 15px 20px;
+    background: rgba(0, 0, 0, 0.4);
+    border: 2px solid var(--cyan);
+    border-radius: 10px;
+    color: var(--text-primary);
+    font-family: var(--font-bengali);
+    font-size: 1rem;
+    outline: none;
+    transition: all var(--speed-fast) ease;
+}
+
+.password-input-container input:focus {
+    border-color: var(--green);
+    box-shadow: 0 0 20px rgba(0, 255, 136, 0.3);
+}
+
+.password-input-container input::placeholder {
+    color: rgba(255, 255, 255, 0.4);
+}
+
+.btn-submit {
+    padding: 15px 25px;
+    background: linear-gradient(135deg, var(--cyan), var(--green));
+    border: none;
+    border-radius: 10px;
+    color: var(--bg-dark);
+    font-size: 1.2rem;
+    cursor: pointer;
+    transition: all var(--speed-fast) ease;
+}
+
+.btn-submit:hover {
+    transform: scale(1.05);
+    box-shadow: 0 0 20px rgba(0, 255, 136, 0.5);
+}
+
+.password-error {
+    color: var(--red);
+    font-family: var(--font-bengali);
+    font-size: 0.9rem;
+    margin: 10px 0;
+    min-height: 24px;
+}

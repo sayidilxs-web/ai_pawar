@@ -266,6 +266,23 @@
                 </div>
             </div>
         </div>
+
+        <!-- Password Modal -->
+        <div class="modal-overlay" id="passwordModal">
+            <div class="modal-content password-modal-content">
+                <div class="modal-header">
+                    <h2>🔐 পাসওয়ার্ড দিন</h2>
+                    <button class="modal-close" onclick="closePasswordModal()">✕</button>
+                </div>
+                <div class="modal-body">
+                    <div class="password-input-container">
+                        <input type="password" id="passwordInput" placeholder="পাসওয়ার্ড লিখুন..." onkeypress="handlePasswordKeypress(event)">
+                        <button class="btn-submit" onclick="checkPassword()">✓</button>
+                    </div>
+                    <p class="password-error" id="passwordError"></p>
+                </div>
+            </div>
+        </div>
     </div>
 
     // Scripts

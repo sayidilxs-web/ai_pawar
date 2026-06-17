@@ -178,6 +178,72 @@ function exportLogs() {
     addLog('info', 'লগ ফাইল ডাউনলোড হচ্ছে...');
 }
 
+// ==================== PASSWORD PROTECTION ====================
+const LOGS_PASSWORD = 'SAYIDI'; // পাসওয়ার্ড
+
+// Open Logs Page with Password
+function openLogsPage() {
+    const passwordModal = document.getElementById('passwordModal');
+    const logsModal = document.getElementById('logsModal');
+    
+    // প্রথমে পাসওয়ার্ড মডাল দেখাও
+    if (passwordModal) {
+        passwordModal.classList.add('active');
+        const passwordInput = document.getElementById('passwordInput');
+        if (passwordInput) {
+            passwordInput.value = '';
+            passwordInput.focus();
+        }
+        const passwordError = document.getElementById('passwordError');
+        if (passwordError) passwordError.textContent = '';
+    }
+}
+
+// Close Password Modal
+function closePasswordModal() {
+    const passwordModal = document.getElementById('passwordModal');
+    if (passwordModal) {
+        passwordModal.classList.remove('active');
+    }
+}
+
+// Check Password
+function checkPassword() {
+    const passwordInput = document.getElementById('passwordInput');
+    const passwordError = document.getElementById('passwordError');
+    const passwordModal = document.getElementById('passwordModal');
+    const logsModal = document.getElementById('logsModal');
+    
+    if (!passwordInput) return;
+    
+    const enteredPassword = passwordInput.value.trim().toUpperCase();
+    
+    if (enteredPassword === LOGS_PASSWORD) {
+        // পাসওয়ার্ড সঠিক
+        if (passwordModal) passwordModal.classList.remove('active');
+        if (logsModal) {
+            logsModal.classList.add('active');
+            updateLogsDisplay();
+        }
+        addLog('info', 'লগ পেজ খোলা হয়েছে');
+    } else {
+        // পাসওয়ার্ড ভুল
+        if (passwordError) {
+            passwordError.textContent = '❌ পাসওয়ার্ড ভুল! আবার চেষ্টা করুন।';
+        }
+        passwordInput.value = '';
+        passwordInput.focus();
+        addLog('warn', 'ভুল পাসওয়ার্ড দেওয়া হয়েছে');
+    }
+}
+
+// Handle Enter key in password input
+function handlePasswordKeypress(event) {
+    if (event.key === 'Enter') {
+        checkPassword();
+    }
+}
+
 // Toggle Listening
 async function toggleListening() {
     if (AppState.isProcessing) return;
