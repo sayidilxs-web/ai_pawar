@@ -176,6 +176,10 @@
                         <span class="btn-icon">📸</span>
                         <span class="btn-text">স্ক্রিন</span>
                     </button>
+                    <button class="ctrl-btn" id="logsBtn" onclick="openLogsPage()">
+                        <span class="btn-icon">📋</span>
+                        <span class="btn-text">লগ</span>
+                    </button>
                     <button class="ctrl-btn" id="settingsBtn" onclick="openSettings()">
                         <span class="btn-icon">⚙️</span>
                         <span class="btn-text">সেটিংস</span>
@@ -241,6 +245,26 @@
         <!-- Notification -->
         <div class="notification" id="notification">
             <span id="notificationText"></span>
+        </div>
+
+        <!-- Logs Modal -->
+        <div class="modal-overlay" id="logsModal">
+            <div class="modal-content logs-modal-content">
+                <div class="modal-header">
+                    <h2>📋 লগ হিস্টোরি</h2>
+                    <button class="modal-close" onclick="closeLogsPage()">✕</button>
+                </div>
+                <div class="modal-body logs-modal-body">
+                    <div class="logs-actions">
+                        <button class="btn-action" onclick="clearLogs()">🗑️ সব মুছু</button>
+                        <button class="btn-action" onclick="exportLogs()">📥 ডাউনলোড</button>
+                        <button class="btn-action" onclick="updateLogsDisplay()">🔄 রিফ্রেশ</button>
+                    </div>
+                    <div class="logs-container" id="logsContainer">
+                        <!-- Logs will be loaded here -->
+                    </div>
+                </div>
+            </div>
         </div>
     </div>
 

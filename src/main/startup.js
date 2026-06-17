@@ -365,6 +365,9 @@ ipcMain.handle('write-file', async (event, filePath, content) => {
 });
 
 // App lifecycle
+app.commandLine.appendSwitch('no-sandbox');
+app.commandLine.appendSwitch('disable-gpu');
+
 app.whenReady().then(() => {
     log.info('✅ App ready, initializing...');
     createWindow();

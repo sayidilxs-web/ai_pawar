@@ -1,6 +1,6 @@
 /**
  * NEXUS AI - Voice Recognition Module
- * বাংলা ভয়েস রিকগনিশন
+ * বাংলা ভয়েস রিকগনিশন - শুধু "নেক্সাস" ডাকলে কাজ করে
  */
 
 class VoiceRecognition {
@@ -10,6 +10,10 @@ class VoiceRecognition {
         this.language = Config.voice.recognitionLang || 'bn-BD';
         this.interimTranscript = '';
         this.finalTranscript = '';
+        this.isActivated = false; // নেক্সাস ডাকলে সক্রিয় হবে
+        this.wakeWords = ['নেক্সাস', 'nexus', 'nexas', 'nekxas', 'হ্যালো নেক্সাস', 'hey nexus', 'hi nexus'];
+        this.activationTimeout = null;
+        this.activationDuration = 30000; // 30 সেকেন্ড পর নিজে বন্ধ হবে
         
         this.init();
     }
@@ -65,7 +69,7 @@ class VoiceRecognition {
         
         this.recognition.onspeechstart = () => {
             console.log('[Voice Recognition] Speech detected');
-            if (window.App) {
+            if (window.App && this.isActivated) {
                 window.App.showNotification('কথা শুনছি...');
             }
         };
@@ -82,7 +86,7 @@ class VoiceRecognition {
         let finalTranscript = '';
         
         for (let i = event.resultIndex; i < event.results.length; i++) {
-            const transcript = event.results[i][0].transcript;
+            const transcript = event.results[i][0].transcript.toLowerCase().trim();
             
             if (event.results[i].isFinal) {
                 finalTranscript += transcript;
@@ -97,13 +101,64 @@ class VoiceRecognition {
             this.finalTranscript = finalTranscript;
             console.log('[Voice Recognition] Final:', finalTranscript);
             
-            // Process the voice input
-            if (window.App) {
-                window.App.processVoiceInput(finalTranscript.trim());
+            // চেক করো নেক্সাস ডাকা হয়েছে কিনা
+            const isWakeWord = this.wakeWords.some(wakeWord => 
+                finalTranscript.includes(wakeWord.toLowerCase())
+            );
+            
+            if (!this.isActivated && isWakeWord) {
+                // নেক্সাস সক্রিয় হলো
+                this.activate();
+                if (window.App) {
+                    window.App.showNotification('হ্যাঁ, আমি এখানে আছি! কি করতে পারি?');
+                    window.App.speak('হ্যাঁ, আমি এখানে আছি! কি করতে পারি?');
+                }
+            } else if (this.isActivated) {
+                // নেক্সাস সক্রিয় থাকলে কমান্ড প্রসেস করো
+                if (window.App) {
+                    window.App.processVoiceInput(finalTranscript.trim());
+                }
+                this.resetActivationTimer();
+            } else {
+                // নেক্সাস সক্রিয় না থাকলে কিছু করবে না
+                console.log('[Voice Recognition] Waiting for wake word...');
             }
             
             this.finalTranscript = '';
         }
+    }
+    
+    activate() {
+        this.isActivated = true;
+        this.resetActivationTimer();
+        if (window.App) {
+            window.App.setActivated(true);
+        }
+        console.log('[Voice Recognition] NEXUS ACTIVATED!');
+    }
+    
+    deactivate() {
+        this.isActivated = false;
+        if (this.activationTimeout) {
+            clearTimeout(this.activationTimeout);
+            this.activationTimeout = null;
+        }
+        if (window.App) {
+            window.App.setActivated(false);
+        }
+        console.log('[Voice Recognition] NEXUS DEACTIVATED');
+    }
+    
+    resetActivationTimer() {
+        if (this.activationTimeout) {
+            clearTimeout(this.activationTimeout);
+        }
+        this.activationTimeout = setTimeout(() => {
+            this.deactivate();
+            if (window.App) {
+                window.App.showNotification('সময় শেষ। আবার ডাকলে আসব!');
+            }
+        }, this.activationDuration);
     }
     
     handleError(error) {
@@ -182,6 +237,7 @@ class VoiceRecognition {
         try {
             this.recognition.stop();
             console.log('[Voice Recognition] Stopping...');
+            this.deactivate();
         } catch (error) {
             console.error('[Voice Recognition] Stop error:', error);
         }
@@ -201,6 +257,10 @@ class VoiceRecognition {
     
     isSupported() {
         return !!(window.SpeechRecognition || window.webkitSpeechRecognition);
+    }
+    
+    isActivatedByUser() {
+        return this.isActivated;
     }
 }
 
