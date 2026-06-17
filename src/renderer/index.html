@@ -1,0 +1,271 @@
+<!DOCTYPE html>
+<html lang="bn">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self' 'unsafe-inline' https://cdn.jsdelivr.net https://cdnjs.cloudflare.com; style-src 'self' 'unsafe-inline' https://fonts.googleapis.com; font-src 'self' https://fonts.gstatic.com; img-src 'self' data: blob:; connect-src 'self' https://generativelanguage.googleapis.com;">
+    <title>NEXUS AI - আপনার ব্যক্তিগত সহকারী</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;500;600;700;900&family=Rajdhani:wght@400;500;600;700&family=Share+Tech+Mono&family=Hind+Siliguri:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div id="app">
+        <!-- Animated Background -->
+        <div class="bg-container">
+            <div class="circuit-bg"></div>
+            <div class="circuit-lines"></div>
+            <div class="animated-grid"></div>
+            <div class="particles-container">
+                <div class="particle"></div>
+                <div class="particle"></div>
+                <div class="particle"></div>
+                <div class="particle"></div>
+                <div class="particle"></div>
+            </div>
+        </div>
+        
+        <!-- Central Energy Vortex Core -->
+        <div class="core-container">
+            <div class="vortex-core">
+                <div class="core-glow"></div>
+                <div class="orbital-ring ring-1"></div>
+                <div class="orbital-ring ring-2"></div>
+                <div class="orbital-ring ring-3"></div>
+                <div class="energy-sphere"></div>
+                <div class="inner-core"></div>
+                <div class="energy-particle" style="top: 50%; left: 50%;"></div>
+                <div class="energy-particle" style="top: 50%; left: 50%;"></div>
+                <div class="energy-particle" style="top: 50%; left: 50%;"></div>
+                <div class="core-clickable" id="coreClickable" onclick="toggleListening()"></div>
+            </div>
+        </div>
+        
+        <!-- Scanlines Effect -->
+        <div class="scanlines"></div>
+        
+        <!-- Main Container -->
+        <div class="main-container">
+            <!-- Top Navigation -->
+            <header class="top-nav">
+                <div class="logo">
+                    <div class="logo-icon">◈</div>
+                    <span class="logo-text">NEXUS</span>
+                    <span class="logo-ai">AI</span>
+                </div>
+                <div class="status-badge" id="statusBadge">
+                    <div class="status-led"></div>
+                    <span class="status-text" id="statusText">পিসি রেডি</span>
+                </div>
+                <div class="window-controls">
+                    <button class="win-btn minimize" onclick="window.nexusAI?.minimizeWindow()">─</button>
+                    <button class="win-btn maximize" onclick="window.nexusAI?.maximizeWindow()">□</button>
+                    <button class="win-btn close" onclick="window.nexusAI?.closeWindow()">✕</button>
+                </div>
+            </header>
+
+            <!-- Content Area -->
+            <div class="content-area">
+                <!-- Left Panel - Action Log -->
+                <div class="glass-panel left-panel">
+                    <div class="panel-header">
+                        <span class="panel-icon">⚡</span>
+                        <span class="panel-title">অ্যাকশন লগ</span>
+                    </div>
+                    <div class="panel-content" id="actionLog">
+                        <div class="log-entry system">
+                            <div class="log-time">--:--:--</div>
+                            <div class="log-text">সিস্টেম চালু হয়েছে...</div>
+                        </div>
+                    </div>
+                    <div class="system-stats">
+                        <div class="stat-row">
+                            <span class="stat-label">CPU</span>
+                            <div class="stat-bar-container">
+                                <div class="stat-bar cpu" id="cpuBar" style="width: 25%"></div>
+                            </div>
+                            <span class="stat-value" id="cpuValue">25%</span>
+                        </div>
+                        <div class="stat-row">
+                            <span class="stat-label">মেমোরি</span>
+                            <div class="stat-bar-container">
+                                <div class="stat-bar memory" id="memBar" style="width: 40%"></div>
+                            </div>
+                            <span class="stat-value" id="memValue">40%</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Center Section (Empty space for Core) -->
+                <div class="center-section">
+                    <!-- Wake Indicator -->
+                    <div class="wake-indicator" id="wakeIndicator">
+                        <span>শুনছি...</span>
+                    </div>
+                </div>
+
+                <!-- Right Panel - Discussion -->
+                <div class="glass-panel right-panel">
+                    <div class="panel-header">
+                        <span class="panel-icon">💬</span>
+                        <span class="panel-title">আলোচনা</span>
+                    </div>
+                    <div class="chat-area" id="chatArea">
+                        <div class="chat-message ai">
+                            <div class="message-sender">AI সহকর্মী</div>
+                            <div class="message-text">হ্যালো! আমি নেক্সাস, তোমার ব্যক্তিগত সহকারী। কিভাবে সাহায্য করতে পারি তোমার?</div>
+                        </div>
+                    </div>
+                    <div class="telemetry-bar">
+                        <div class="telemetry-item">
+                            <span class="telemetry-label">নেটওয়ার্ক</span>
+                            <div class="telemetry-graph">
+                                <div class="telemetry-spark"></div>
+                            </div>
+                        </div>
+                        <div class="telemetry-item">
+                            <span class="telemetry-label">মেমোরি</span>
+                            <div class="telemetry-graph">
+                                <div class="telemetry-spark"></div>
+                            </div>
+                        </div>
+                        <div class="telemetry-item">
+                            <span class="telemetry-label">AI: জেমিনি</span>
+                            <div class="telemetry-graph">
+                                <div class="telemetry-spark"></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Bottom Control Section -->
+            <div class="bottom-section">
+                <!-- Audio Visualizer -->
+                <div class="audio-section">
+                    <span class="audio-label">অডিও ইনপুট</span>
+                    <div class="audio-visualizer" id="audioVisualizer">
+                        <div class="audio-bar"></div>
+                        <div class="audio-bar"></div>
+                        <div class="audio-bar"></div>
+                        <div class="audio-bar"></div>
+                        <div class="audio-bar"></div>
+                        <div class="audio-bar"></div>
+                        <div class="audio-bar"></div>
+                        <div class="audio-bar"></div>
+                        <div class="audio-bar"></div>
+                        <div class="audio-bar"></div>
+                        <div class="audio-bar"></div>
+                        <div class="audio-bar"></div>
+                    </div>
+                    <div class="volume-control">
+                        <span class="volume-icon">🔊</span>
+                        <input type="range" class="volume-slider" id="volumeSlider" min="0" max="100" value="80">
+                        <span class="volume-value" id="volumeValue">80%</span>
+                    </div>
+                </div>
+
+                <!-- Control Buttons -->
+                <div class="control-buttons">
+                    <button class="ctrl-btn" id="listenBtn" onclick="toggleListening()">
+                        <span class="btn-icon">🎤</span>
+                        <span class="btn-text">শুনুন</span>
+                    </button>
+                    <button class="ctrl-btn" id="screenBtn" onclick="captureScreen()">
+                        <span class="btn-icon">📸</span>
+                        <span class="btn-text">স্ক্রিন</span>
+                    </button>
+                    <button class="ctrl-btn" id="settingsBtn" onclick="openSettings()">
+                        <span class="btn-icon">⚙️</span>
+                        <span class="btn-text">সেটিংস</span>
+                    </button>
+                </div>
+
+                <!-- Status Bar -->
+                <div class="status-bar">
+                    <div class="status-item">
+                        <span class="label">CPU:</span>
+                        <span class="value" id="cpuStatusSmall">--</span>
+                    </div>
+                    <div class="status-item">
+                        <span class="label">মেমোরি:</span>
+                        <span class="value" id="memStatusSmall">--</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Settings Modal -->
+        <div class="modal-overlay" id="settingsModal">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h2>সেটিংস</h2>
+                    <button class="modal-close" onclick="closeSettings()">✕</button>
+                </div>
+                <div class="modal-body">
+                    <div class="setting-group">
+                        <label>জেমিনি API কী</label>
+                        <input type="password" id="geminiApiKey" placeholder="AIza...">
+                    </div>
+                    <div class="setting-group">
+                        <label>ওয়েক ওয়ার্ড</label>
+                        <input type="text" id="wakeWord" value="হ্যালো নেক্সাস">
+                    </div>
+                    <div class="setting-group">
+                        <label>ভাষা</label>
+                        <select id="languageSelect">
+                            <option value="bn-BD" selected>বাংলা</option>
+                            <option value="en-US">English</option>
+                        </select>
+                    </div>
+                    <div class="setting-group">
+                        <label>
+                            <input type="checkbox" id="faceRecogToggle" checked>
+                            চেহারা চিনতে পারা
+                        </label>
+                    </div>
+                    <div class="setting-group">
+                        <label>
+                            <input type="checkbox" id="screenCaptureToggle" checked>
+                            স্ক্রিন দেখতে পারা
+                        </label>
+                    </div>
+                </div>
+                <div class="modal-footer">
+                    <button class="btn-save" onclick="saveSettings()">সেভ করুন</button>
+                </div>
+            </div>
+        </div>
+
+        <!-- Notification -->
+        <div class="notification" id="notification">
+            <span id="notificationText"></span>
+        </div>
+    </div>
+
+    // Scripts
+    <script src="config.js"></script>
+    <script src="ai-core.js"></script>
+    <script src="voice-recognition.js"></script>
+    <script src="voice-synthesis.js"></script>
+    <script src="automation.js"></script>
+    <script src="screen-capture.js"></script>
+    
+    <!-- Knowledge Base - AI Brain -->
+    <script src="../NEXUS-NEURAL-NETWORK/knowledge/knowledge-base.js"></script>
+    <script src="../NEXUS-NEURAL-NETWORK/knowledge/knowledge-literature.js"></script>
+    <script src="../NEXUS-NEURAL-NETWORK/core/layers.js"></script>
+    <script src="../NEXUS-NEURAL-NETWORK/core/activations.js"></script>
+    <script src="../NEXUS-NEURAL-NETWORK/core/model.js"></script>
+    <script src="../NEXUS-NEURAL-NETWORK/learning/smart-learning.js"></script>
+    
+    <script src="model-maker/model-maker.js"></script>
+    <script src="model-maker/css-generator/css-generator.js"></script>
+    <script src="model-maker/html-generator/html-generator.js"></script>
+    <script src="model-maker/js-generator/js-generator.js"></script>
+    <script src="model-maker/cpp-generator/cpp-generator.js"></script>
+    <script src="utils/live-voice.js"></script>
+    <script src="app.js"></script>
+</body>
+</html>
