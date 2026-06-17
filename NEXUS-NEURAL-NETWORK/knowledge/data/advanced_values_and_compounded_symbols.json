@@ -1,0 +1,168 @@
+{
+  "file_meta": {
+    "file_name": "advanced_values_and_compounded_symbols.json",
+    "associated_concept": "Multi-Digit Numeric Literals, Temporal Chronology Data, and Compounded Operator Syntax",
+    "complexity_level": "Max-Quantum / Complete Structural Expansion",
+    "parsing_protocol": "Strict Context-Aware Value Resolution"
+  },
+  "advanced_numeric_literals": {
+    "number_11": {
+      "value": "11",
+      "official_classification": "Multi-Digit Decimal Integer Literal / Prime Number Token",
+      "bangla_name": "এগারো (১১) নম্বর টোকেন",
+      "primary_purposes": [
+        {
+          "context": "Loop Control Counters and Boundaries",
+          "bangla_explanation": "লুপ ১০ বার চালানোর জন্য অনেক সময় ইণ্ডেক্স বা বাউন্ডারি হিসেবে ১১ ব্যবহার করা হয় (যেমন: ১ থেকে শুরু করে < ১১)।",
+          "why_use": "যখন লুপের রেঞ্জ বা শেষ সীমা নির্দিষ্ট করতে হয়, তখন এই টোকেনটি সরাসরি মেমরির ইমিডিয়েট রেজিস্টারে লোড হয়।",
+          "syntax_example": "for (int i = 1; i < 11; i++) { // runs exactly 10 times }"
+        },
+        {
+          "context": "String/Array Extraction Offsets",
+          "bangla_explanation": "কোনো লেখার বা ডেটার ১১ নম্বর পজিশন বা ইনডেক্স থেকে ডেটা কেটে আলাদা করতে এই মানটি মেমোরি অফসেট হিসেবে কাজ করে।",
+          "syntax_example": "substring = text[11:]"
+        }
+      ],
+      "ai_parsing_rule": "Do not split into '1' and '1'. Parse as a combined weight of eleven within the symbol table."
+    },
+    "number_251": {
+      "value": "251",
+      "official_classification": "8-Bit Overflow Boundary / Color and Network Constant",
+      "bangla_name": "দুইশত একান্ন (২৫১) নম্বর টোকেন",
+      "primary_purposes": [
+        {
+          "context": "8-Bit unsigned Integer Value (0-255 Range)",
+          "bangla_explanation": "কম্পিউটারের ১ বাইট বা ৮-বিটের সর্বোচ্চ রেঞ্জ হলো ২৫৫। তার ঠিক কাছাকাছি ২৫১ হলো একটি গুরুত্বপূর্ণ মান, যা বিভিন্ন মেমোরি অ্যাড্রেসিং, নেটওয়ার্ক পোর্ট ক্যালকুলেশন বা আরজিবি (RGB) কালার শেড তৈরিতে ব্যবহৃত হয়।",
+          "why_use": "পিক্সেল পার্সিং, ইমেজ প্রসেসিং এবং নেটওয়ার্কের হেডার ডাটা ভ্যালিডেশনে এই ধরণের প্রাইম বা বিজোড় তিন ডিজিটের সংখ্যাগুলো ম্যাথমেটিক্যাল হ্যাশিং এর জন্য অত্যন্ত জনপ্রিয়।",
+          "syntax_example": "custom_color = rgb(251, 120, 40);"
+        }
+      ],
+      "ai_parsing_rule": "Evaluate within the 0-255 unsigned byte spectrum. Flag if it exceeds 255 in strict 8-bit memory structures."
+    }
+  },
+  "temporal_chronology_data": {
+    "date_and_time_stamps": {
+      "concept": "Dates and Timestamps",
+      "bangla_name": "তারিখ এবং সময় ডেটা স্ট্রাকচার",
+      "primary_purposes": [
+        {
+          "context": "ISO 8601 Standard String / Date Object",
+          "bangla_explanation": "কোডিংয়ে তারিখ সরাসরি কোনো সংখ্যা হিসেবে কাজ করে না, কারণ এর মাঝে হাইফেন (`-`) বা স্ল্যাশ (`/`) থাকে। কম্পিউটার এটিকে প্রথমে একটি স্ট্রিং হিসেবে নেয় এবং পরে 'Date-Time Object'-এ রূপান্তর করে মেমোরির টাইমস্ট্যাম্পে (Epoch Time) রূপান্তর করে।",
+          "why_use": "সফটওয়্যারে ডেটা এন্ট্রি করার সময়, ইউজারের বয়স হিসাব করতে, কিংবা লেনদেনের নির্দিষ্ট সময় বা 'পানির বিল/বিদ্যুৎ বিল প্রদানের তারিখ' ডাটাবেজে চিরস্থায়ীভাবে সংরক্ষণ করতে এটি ব্যবহৃত হয়।",
+          "syntax_example": "due_date = \"2026-06-16\" -> parse_date(due_date)"
+        }
+      ],
+      "ai_parsing_rule": "If a string follows the YYYY-MM-DD pattern, immediately switch from raw string processing to Chronological Object Parsing to avoid mathematical subtraction of hyphens."
+    }
+  },
+  "compounded_and_missing_symbols": {
+    "plus_equals": {
+      "character": "+=",
+      "official_name": "Addition Assignment Operator",
+      "bangla_name": "যোগ-অ্যাসাইনমেন্ট কম্পাউন্ড চিহ্ন",
+      "primary_purposes": [
+        {
+          "context": "Variable Increment Short-hand",
+          "languages": ["All Modern Languages"],
+          "bangla_explanation": "কোনো ভ্যারিয়েবলের আগের মানের সাথে নতুন একটি মান যোগ করে সেই ভ্যারিয়েবলেই আবার ফেরত জমা রাখার শর্টকাট উপায়।",
+          "why_use": "কোড ছোট করতে এবং মেমোরি রিড-রাইট অপারেশন দ্রুত করতে। যেমন: `x = x + 5` লেখার চেয়ে `x += 5` লেখা অনেক বেশি সাশ্রয়ী।",
+          "syntax_example": "total_bill += current_charge;"
+        }
+      ]
+    },
+    "minus_equals": {
+      "character": "-=",
+      "official_name": "Subtraction Assignment Operator",
+      "bangla_name": "বিয়োগ-অ্যাসাইনমেন্ট কম্পাউন্ড চিহ্ন",
+      "primary_purposes": [
+        {
+          "context": "Variable Decrement Short-hand",
+          "languages": ["All Modern Languages"],
+          "bangla_explanation": "ভ্যারিয়েবলের বর্তমান মান থেকে নির্দিষ্ট কোনো সংখ্যা বিয়োগ করে ফলাফলটি একই ভ্যারিয়েবলে আপডেট করার জন্য এটি বসে।",
+          "syntax_example": "stock_count -= items_sold;"
+        }
+      ]
+    },
+    "less_than_equal": {
+      "character": "<=",
+      "official_name": "Less Than or Equal To Operator",
+      "bangla_name": "ছোট অথবা সমান চিহ্ন",
+      "primary_purposes": [
+        {
+          "context": "Inclusive Boundary Comparison",
+          "languages": ["All Languages"],
+          "bangla_explanation": "বাম পাশের মানটি ডান পাশের মানের চেয়ে ছোট কি না, অথবা হুবহু সমান কি না—এই দুটি শর্ত একসাথে চেক করে। যেকোনো একটি সত্যি হলেই আউটপুট 'True' আসে।",
+          "why_use": "লুপের শেষ সীমানা বা বাউন্ডারি একদম নিখুঁতভাবে ছুঁয়ে যাওয়ার জন্য এটি ব্যবহার করা হয়।",
+          "syntax_example": "if (user_age <= 18) { // includes exactly 18 }"
+        }
+      ]
+    },
+    "greater_than_equal": {
+      "character": ">=",
+      "official_name": "Greater Than or Equal To Operator",
+      "bangla_name": "বড় অথবা সমান চিহ্ন",
+      "primary_purposes": [
+        {
+          "context": "Inclusive Lower Boundary Comparison",
+          "languages": ["All Languages"],
+          "bangla_explanation": "বাম পাশের মানটি ডান পাশের মানের চেয়ে বড় কি না, অথবা সমান কি না—তা পরীক্ষা করে।",
+          "syntax_example": "if (bank_balance >= 500) { // allows withdrawal if exactly 500 }"
+        }
+      ]
+    },
+    "logical_not_equal": {
+      "character": "!=",
+      "official_name": "Not Equal To Operator",
+      "bangla_name": "অসমান বা নট-ইকুয়াল চিহ্ন",
+      "primary_purposes": [
+        {
+          "context": "Inequality Verification",
+          "languages": ["All Languages"],
+          "bangla_explanation": "দুটি মান একে অপরের সাথে অমিল কি না তা যাচাই করে। যদি আলাদা হয় তবেই এটি সামনে যাওয়ার অনুমতি দেয়।",
+          "syntax_example": "if (input_pin != correct_pin)"
+        }
+      ]
+    },
+    "increment_operator": {
+      "character": "++",
+      "official_name": "Increment Operator",
+      "bangla_name": "ইনক্রিমেন্ট অপারেটর (এক বৃদ্ধি)",
+      "primary_purposes": [
+        {
+          "context": "Unary Loop Stepper",
+          "languages": ["C", "C++", "Java", "JavaScript"],
+          "bangla_explanation": "কোনো ভ্যারিয়েবলের মান সরাসরি ১ (এক) বাড়িয়ে দেওয়ার জন্য এই জোড়া প্লাস চিহ্ন ব্যবহার করা হয়। এটি মূলত লুপের চক্কর গণনায় ব্যবহৃত হয়।",
+          "syntax_example": "counter++; // increases value by exactly 1"
+        }
+      ]
+    },
+    "decrement_operator": {
+      "character": "--",
+      "official_name": "Decrement Operator",
+      "bangla_name": "ডিক্রিমেন্ট অপারেটর (এক হ্রাস)",
+      "primary_purposes": [
+        {
+          "context": "Unary Loop Regressor",
+          "languages": ["C", "C++", "Java", "JavaScript"],
+          "bangla_explanation": "কোনো ভ্যারিয়েবলের মান সরাসরি ১ (এক) কমিয়ে দেওয়ার অত্যন্ত দ্রুতগতির মেমোরি কমান্ড।",
+          "syntax_example": "timer_countdown--; // decreases value by exactly 1"
+        }
+      ]
+    },
+    "scope_resolution": {
+      "character": "::",
+      "official_name": "Scope Resolution Operator",
+      "bangla_name": "স্কোপ রেজোলিউশন বা ডাবল-কোলন চিহ্ন",
+      "primary_purposes": [
+        {
+          "context": "Class and Namespace Boundary Access",
+          "languages": ["C++", "PHP"],
+          "bangla_explanation": "কোনো বড় মেমোরি স্পেস বা ক্লাসের গভীরের সুনির্দিষ্ট কোড বা ফাংশনকে সরাসরি বাইরে থেকে টেনে আনার জন্য এটি ব্যবহৃত হয়।",
+          "why_use": "কোডের একাধিক বড় লাইব্রেরির মধ্যে নামের সংঘর্ষ (Name Conflict) এড়াতে এটি অত্যন্ত শক্তিশালী কাজ করে।",
+          "syntax_example": "std::cout << \"Hello\";"
+        }
+      ],
+      "ai_parsing_rule": "Treat the tokens on both sides as structural address spaces, not independent colon operations."
+    }
+  }
+        }

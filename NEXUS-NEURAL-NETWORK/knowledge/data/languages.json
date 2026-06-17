@@ -1,0 +1,622 @@
+{
+  "meta": {
+    "name": "NEXUS Languages Knowledge Base",
+    "version": "1.0.0",
+    "total_languages": 100,
+    "last_updated": "2024"
+  },
+  "bangla": {
+    "name": "বাংলা",
+    "native_name": "বাংলা",
+    "script": "Bengali (Unicode)",
+    "speakers": "230 million+",
+    "countries": ["Bangladesh", "India (West Bengal, Tripura)"],
+    "grammar": {
+      "alphabet": {
+        "vowels": ["অ", "আ", "ই", "ঈ", "উ", "ঊ", "ঋ", "এ", "ঐ", "ও", "ঔ"],
+        "consonants": {
+          "velar": ["ক", "খ", "গ", "ঘ", "ঙ"],
+          "palatal": ["চ", "ছ", "জ", "ঝ", "ঞ"],
+          "retroflex": ["ট", "ঠ", "ড", "ঢ", "ণ"],
+          "dental": ["ত", "থ", "দ", "ধ", "ন"],
+          "labial": ["প", "ফ", "ব", "ভ", "ম"]
+        }
+      },
+      "pronouns": {
+        "first_person": {"singular": "আমি", "plural": "আমরা"},
+        "second_person": {"singular_informal": "তুমি", "singular_formal": "আপনি", "plural": "তোমরা/আপনারা"},
+        "third_person": {"singular": "সে/এ/ও", "plural": "তারা/এরা/ওরা"}
+      },
+      "tenses": {
+        "present": {
+          "simple": {"আমি": "করি", "তুমি": "করো", "সে": "করে", "আমরা": "করি", "তারা": "করে"},
+          "continuous": {"আমি": "করছি", "তুমি": "করছো", "সে": "করছে"}
+        },
+        "past": {
+          "simple": {"আমি": "করেছিলাম", "তুমি": "করেছিলে", "সে": "করেছিল"},
+          "continuous": {"আমি": "করছিলাম", "তুমি": "করছিলে"}
+        },
+        "future": {
+          "simple": {"আমি": "করব", "তুমি": "করবে", "সে": "করবে"},
+          "continuous": {"আমি": "করবো", "তুমি": "করবে"}
+        }
+      },
+      "cases": {
+        "nominative": "কর্তা",
+        "accusative": "কর্ম",
+        "genitive": "সম্পর্ক",
+        "dative": "করণ",
+        "instrumental": "অধিকরণ",
+        "locative": "অবস্থান"
+      }
+    },
+    "numbers": {
+      "0": "শূন্য", "1": "এক", "2": "দুই", "3": "তিন", "4": "চার",
+      "5": "পাঁচ", "6": "ছয়", "7": "সাত", "8": "আট", "9": "নয়", "10": "দশ",
+      "11": "এগারো", "12": "বারো", "13": "তেরো", "14": "চোদ্দ", "15": "পনেরো",
+      "16": "ষোলো", "17": "সতেরো", "18": "আঠারো", "19": "উনিশ", "20": "বিশ",
+      "30": "ত্রিশ", "40": "চল্লিশ", "50": "পঞ্চাশ", "60": "ষাট", "70": "সত্তর",
+      "80": "আশি", "90": "নব্বই", "100": "একশো", "1000": "এক হাজার", "100000": "এক লক্ষ"
+    },
+    "common_phrases": {
+      "greetings": {
+        "formal": "নমস্কার/আসসালামু আলাইকুম",
+        "informal": "হ্যালো/কেমন আছো?",
+        "morning": "সুপ্রভাত",
+        "evening": "শুভ সন্ধ্যা"
+      },
+      "farewell": ["বিদায়", "চলে যাচ্ছি", "আবার দেখা হবে", "আল্লাহ হাফেজ"],
+      "thanks": ["ধন্যবাদ", "অনেক ধন্যবাদ", "জাযাকাল্লাহ খাইরান"],
+      "apology": ["দুঃখিত", "মাফ করবেন", "ক্ষমা করবেন"],
+      "please": ["দয়া করে", "প্লিজ"],
+      "yes_no": {"yes": "হ্যাঁ", "no": "না"}
+    },
+    "essential_words": {
+      "family": {
+        "mother": "মা", "father": "বাবা", "brother": "ভাই", "sister": "বোন",
+        "son": "ছেলে", "daughter": "মেয়ে", "grandmother": "দাদি/নানি", "grandfather": "দাদু/আদর",
+        "uncle": "চাচা/কাকা/মামা", "aunt": "চাচী/কাকী/মামী", "cousin": "চাচাতো ভাই/বোন"
+      },
+      "food": {
+        "rice": "ভাত", "bread": "রুটি/পরোটা", "fish": "মাছ", "meat": "মাংস",
+        "vegetables": "সবজি", "fruits": "ফল", "water": "পানি", "milk": "দুধ",
+        "tea": "চা", "coffee": "কফি", "sugar": "চিনি", "salt": "লবণ"
+      },
+      "time": {
+        "day": "দিন", "night": "রাত", "morning": "সকাল", "afternoon": "দুপুর",
+        "today": "আজ", "tomorrow": "আগামীকাল", "yesterday": "গতকাল",
+        "now": "এখন", "later": "পরে", "always": "সবসময়", "never": "কখনো না"
+      },
+      "places": {
+        "house": "বাড়ি", "school": "স্কুল", "office": "অফিস", "market": "বাজার",
+        "hospital": "হাসপাতাল", "restaurant": "রেস্তোরাঁ", "park": "পার্ক", "temple": "মন্দির", "mosque": "মসজিদ", "church": "গির্জা"
+      },
+      "body_parts": {
+        "head": "মাথা", "eye": "চোখ", "ear": "কান", "nose": "নাক", "mouth": "মুখ",
+        "hand": "হাত", "leg": "পা", "heart": "হৃদয়/বুক", "stomach": "পেট"
+      },
+      "colors": {
+        "red": "লাল", "blue": "নীল", "green": "সবুজ", "yellow": "হলুদ",
+        "white": "সাদা", "black": "কালো", "orange": "কমলা", "purple": "বেগুনি"
+      }
+    },
+    "translation": {
+      "i_love_you": "আমি তোমাকে ভালোবাসি",
+      "how_are_you": "তুমি কেমন আছো?",
+      "what_is_your_name": "তোমার নাম কী?",
+      "my_name_is": "আমার নাম...",
+      "where_are_you_from": "তুমি কোথা থেকে এসেছ?",
+      "i_am_from_bangladesh": "আমি বাংলাদেশ থেকে এসেছি",
+      "how_much": "কত টাকা?",
+      "i_do_not_understand": "আমি বুঝতে পারছি না",
+      "please_speak_slowly": "ধীরে বলুন",
+      "thank_you_for_help": "সাহায্যের জন্য ধন্যবাদ",
+      "good_morning_bangladesh": "সুপ্রভাত বাংলাদেশ"
+    }
+  },
+  "world_languages": {
+    "english": {
+      "name": "English",
+      "native_name": "English",
+      "speakers": "1.5 billion+",
+      "countries": ["USA", "UK", "India", "Canada", "Australia", "Bangladesh"],
+      "family": "Indo-European > Germanic > West Germanic",
+      "script": "Latin (Roman)",
+      "greetings": ["Hello", "Hi", "Good morning", "Good afternoon", "Good evening", "Good night"],
+      "farewell": ["Goodbye", "Bye", "See you", "Take care"],
+      "essentials": ["Yes", "No", "Please", "Thank you", "Sorry", "Excuse me", "Help", "Water", "Food", "Money"]
+    },
+    "hindi": {
+      "name": "Hindi",
+      "native_name": "हिन्दी",
+      "speakers": "600 million+",
+      "countries": ["India"],
+      "script": "Devanagari",
+      "greetings": ["नमस्ते (Namaste)", "नमस्कार (Namaskar)", "प्रणाम (Pranam)"],
+      "farewell": ["अलविदा (Alvida)", "जय हिंद (Jai Hind)"],
+      "essentials": ["हाँ (Haan)", "नहीं (Nahin)", "कृपया (Kripya)", "धन्यवाद (Dhanyavaad)", "माफ़ करें (Maaf Karna)"]
+    },
+    "arabic": {
+      "name": "Arabic",
+      "native_name": "العربية",
+      "speakers": "400 million+",
+      "countries": ["Saudi Arabia", "Egypt", "UAE", "Morocco", "Iraq", "Lebanon"],
+      "script": "Arabic (Right to Left)",
+      "direction": "RTL",
+      "greetings": ["مرحبا (Marhaba)", "السلام عليكم (As-salamu alaykum)", "أهلاً وسهلاً (Ahlan wa sahlan)"],
+      "farewell": ["مع السلامة (Ma'a as-salama)", "إلى اللقاء (Ila al-liqa')", "وداعاً (Wada'an)"],
+      "essentials": ["نعم (Na'am)", "لا (La)", "شكراً (Shukran)", "عفواً (Afwan)"]
+    },
+    "spanish": {
+      "name": "Spanish",
+      "native_name": "Español",
+      "speakers": "550 million+",
+      "countries": ["Spain", "Mexico", "Argentina", "Colombia", "Peru", "USA"],
+      "script": "Latin",
+      "greetings": ["Hola", "Buenos días", "Buenas tardes", "Buenas noches"],
+      "farewell": ["Adiós", "Hasta luego", "Chao", "Nos vemos"],
+      "essentials": ["Sí", "No", "Por favor", "Gracias", "De nada", "Lo siento"]
+    },
+    "french": {
+      "name": "French",
+      "native_name": "Français",
+      "speakers": "300 million+",
+      "countries": ["France", "Canada", "Belgium", "Switzerland", "Africa"],
+      "script": "Latin",
+      "greetings": ["Bonjour", "Bonsoir", "Salut", "Coucou"],
+      "farewell": ["Au revoir", "Salut", "À bientôt", "Adieu"],
+      "essentials": ["Oui", "Non", "S'il vous plaît", "Merci", "Pardon", "Excusez-moi"]
+    },
+    "german": {
+      "name": "German",
+      "native_name": "Deutsch",
+      "speakers": "130 million+",
+      "countries": ["Germany", "Austria", "Switzerland", "Liechtenstein"],
+      "script": "Latin",
+      "greetings": ["Guten Morgen", "Guten Tag", "Guten Abend", "Hallo"],
+      "farewell": ["Auf Wiedersehen", "Tschüss", "Bis später", "Gute Nacht"],
+      "essentials": ["Ja", "Nein", "Bitte", "Danke", "Entschuldigung"]
+    },
+    "chinese": {
+      "name": "Chinese (Mandarin)",
+      "native_name": "中文",
+      "speakers": "1.1 billion+",
+      "countries": ["China", "Taiwan", "Singapore"],
+      "script": "Chinese characters (Hanzi)",
+      "tones": 4,
+      "greetings": ["你好 (Nǐ hǎo)", "早上好 (Zǎoshang hǎo)", "晚安 (Wǎn'ān)"],
+      "farewell": ["再见 (Zàijiàn)", "拜拜 (Bàibài)", "回头见 (Huítóu jiàn)"],
+      "essentials": ["是 (Shì)", "不 (Bù)", "请 (Qǐng)", "谢谢 (Xièxiè)", "对不起 (Duìbùqǐ)"]
+    },
+    "japanese": {
+      "name": "Japanese",
+      "native_name": "日本語",
+      "speakers": "130 million+",
+      "countries": ["Japan"],
+      "scripts": ["Hiragana", "Katakana", "Kanji"],
+      "greetings": ["こんにちは (Konnichiwa)", "おはよう (Ohayou)", "こんばんは (Konbanwa)"],
+      "farewell": ["さようなら (Sayounara)", "またね (Mata ne)", "失礼します (Shitsurei shimasu)"],
+      "essentials": ["はい (Hai)", "いいえ (Iie)", "お願いします (Onegaishimasu)", "ありがとう (Arigatou)", "ごめんなさい (Gomen nasai)"]
+    },
+    "korean": {
+      "name": "Korean",
+      "native_name": "한국어",
+      "speakers": "80 million+",
+      "countries": ["South Korea", "North Korea"],
+      "script": "Hangul",
+      "greetings": ["안녕하세요 (Annyeonghaseyo)", "안녕 (Annyeong)", "좋은 아침 (Joeun achim)"],
+      "farewell": ["안녕히 가세요 (Anninhni gaseyo)", "또 만나요 (Tto mannal yo)", "감사합니다 (Gamsahamnida)"],
+      "essentials": ["네 (Ne)", "아니요 (Aniyo)", "부탁합니다 (Butakhamnida)", "고마워 (Komawo)", "미안해요 (Mianhaeyo)"]
+    },
+    "russian": {
+      "name": "Russian",
+      "native_name": "Русский",
+      "speakers": "260 million+",
+      "countries": ["Russia", "Belarus", "Kazakhstan", "Kyrgyzstan"],
+      "script": "Cyrillic",
+      "greetings": ["Привет (Privet)", "Здравствуйте (Zdrastvuyte)", "Доброе утро (Dobroye utro)"],
+      "farewell": ["До свидания (Do svidaniya)", "Пока (Poka)", "Увидимся (Uvidimsya)"],
+      "essentials": ["Да (Da)", "Нет (Net)", "Пожалуйста (Pozhaluysta)", "Спасибо (Spasibo)", "Извините (Izvinite)"]
+    },
+    "portuguese": {
+      "name": "Portuguese",
+      "native_name": "Português",
+      "speakers": "250 million+",
+      "countries": ["Portugal", "Brazil", "Angola", "Mozambique"],
+      "script": "Latin",
+      "greetings": ["Olá", "Bom dia", "Boa tarde", "Boa noite"],
+      "farewell": ["Adeus", "Tchau", "Até logo", "Até mais"],
+      "essentials": ["Sim", "Não", "Por favor", "Obrigado/Obrigada", "Com licença", "Desculpe"]
+    },
+    "turkish": {
+      "name": "Turkish",
+      "native_name": "Türkçe",
+      "speakers": "80 million+",
+      "countries": ["Turkey", "Cyprus", "Germany"],
+      "script": "Latin",
+      "greetings": ["Merhaba", "İyi günler", "İyi akşamlar", "Günaydın"],
+      "farewell": ["Hoşçakal", "Elveda", "Görüşürüz", "Kendine bak"],
+      "essentials": ["Evet", "Hayır", "Lütfen", "Teşekkür ederim", "Özür dilerim"]
+    },
+    "italian": {
+      "name": "Italian",
+      "native_name": "Italiano",
+      "speakers": "68 million+",
+      "countries": ["Italy", "Switzerland", "Vatican City"],
+      "script": "Latin",
+      "greetings": ["Ciao", "Buongiorno", "Buonasera", "Buonanotte"],
+      "farewell": ["Arrivederci", "Ciao", "A presto", "Buonanotte"],
+      "essentials": ["Sì", "No", "Per favore", "Grazie", "Scusi", "Prego"]
+    },
+    "dutch": {
+      "name": "Dutch",
+      "native_name": "Nederlands",
+      "speakers": "25 million+",
+      "countries": ["Netherlands", "Belgium", "Suriname"],
+      "script": "Latin",
+      "greetings": ["Hallo", "Goedemorgen", "Goedenavond", "Hoi"],
+      "farewell": ["Tot ziens", "Doei", "Tot morgen", "Dag"],
+      "essentials": ["Ja", "Nee", "Alstublieft", "Dank u", "Sorry"]
+    },
+    "polish": {
+      "name": "Polish",
+      "native_name": "Polski",
+      "speakers": "45 million+",
+      "countries": ["Poland"],
+      "script": "Latin",
+      "greetings": ["Cześć", "Dzień dobry", "Dobry wieczór", "Witaj"],
+      "farewell": ["Do widzenia", "Pa", "Na razie", "Trzymaj się"],
+      "essentials": ["Tak", "Nie", "Proszę", "Dziękuję", "Przepraszam"]
+    },
+    "vietnamese": {
+      "name": "Vietnamese",
+      "native_name": "Tiếng Việt",
+      "speakers": "85 million+",
+      "countries": ["Vietnam"],
+      "script": "Latin (Quốc Ngữ)",
+      "greetings": ["Xin chào", "Chào bạn", "Chào buổi sáng", "Chào buổi tối"],
+      "farewell": ["Tạm biệt", "Hẹn gặp lại", "Tính sau nhé", "Giữ liên lạc"],
+      "essentials": ["Vâng", "Không", "Xin cảm ơn", "Cảm ơn", "Xin lỗi"]
+    },
+    "thai": {
+      "name": "Thai",
+      "native_name": "ภาษาไทย",
+      "speakers": "60 million+",
+      "countries": ["Thailand"],
+      "script": "Thai script",
+      "tones": 5,
+      "greetings": ["สวัสดี (Sawasdee)", "ทำไม (Tammai)", "ไง (Nai)"],
+      "farewell": ["ลาก่อน (La kon)", "แล้วเจอกัน (Lao jer gan)", "บางที (Bang ti)"],
+      "essentials": ["ใช่ (Chai)", "ไม่ (Mai)", "ขอบคุณ (Khob khun)", "ขอโทษ (Kho tot)"]
+    },
+    "indonesian": {
+      "name": "Indonesian",
+      "native_name": "Bahasa Indonesia",
+      "speakers": "200 million+",
+      "countries": ["Indonesia", "Malaysia", "Singapore"],
+      "script": "Latin",
+      "greetings": ["Halo", "Selamat pagi", "Selamat siang", "Selamat malam"],
+      "farewell": ["Selamat tinggal", "Sampai jumpa", "Dadah"],
+      "essentials": ["Ya", "Tidak", "Tolong", "Terima kasih", "Maaf"]
+    },
+    "malay": {
+      "name": "Malay",
+      "native_name": "Bahasa Melayu",
+      "speakers": "290 million+",
+      "countries": ["Malaysia", "Brunei", "Singapore", "Indonesia"],
+      "script": "Latin",
+      "greetings": ["Halo", "Selamat pagi", "Selamat petang", "Apa khabar?"],
+      "farewell": ["Selamat tinggal", "Dah jumpa lagi", "Jumpa lagi"],
+      "essentials": ["Ya", "Tidak", "Tolong", "Terima kasih", "Maaf"]
+    },
+    "persian": {
+      "name": "Persian (Farsi)",
+      "native_name": "فارسی",
+      "speakers": "110 million+",
+      "countries": ["Iran", "Afghanistan", "Tajikistan"],
+      "script": "Arabic (Persian variant)",
+      "direction": "RTL",
+      "greetings": ["سلام (Salam)", "درود (Dorud)", "چطوری؟ (Chetori?)"],
+      "farewell": ["خداحافظ (Khodahafez)", "بدرود (Bedroud)", "بعداً میبینمت (Ba'dan mibinamet)"],
+      "essentials": ["بله (Bale)", "نه (Na)", "لطفاً (Lotfan)", "ممنون (Mamnon)", "ببخشید (Bebakhshid)"]
+    },
+    "urdu": {
+      "name": "Urdu",
+      "native_name": "اردو",
+      "speakers": "170 million+",
+      "countries": ["Pakistan", "India"],
+      "script": "Nastaliq (Arabic variant)",
+      "direction": "RTL",
+      "greetings": ["السلام علیکم (Assalamu Alaikum)", "خوش آمدید (Khush Amadeed)", "کیا حال ہے؟ (Kya haal hai?)"],
+      "farewell": ["خدا حافظ (Khuda Hafiz)", "الوداع (Alvida)", "چلے جاؤ (Chale jaao)"],
+      "essentials": ["جی ہاں (Jee haan)", "نہیں (Nahin)", "مہربانی (Meherbani)", "شکریہ (Shukriya)", "معاف کیجیے (Maaf kijiye)"]
+    },
+    "tamil": {
+      "name": "Tamil",
+      "native_name": "தமிழ்",
+      "speakers": "78 million+",
+      "countries": ["India (Tamil Nadu)", "Sri Lanka", "Singapore"],
+      "script": "Tamil script",
+      "greetings": ["வணக்கம் (Vanakkam)", "நமஸ்தே (Namaste)", "எப்படி இருக்கிறாய்? (Epadi irukkai?)"],
+      "farewell": ["கிட再见再见再见再见再见aめ (Vaazhgiraen)", "போய் வருகிறேன் (Poi varugiren)", "சந்திப்போம் (Sandhippom)"],
+      "essentials": ["ஆம் (Aam)", "இல்லை (Illai)", "தயவுசெய்து (Thayavuseithu)", "நன்றி (Nandri)", "மன்னிக்கவும் (Mannikavum)"]
+    },
+    "bengali": {
+      "name": "Bengali (Bangla)",
+      "native_name": "বাংলা",
+      "speakers": "270 million+",
+      "countries": ["Bangladesh", "India (West Bengal, Tripura)"],
+      "script": "Bengali script"
+    }
+  },
+  "common_translations": {
+    "hello": {
+      "bangla": "নমস্কার/হ্যালো",
+      "english": "Hello",
+      "hindi": "नमस्ते",
+      "arabic": "مرحبا",
+      "spanish": "Hola",
+      "french": "Bonjour",
+      "german": "Hallo",
+      "chinese": "你好",
+      "japanese": "こんにちは",
+      "korean": "안녕하세요",
+      "russian": "Привет",
+      "portuguese": "Olá",
+      "turkish": "Merhaba",
+      "italian": "Ciao",
+      "dutch": "Hallo",
+      "vietnamese": "Xin chào",
+      "thai": "สวัสดี",
+      "indonesian": "Halo",
+      "persian": "سلام",
+      "urdu": "السلام",
+      "tamil": "வணக்கம்"
+    },
+    "thank_you": {
+      "bangla": "ধন্যবাদ",
+      "english": "Thank you",
+      "hindi": "धन्यवाद",
+      "arabic": "شكراً",
+      "spanish": "Gracias",
+      "french": "Merci",
+      "german": "Danke",
+      "chinese": "谢谢",
+      "japanese": "ありがとう",
+      "korean": "감사합니다",
+      "russian": "Спасибо",
+      "portuguese": "Obrigado",
+      "turkish": "Teşekkürler",
+      "italian": "Grazie",
+      "dutch": "Dank u",
+      "vietnamese": "Cảm ơn",
+      "thai": "ขอบคุณ",
+      "indonesian": "Terima kasih",
+      "persian": "ممنون",
+      "urdu": "شکریہ",
+      "tamil": "நன்றி"
+    },
+    "goodbye": {
+      "bangla": "বিদায়",
+      "english": "Goodbye",
+      "hindi": "अलविदा",
+      "arabic": "مع السلامة",
+      "spanish": "Adiós",
+      "french": "Au revoir",
+      "german": "Auf Wiedersehen",
+      "chinese": "再见",
+      "japanese": "さようなら",
+      "korean": "안녕히 가세요",
+      "russian": "До свидания",
+      "portuguese": "Adeus",
+      "turkish": "Hoşçakal",
+      "italian": "Arrivederci",
+      "dutch": "Tot ziens",
+      "vietnamese": "Tạm biệt",
+      "thai": "ลาก่อน",
+      "indonesian": "Selamat tinggal",
+      "persian": "خداحافظ",
+      "urdu": "خدا حافظ",
+      "tamil": "கிட再见"
+    },
+    "water": {
+      "bangla": "পানি",
+      "english": "Water",
+      "hindi": "पानी",
+      "arabic": "ماء",
+      "spanish": "Agua",
+      "french": "Eau",
+      "german": "Wasser",
+      "chinese": "水",
+      "japanese": "水",
+      "korean": "물",
+      "russian": "Вода",
+      "portuguese": "Água",
+      "turkish": "Su",
+      "italian": "Acqua",
+      "dutch": "Water",
+      "vietnamese": "Nước",
+      "thai": "น้ำ",
+      "indonesian": "Air",
+      "persian": "آب",
+      "urdu": "پانی",
+      "tamil": "தண்ணீர்"
+    },
+    "food": {
+      "bangla": "খাবার",
+      "english": "Food",
+      "hindi": "खाना",
+      "arabic": "طعام",
+      "spanish": "Comida",
+      "french": "Nourriture",
+      "german": "Essen",
+      "chinese": "食物",
+      "japanese": "食べ物",
+      "korean": "음식",
+      "russian": "Еда",
+      "portuguese": "Comida",
+      "turkish": "Yemek",
+      "italian": "Cibo",
+      "dutch": "Eten",
+      "vietnamese": "Đồ ăn",
+      "thai": "อาหาร",
+      "indonesian": "Makanan",
+      "persian": "غذا",
+      "urdu": "کھانا",
+      "tamil": "உணவு"
+    },
+    "money": {
+      "bangla": "টাকা",
+      "english": "Money",
+      "hindi": "पैसा",
+      "arabic": "مال",
+      "spanish": "Dinero",
+      "french": "Argent",
+      "german": "Geld",
+      "chinese": "钱",
+      "japanese": "お金",
+      "korean": "돈",
+      "russian": "Деньги",
+      "portuguese": "Dinheiro",
+      "turkish": "Para",
+      "italian": "Denaro",
+      "dutch": "Geld",
+      "vietnamese": "Tiền",
+      "thai": "เงิน",
+      "indonesian": "Uang",
+      "persian": "پول",
+      "urdu": "پیسے",
+      "tamil": "பணம்"
+    }
+  },
+  "language_families": {
+    "indo_european": {
+      "description": "World's most widely spoken language family",
+      "branches": {
+        "germanic": ["English", "German", "Dutch", "Swedish", "Norwegian", "Danish", "Icelandic"],
+        "italic": ["Spanish", "French", "Italian", "Portuguese", "Romanian"],
+        "indo_iranian": {
+          "indo_aryan": ["Hindi", "Bengali", "Urdu", "Punjabi", "Marathi", "Gujarati", "Nepali"],
+          "iranian": ["Persian", "Pashto", "Kurdish"]
+        },
+        "slavic": ["Russian", "Polish", "Ukrainian", "Czech", "Serbian", "Bulgarian"],
+        "baltic": ["Lithuanian", "Latvian"],
+        "celtic": ["Irish", "Welsh", "Scottish Gaelic"],
+        "greek": ["Greek"],
+        "albanian": ["Albanian"],
+        "armenian": ["Armenian"]
+      }
+    },
+    "sino_tibetan": {
+      "description": "Languages primarily in East Asia",
+      "branches": {
+        "chinese": ["Mandarin", "Cantonese", "Wu", "Min", "Hakka"],
+        "tibeto_burman": ["Tibetan", "Burmese", "Nepali", "Bodo"]
+      }
+    },
+    "austroasiatic": {
+      "description": "Languages of Southeast Asia",
+      "branches": {
+        "viet_muong": ["Vietnamese"],
+        "mon_khmer": ["Khmer", "Mon"]
+      }
+    },
+    "austronesian": {
+      "description": "Malayo-Polynesian languages",
+      "branches": {
+        "malayo_polynesian": ["Indonesian", "Malay", "Tagalog", "Javanese", "Sundanese", "Hawaiian", "Maori"]
+      }
+    },
+    "dravidian": {
+      "description": "Languages of South India",
+      "branches": {
+        "south_dravidian": ["Tamil", "Telugu", "Kannada", "Malayalam"]
+      }
+    },
+    "afroasiatic": {
+      "description": "Languages of Africa and West Asia",
+      "branches": {
+        "semitic": ["Arabic", "Hebrew", "Amharic", "Aramaic"],
+        "berber": ["Tamazight", "Kabyle"],
+        "cushitic": ["Somali", "Oromo", "Afar"]
+      }
+    },
+    "altaic": {
+      "description": "Turkic, Mongolic, Tungusic languages (controversial)",
+      "branches": {
+        "turkic": ["Turkish", "Azerbaijani", "Uzbek", "Kazakh", "Turkmen", "Uyghur"],
+        "mongolic": ["Mongolian"],
+        "tungusic": ["Manchu", "Evenki"]
+      }
+    },
+    "niger_congo": {
+      "description": "Languages of Sub-Saharan Africa",
+      "branches": {
+        "bantu": ["Swahili", "Zulu", "Xhosa", "Shona"],
+        "west_atlantic": ["Wolof", "Fula"]
+      }
+    },
+    "language_isolates": {
+      "description": "Languages with no known relatives",
+      "examples": ["Basque", "Korean", "Japanese (debated)", "Ainu", "Burushaski"]
+    }
+  },
+  "writing_systems": {
+    "latin": {
+      "name": "Latin (Roman) Script",
+      "used_by": ["English", "Spanish", "French", "German", "Portuguese", "Indonesian", "Vietnamese"]
+    },
+    "cyrillic": {
+      "name": "Cyrillic Script",
+      "used_by": ["Russian", "Ukrainian", "Bulgarian", "Serbian", "Mongolian"]
+    },
+    "arabic": {
+      "name": "Arabic Script",
+      "direction": "RTL",
+      "used_by": ["Arabic", "Persian", "Urdu", "Pashto", "Uyghur"]
+    },
+    "devanagari": {
+      "name": "Devanagari Script",
+      "used_by": ["Hindi", "Marathi", "Nepali", "Sanskrit"]
+    },
+    "bengali": {
+      "name": "Bengali Script",
+      "used_by": ["Bengali", "Assamese"]
+    },
+    "tamil": {
+      "name": "Tamil Script",
+      "used_by": ["Tamil", "Malayalam"]
+    },
+    "telugu": {
+      "name": "Telugu Script",
+      "used_by": ["Telugu", "Kannada"]
+    },
+    "thai": {
+      "name": "Thai Script",
+      "used_by": ["Thai", "Lao"]
+    },
+    "korean": {
+      "name": "Hangul Script",
+      "used_by": ["Korean"]
+    },
+    "japanese": {
+      "name": "Japanese Scripts",
+      "types": ["Hiragana", "Katakana", "Kanji"],
+      "used_by": ["Japanese"]
+    },
+    "chinese": {
+      "name": "Chinese Characters (Hanzi)",
+      "variants": ["Simplified (China)", "Traditional (Taiwan/HK)"],
+      "used_by": ["Chinese", "Japanese (Kanji)", "Korean (Hanja)"]
+    },
+    "greek": {
+      "name": "Greek Script",
+      "used_by": ["Greek"]
+    },
+    "hebrew": {
+      "name": "Hebrew Script",
+      "direction": "RTL",
+      "used_by": ["Hebrew", "Yiddish"]
+    }
+  }
+}

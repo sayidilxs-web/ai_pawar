@@ -1,0 +1,189 @@
+{
+  "file_meta": {
+    "file_name": "control_flow_and_execution_graph.json",
+    "associated_concept": "Runtime Chronology, Program Branching, Iteration Matrices, and Error Boundary Graph",
+    "complexity_level": "Maximum Synaptic Mapping / Non-Linear Code Execution Intelligence",
+    "parsing_protocol": "Strict-Contextual-Branch-Resolution",
+    "total_structural_tokens": "Extremely Heavy Node Matrix"
+  },
+  "execution_graph_nodes": {
+    "conditional_branching_matrix": {
+      "if_else_structure": {
+        "node_id": "CF_COND_001",
+        "technical_title": "Binary Logic Forking Subsystem",
+        "bangla_name": "দ্বিমুখী লজিক্যাল ব্রাঞ্চিং বা শর্তাধীন গতিপথ",
+        "mechanics": "Evaluates the truth value of a specific boolean expression. If true, the Program Counter jumps directly to the primary memory block. If false, it completely bypasses the block and targets the 'else' memory segment.",
+        "bangla_explanation": "এটি হলো কোডের ভেতরের চৌরাস্তা। কম্পিউটার যখন একটি লাইনে আসে, সে তার সামনের শর্তটি পরীক্ষা করে। শর্ত সত্যি হলে সে বামের রাস্তায় (if ব্লক) যায়, আর মিথ্যা হলে ডানের রাস্তায় (else ব্লক) যায়। দুই রাস্তার কোড সে একসাথে কখনো রান করে না।",
+        "why_and_when_to_use": "যখন প্রোগ্রামে কোনো সিদ্ধান্তের ওপর ভিত্তি করে কোড চালাতে হয়। যেমন: ইউজারের ব্যালেন্স যদি ৫০০ টাকার বেশি হয় তবে টাকা তুলতে দাও, নতুবা ট্রানজেকশন রিজেক্ট করো।",
+        "real_world_example": "if (user_balance >= 500) { allow_withdrawal(); } else { show_error(\"Insufficient Funds\"); }",
+        "memory_behavior": "Utilizes CPU conditional jump instructions (e.g., JZ, JNZ) at the assembly level to redirect the hardware instruction pointer.",
+        "edge_cases": "If the condition contains a single assignment mark '=' instead of comparison '==', it results in a critical logical defect where the condition might permanently evaluate to true.",
+        "ai_optimization_rules": "Analyze conditional chains. If multiple independent 'if' statements check the exact same variable, recommend converting them into a single sequential 'if-else-if' structure to reduce unnecessary CPU cycles."
+      },
+      "switch_case_structure": {
+        "node_id": "CF_COND_002",
+        "technical_title": "Multi-Way Jump Table Selector",
+        "bangla_name": "বহুমুখী জাম্প টেবিল বা সুইচ-কেস আর্কিটেকচার",
+        "mechanics": "Maps a single discrete input directly against a pre-compiled index array of matching constant values for instantaneous O(1) jump execution.",
+        "bangla_explanation": "যখন একটি মাত্র ভ্যারিয়েবলের অনেকগুলো সম্ভাব্য মান চেক করতে হয়, তখন লম্বা 'if-else' না লিখে এটি ব্যবহার করা হয়। এটি একটি লিফটের মতো—আপনি যত নম্বর বাটনে চাপ দেবেন, লিফটটি মাঝখানের অন্য সব ফ্লোর স্কিপ করে সরাসরি সেই নির্দিষ্ট ফ্লোরে (Case) গিয়ে থামবে।",
+        "why_and_when_to_use": "মেনু সিলেকশন, ড্রপডাউন অপশন হ্যান্ডলিং, বা কোনো নির্দিষ্ট ডিরেকশন (যেমন: উত্তর, দক্ষিণ, পূর্ব, পশ্চিম) অনুযায়ী আলাদা কোড চালাতে এটি ব্যবহার করা হয়।",
+        "real_world_example": "switch(user_role) { case 'admin': load_dashboard(); break; case 'guest': load_public_page(); break; default: access_denied(); }",
+        "critical_token_dependency": "break",
+        "danger_zone": "যদি কোনো 'case' ব্লকের শেষে 'break' কি-ওয়ার্ডটি দিতে ভুলে যাওয়া হয়, তবে 'Fall-Through' এরর ঘটবে। এর ফলে নিচের অন্য সব কেসের কোডগুলোও কোনো শর্ত ছাড়াই স্বয়ংক্রিয়ভাবে রান করে যাবে। এআই-কে অবশ্যই প্রতিটি কেসে ব্রেক ট্রিগার ভ্যালিডেট করতে হবে।"
+      }
+    },
+    "cyclic_iteration_matrix": {
+      "deterministic_for_loop": {
+        "node_id": "CF_LOOP_001",
+        "technical_title": "Finite Bound Iterator Engine",
+        "bangla_name": "নির্দিষ্ট সীমার লুপ বা ফর-লুপ ইঞ্জিন",
+        "components": {
+          "initialization": "লুপের কাউন্টার বা শুরুর মান নির্ধারণ করা (যেমন: i = 0)। এটি লুপে কেবল একবারই চলে।",
+          "condition": "লুপটি কতক্ষণ ঘুরবে তার শেষ সীমানা বা বাউন্ডারি চেক করা (যেমন: i < 100)।",
+          "update_expression": "প্রতি চক্কর শেষে কাউন্টারের মান বাড়ানো বা কমানো (যেমন: i++)।"
+        },
+        "bangla_explanation": "একটি নির্দিষ্ট কোড ব্লককে গুনে গুনে ঠিক কতবার ঘুরাতে হবে তা যখন আগে থেকেই নিশ্চিতভাবে জানা থাকে, তখন এই লুপ ব্যবহার করা হয়। এটি মেমোরির একটি নির্দিষ্ট কাউন্টার ট্র্যাক করে প্রতি চক্করে তার মান আপডেট করে।",
+        "why_and_when_to_use": "১ থেকে ১০০০ পর্যন্ত সংখ্যা প্রিন্ট করতে, কোনো ডাটাবেজ থেকে আসা ১০০টি প্রোডাক্টের লিস্ট স্ক্রিনে একে একে দেখাতে, বা কোনো অ্যারের শুরু থেকে শেষ পর্যন্ত প্রসেস করতে।",
+        "real_world_example": "for (int i = 0; i < product_list.length; i++) { render_product(product_list[i]); }",
+        "time_complexity": "O(n) where n is the total range size."
+      },
+      "conditional_while_loop": {
+        "node_id": "CF_LOOP_002",
+        "technical_title": "Indeterminate Predicate Iterator",
+        "bangla_name": "শর্তাধীন অনির্দিষ্ট লুপ বা হোয়াইল-লুপ",
+        "mechanics": "Continuously loops the internal instruction stack as long as the primary condition remains logically True. Checks the condition *before* entering the loop cycle.",
+        "bangla_explanation": "কোডটি ঠিক কতবার ঘুরবে তার কোনো গ্যারান্টি নেই, তবে যতক্ষণ পর্যন্ত একটি নির্দিষ্ট শর্ত সত্যি থাকবে ততক্ষণ এটি ঘুরতেই থাকবে। যদি শুরুতেই শর্তটি মিথ্যা হয়, তবে ভেতরের কোড একবারও চলবে না।",
+        "why_and_when_to_use": "ইন্টারনেট থেকে ফাইল ডাউনলোড করার সময় (যতক্ষণ ফাইল ডাউনলোড শেষ না হবে লুপ চলবে), বা ইউজার যতক্ষণ ক্রস বাটনে ক্লিক না করবে ততক্ষণ গেম স্ক্রিন চালু রাখতে।",
+        "real_world_example": "while (is_connected == true) { listen_for_messages(); }",
+        "catastrophic_failure_mode": "যদি লুপের ভেতরের কোড কোনো কারণে কন্ডিশনের মান পরিবর্তন করতে না পারে (যেমন: is_connected চিরকাল ট্রু রয়ে গেল), তবে এটি একটি 'Infinite Loop' বা অন্তহীন চক্র তৈরি করবে। এতে সিপিইউ ১০০% এনগেজ হয়ে যাবে এবং মেমোরি ক্র্যাশ করবে।"
+      }
+    },
+    "runtime_interrupt_triggers": {
+      "break_statement": {
+        "token_id": "CF_INT_001",
+        "technical_action": "Immediate Context Boundary Breakout",
+        "bangla_name": "ইনস্ট্যান্ট লুপ ব্রেকার",
+        "bangla_explanation": "চলমান কোনো লুপের স্বাভাবিক ঘূর্ণন শেষ হওয়ার আগেই যদি বিশেষ কোনো কারণে লুপটি সাথে সাথে বন্ধ করে একদম বাইরে চলে আসতে হয়, তবে এই কমান্ড দেওয়া হয়।",
+        "why_and_when_to_use": "১০ লক্ষ ইউজারের মধ্যে একটি নির্দিষ্ট আইডি খুঁজছেন। ৫০০ নম্বর লাইনে আইডিটি পেয়ে গেলেন। বাকি ৯ লক্ষ ৯৯ হাজার ৫০০ বার লুপ ঘুরিয়ে শুধু শুধু প্রসেসর নষ্ট না করে সাথে সাথে লুপ থেকে বের হতে এটি ব্যবহার করা হয়।",
+        "syntax_example": "if (user.id == target_id) { break; }"
+      },
+      "continue_statement": {
+        "token_id": "CF_INT_002",
+        "technical_action": "Downstream Skip and Counter Advancement",
+        "bangla_name": "চলমান চক্কর স্কিপার",
+        "bangla_explanation": "লুপের বর্তমান চক্করের ভেতরের বাকি কোডটুকু সাময়িকভাবে না চালিয়ে, সরাসরি স্কিপ করে লুপের পরবর্তী চক্করে চলে যাওয়ার নির্দেশ দেয়। এটি লুপ বন্ধ করে না, শুধু চলতি চক্করটি বাদ দেয়।",
+        "why_and_when_to_use": "১ থেকে ১০০ পর্যন্ত সব সংখ্যা যোগ করবেন, কিন্তু শুধুমাত্র '১৩' নম্বর সংখ্যাটি যোগ না করে বাদ দিতে চান।",
+        "syntax_example": "if (number == 13) { continue; }"
+      }
+    },
+    "exception_boundary_handling": {
+      "try_catch_finally_block": {
+        "node_id": "CF_ERR_001",
+        "technical_title": "Runtime Fault Isolation Architecture",
+        "bangla_name": "রানটাইম এরর বা ক্র্যাশ প্রটেকশন সিল্ড",
+        "segments": {
+          "try_block": "যে কোডের ভেতরে এরর বা ক্র্যাশ হওয়ার সম্ভাবনা আছে, তাকে এই সুরক্ষিত ব্লকের ভেতরে রাখা হয়।",
+          "catch_block": "যদি 'try' ব্লকের কোডে কোনো এরর আসে, তবে পুরো সফটওয়্যার ক্র্যাশ না করে এররটিকে এখানে বন্দি করা হয় এবং ডেভলপারের কাস্টম মেসেজ দেখানো হয়।",
+          "finally_block": "কোডে এরর আসুক বা না আসুক—যেকোনো অবস্থাতেই এই ব্লকের কোডটি সবার শেষে নিশ্চিতভাবে রান করবেই।"
+        },
+        "bangla_explanation": "এটি হলো কোডের জন্য একটি সেফটি নেট বা এয়ারব্যাগ। ইন্টারনেট কানেকশন হুট করে চলে যাওয়া বা ভুল ফাইল ওপেন করার মতো ঘটনা ঘটলে অ্যাপ যেন ক্র্যাশ করে বন্ধ না হয়ে যায়, বরং সুন্দরভাবে হ্যান্ডেল করা যায়—তা এই আর্কিটেকচার নিশ্চিত করে।",
+        "why_and_when_to_use": "ডাটাবেজ কানেকশন, ফাইল রিড-রাইট, বা থার্ড-পার্টি এপিআই (API) কল করার সময় যেখানে বাইরের যেকোনো কারণে কোড যেকোনো মুহূর্তে ফেইল করতে পারে।",
+        "real_world_example": "try { open_database(); } catch (Exception e) { log_error(e); } finally { close_file_streams(); }"
+      }
+    }
+  }
+}{
+  "file_meta": {
+    "file_name": "control_flow_and_execution_graph.json",
+    "associated_concept": "Runtime Chronology, Program Branching, Iteration Matrices, and Error Boundary Graph",
+    "complexity_level": "Maximum Synaptic Mapping / Non-Linear Code Execution Intelligence",
+    "parsing_protocol": "Strict-Contextual-Branch-Resolution",
+    "total_structural_tokens": "Extremely Heavy Node Matrix"
+  },
+  "execution_graph_nodes": {
+    "conditional_branching_matrix": {
+      "if_else_structure": {
+        "node_id": "CF_COND_001",
+        "technical_title": "Binary Logic Forking Subsystem",
+        "bangla_name": "দ্বিমুখী লজিক্যাল ব্রাঞ্চিং বা শর্তাধীন গতিপথ",
+        "mechanics": "Evaluates the truth value of a specific boolean expression. If true, the Program Counter jumps directly to the primary memory block. If false, it completely bypasses the block and targets the 'else' memory segment.",
+        "bangla_explanation": "এটি হলো কোডের ভেতরের চৌরাস্তা। কম্পিউটার যখন একটি লাইনে আসে, সে তার সামনের শর্তটি পরীক্ষা করে। শর্ত সত্যি হলে সে বামের রাস্তায় (if ব্লক) যায়, আর মিথ্যা হলে ডানের রাস্তায় (else ব্লক) যায়। দুই রাস্তার কোড সে একসাথে কখনো রান করে না।",
+        "why_and_when_to_use": "যখন প্রোগ্রামে কোনো সিদ্ধান্তের ওপর ভিত্তি করে কোড চালাতে হয়। যেমন: ইউজারের ব্যালেন্স যদি ৫০০ টাকার বেশি হয় তবে টাকা তুলতে দাও, নতুবা ট্রানজেকশন রিজেক্ট করো।",
+        "real_world_example": "if (user_balance >= 500) { allow_withdrawal(); } else { show_error(\"Insufficient Funds\"); }",
+        "memory_behavior": "Utilizes CPU conditional jump instructions (e.g., JZ, JNZ) at the assembly level to redirect the hardware instruction pointer.",
+        "edge_cases": "If the condition contains a single assignment mark '=' instead of comparison '==', it results in a critical logical defect where the condition might permanently evaluate to true.",
+        "ai_optimization_rules": "Analyze conditional chains. If multiple independent 'if' statements check the exact same variable, recommend converting them into a single sequential 'if-else-if' structure to reduce unnecessary CPU cycles."
+      },
+      "switch_case_structure": {
+        "node_id": "CF_COND_002",
+        "technical_title": "Multi-Way Jump Table Selector",
+        "bangla_name": "বহুমুখী জাম্প টেবিল বা সুইচ-কেস আর্কিটেকচার",
+        "mechanics": "Maps a single discrete input directly against a pre-compiled index array of matching constant values for instantaneous O(1) jump execution.",
+        "bangla_explanation": "যখন একটি মাত্র ভ্যারিয়েবলের অনেকগুলো সম্ভাব্য মান চেক করতে হয়, তখন লম্বা 'if-else' না লিখে এটি ব্যবহার করা হয়। এটি একটি লিফটের মতো—আপনি যত নম্বর বাটনে চাপ দেবেন, লিফটটি মাঝখানের অন্য সব ফ্লোর স্কিপ করে সরাসরি সেই নির্দিষ্ট ফ্লোরে (Case) গিয়ে থামবে।",
+        "why_and_when_to_use": "মেনু সিলেকশন, ড্রপডাউন অপশন হ্যান্ডলিং, বা কোনো নির্দিষ্ট ডিরেকশন (যেমন: উত্তর, দক্ষিণ, পূর্ব, পশ্চিম) অনুযায়ী আলাদা কোড চালাতে এটি ব্যবহার করা হয়।",
+        "real_world_example": "switch(user_role) { case 'admin': load_dashboard(); break; case 'guest': load_public_page(); break; default: access_denied(); }",
+        "critical_token_dependency": "break",
+        "danger_zone": "যদি কোনো 'case' ব্লকের শেষে 'break' কি-ওয়ার্ডটি দিতে ভুলে যাওয়া হয়, তবে 'Fall-Through' এরর ঘটবে। এর ফলে নিচের অন্য সব কেসের কোডগুলোও কোনো শর্ত ছাড়াই স্বয়ংক্রিয়ভাবে রান করে যাবে। এআই-কে অবশ্যই প্রতিটি কেসে ব্রেক ট্রিগার ভ্যালিডেট করতে হবে।"
+      }
+    },
+    "cyclic_iteration_matrix": {
+      "deterministic_for_loop": {
+        "node_id": "CF_LOOP_001",
+        "technical_title": "Finite Bound Iterator Engine",
+        "bangla_name": "নির্দিষ্ট সীমার লুপ বা ফর-লুপ ইঞ্জিন",
+        "components": {
+          "initialization": "লুপের কাউন্টার বা শুরুর মান নির্ধারণ করা (যেমন: i = 0)। এটি লুপে কেবল একবারই চলে।",
+          "condition": "লুপটি কতক্ষণ ঘুরবে তার শেষ সীমানা বা বাউন্ডারি চেক করা (যেমন: i < 100)।",
+          "update_expression": "প্রতি চক্কর শেষে কাউন্টারের মান বাড়ানো বা কমানো (যেমন: i++)।"
+        },
+        "bangla_explanation": "একটি নির্দিষ্ট কোড ব্লককে গুনে গুনে ঠিক কতবার ঘুরাতে হবে তা যখন আগে থেকেই নিশ্চিতভাবে জানা থাকে, তখন এই লুপ ব্যবহার করা হয়। এটি মেমোরির একটি নির্দিষ্ট কাউন্টার ট্র্যাক করে প্রতি চক্করে তার মান আপডেট করে।",
+        "why_and_when_to_use": "১ থেকে ১০০০ পর্যন্ত সংখ্যা প্রিন্ট করতে, কোনো ডাটাবেজ থেকে আসা ১০০টি প্রোডাক্টের লিস্ট স্ক্রিনে একে একে দেখাতে, বা কোনো অ্যারের শুরু থেকে শেষ পর্যন্ত প্রসেস করতে।",
+        "real_world_example": "for (int i = 0; i < product_list.length; i++) { render_product(product_list[i]); }",
+        "time_complexity": "O(n) where n is the total range size."
+      },
+      "conditional_while_loop": {
+        "node_id": "CF_LOOP_002",
+        "technical_title": "Indeterminate Predicate Iterator",
+        "bangla_name": "শর্তাধীন অনির্দিষ্ট লুপ বা হোয়াইল-লুপ",
+        "mechanics": "Continuously loops the internal instruction stack as long as the primary condition remains logically True. Checks the condition *before* entering the loop cycle.",
+        "bangla_explanation": "কোডটি ঠিক কতবার ঘুরবে তার কোনো গ্যারান্টি নেই, তবে যতক্ষণ পর্যন্ত একটি নির্দিষ্ট শর্ত সত্যি থাকবে ততক্ষণ এটি ঘুরতেই থাকবে। যদি শুরুতেই শর্তটি মিথ্যা হয়, তবে ভেতরের কোড একবারও চলবে না।",
+        "why_and_when_to_use": "ইন্টারনেট থেকে ফাইল ডাউনলোড করার সময় (যতক্ষণ ফাইল ডাউনলোড শেষ না হবে লুপ চলবে), বা ইউজার যতক্ষণ ক্রস বাটনে ক্লিক না করবে ততক্ষণ গেম স্ক্রিন চালু রাখতে।",
+        "real_world_example": "while (is_connected == true) { listen_for_messages(); }",
+        "catastrophic_failure_mode": "যদি লুপের ভেতরের কোড কোনো কারণে কন্ডিশনের মান পরিবর্তন করতে না পারে (যেমন: is_connected চিরকাল ট্রু রয়ে গেল), তবে এটি একটি 'Infinite Loop' বা অন্তহীন চক্র তৈরি করবে। এতে সিপিইউ ১০০% এনগেজ হয়ে যাবে এবং মেমোরি ক্র্যাশ করবে।"
+      }
+    },
+    "runtime_interrupt_triggers": {
+      "break_statement": {
+        "token_id": "CF_INT_001",
+        "technical_action": "Immediate Context Boundary Breakout",
+        "bangla_name": "ইনস্ট্যান্ট লুপ ব্রেকার",
+        "bangla_explanation": "চলমান কোনো লুপের স্বাভাবিক ঘূর্ণন শেষ হওয়ার আগেই যদি বিশেষ কোনো কারণে লুপটি সাথে সাথে বন্ধ করে একদম বাইরে চলে আসতে হয়, তবে এই কমান্ড দেওয়া হয়।",
+        "why_and_when_to_use": "১০ লক্ষ ইউজারের মধ্যে একটি নির্দিষ্ট আইডি খুঁজছেন। ৫০০ নম্বর লাইনে আইডিটি পেয়ে গেলেন। বাকি ৯ লক্ষ ৯৯ হাজার ৫০০ বার লুপ ঘুরিয়ে শুধু শুধু প্রসেসর নষ্ট না করে সাথে সাথে লুপ থেকে বের হতে এটি ব্যবহার করা হয়।",
+        "syntax_example": "if (user.id == target_id) { break; }"
+      },
+      "continue_statement": {
+        "token_id": "CF_INT_002",
+        "technical_action": "Downstream Skip and Counter Advancement",
+        "bangla_name": "চলমান চক্কর স্কিপার",
+        "bangla_explanation": "লুপের বর্তমান চক্করের ভেতরের বাকি কোডটুকু সাময়িকভাবে না চালিয়ে, সরাসরি স্কিপ করে লুপের পরবর্তী চক্করে চলে যাওয়ার নির্দেশ দেয়। এটি লুপ বন্ধ করে না, শুধু চলতি চক্করটি বাদ দেয়।",
+        "why_and_when_to_use": "১ থেকে ১০০ পর্যন্ত সব সংখ্যা যোগ করবেন, কিন্তু শুধুমাত্র '১৩' নম্বর সংখ্যাটি যোগ না করে বাদ দিতে চান।",
+        "syntax_example": "if (number == 13) { continue; }"
+      }
+    },
+    "exception_boundary_handling": {
+      "try_catch_finally_block": {
+        "node_id": "CF_ERR_001",
+        "technical_title": "Runtime Fault Isolation Architecture",
+        "bangla_name": "রানটাইম এরর বা ক্র্যাশ প্রটেকশন সিল্ড",
+        "segments": {
+          "try_block": "যে কোডের ভেতরে এরর বা ক্র্যাশ হওয়ার সম্ভাবনা আছে, তাকে এই সুরক্ষিত ব্লকের ভেতরে রাখা হয়।",
+          "catch_block": "যদি 'try' ব্লকের কোডে কোনো এরর আসে, তবে পুরো সফটওয়্যার ক্র্যাশ না করে এররটিকে এখানে বন্দি করা হয় এবং ডেভলপারের কাস্টম মেসেজ দেখানো হয়।",
+          "finally_block": "কোডে এরর আসুক বা না আসুক—যেকোনো অবস্থাতেই এই ব্লকের কোডটি সবার শেষে নিশ্চিতভাবে রান করবেই।"
+        },
+        "bangla_explanation": "এটি হলো কোডের জন্য একটি সেফটি নেট বা এয়ারব্যাগ। ইন্টারনেট কানেকশন হুট করে চলে যাওয়া বা ভুল ফাইল ওপেন করার মতো ঘটনা ঘটলে অ্যাপ যেন ক্র্যাশ করে বন্ধ না হয়ে যায়, বরং সুন্দরভাবে হ্যান্ডেল করা যায়—তা এই আর্কিটেকচার নিশ্চিত করে।",
+        "why_and_when_to_use": "ডাটাবেজ কানেকশন, ফাইল রিড-রাইট, বা থার্ড-পার্টি এপিআই (API) কল করার সময় যেখানে বাইরের যেকোনো কারণে কোড যেকোনো মুহূর্তে ফেইল করতে পারে।",
+        "real_world_example": "try { open_database(); } catch (Exception e) { log_error(e); } finally { close_file_streams(); }"
+      }
+    }
+  }
+}

@@ -1,0 +1,166 @@
+{
+  "file_meta_part_two": {
+    "file_name": "symbols_and_tokens_dictionary.json",
+    "associated_concept": "Advanced Operators, Mathematics, Assignment Tokens, and Universal Numeric Literals",
+    "complexity_level": "Max-Quantum / Synaptic Neural Architecture Map - Absolute Expansion",
+    "parsing_protocol": "Zero-Missing-Token-Resolution"
+  },
+  "additional_symbolic_lexicon": {
+    "plus_symbol": {
+      "character": "+",
+      "official_name": "Plus Sign / Addition Operator",
+      "bangla_name": "যোগ চিহ্ন / এডিশন অপারেটর",
+      "primary_purposes": [
+        {
+          "context": "Arithmetic Addition",
+          "languages": ["All Programming Languages"],
+          "bangla_explanation": "দুটি বা তার বেশি নিউমেরিক বা গাণিতিক সংখ্যার মধ্যে যোগফল বের করার জন্য এটি ব্যবহৃত হয়। এটি মেমোরিতে থাকা এলইউ (ALU - Arithmetic Logic Unit) কে সরাসরি নির্দেশ দেয় দুটি মানকে একত্রিত করতে।",
+          "why_use": "যেকোনো গাণিতিক হিসাব, যেমন মোট দাম, লুপের কাউন্টার বৃদ্ধি বা স্কোর গণনা করতে এটি ব্যবহৃত হয়।",
+          "syntax_example": "total_score = current_score + bonus_points"
+        },
+        {
+          "context": "String Concatenation",
+          "languages": ["JavaScript", "Python", "Java", "C++"],
+          "bangla_explanation": "দুটি আলাদা টেক্সট বা স্ট্রিংকে জোড়া লাগিয়ে একটি বড় স্ট্রিং তৈরি করতে এই চিহ্ন ব্যবহার করা হয়।",
+          "why_use": "যখন ইউজারের নামের প্রথম অংশ এবং শেষ অংশ একসাথে জোড়া লাগিয়ে পুরো নাম দেখাতে হয়, তখন এটি ব্যবহার করা হয়।",
+          "syntax_example": "full_name = first_name + \" \" + last_name"
+        }
+      ],
+      "ai_parsing_rule": "If operands on both sides are Numbers, execute mathematical addition. If any operand is a String, transition immediately to String Concatenation logic."
+    },
+    "minus_symbol": {
+      "character": "-",
+      "official_name": "Minus Sign / Subtraction Operator",
+      "bangla_name": "বিয়োগ চিহ্ন / সাবট্রাকশন অপারেটর",
+      "primary_purposes": [
+        {
+          "context": "Arithmetic Subtraction",
+          "languages": ["All Programming Languages"],
+          "bangla_explanation": "বাম পাশের সংখ্যা থেকে ডান পাশের সংখ্যাটি বাদ দিয়ে বিয়োগফল বের করার জন্য এই চিহ্ন বসে।",
+          "why_use": "যেকোনো ডিসকাউন্ট বা ছাড় হিসাব করতে, মেমোরি স্টক বা কাউন্টার কমাতে, অথবা গাণিতিক দূরত্ব বের করতে এটি লাগে।",
+          "syntax_example": "net_price = gross_price - discount_amount"
+        },
+        {
+          "context": "Unary Negation",
+          "languages": ["All Programming Languages"],
+          "bangla_explanation": "কোনো ধনাত্মক (Positive) সংখ্যার সামনে বসে সেটিকে ঋণাত্মক (Negative) সংখ্যায় রূপান্তর করতে এটি ব্যবহার করা হয়।",
+          "why_use": "বিপরীত মান বা মাইনাস ফিগার প্রকাশ করতে।",
+          "syntax_example": "negative_velocity = -velocity_value"
+        }
+      ],
+      "ai_parsing_rule": "Look behind the token; if no operand exists prior, parse strictly as an active Unary Negation operation."
+    },
+    "forward_slash": {
+      "character": "/",
+      "official_name": "Forward Slash / Division Operator",
+      "bangla_name": "ফরওয়ার্ড স্ল্যাশ / ভাগ অপারেটর",
+      "primary_purposes": [
+        {
+          "context": "Mathematical Division",
+          "languages": ["All Programming Languages"],
+          "bangla_explanation": "বাম পাশের সংখ্যাকে ডান পাশের সংখ্যা দিয়ে ভাগ করে ভাগফল বের করার কাজে এটি ব্যবহৃত হয়। অধিকাংশ ভাষায় এটি ফ্লোট বা দশমিক সংখ্যা আউটপুট দেয়।",
+          "why_use": "গড় (Average) বের করতে, শতকরা হিসাব করতে বা বড় ডেটাকে সমান ভাগে ভাগ করতে এটি লাগে।",
+          "syntax_example": "average = total_sum / total_count"
+        }
+      ],
+      "danger_zone": "যদি ডান পাশের সংখ্যাটি ০ (Zero) হয়, তবে মেমোরি লেভেলে ক্র্যাশ ঘটবে এবং 'ZeroDivisionError' বা 'Division by Zero' এরর তৈরি হবে। এআই-কে এই ক্ষেত্রে রানটাইম ব্লক বসাতে হবে।"
+    },
+    "colon_symbol": {
+      "character": ":",
+      "official_name": "Colon",
+      "bangla_name": "কোলন চিহ্ন",
+      "primary_purposes": [
+        {
+          "context": "Dictionary Key-Value Delimiter",
+          "languages": ["Python", "JavaScript", "JSON"],
+          "bangla_explanation": "ডিকশনারি বা জেসন ফাইলে 'কী' (Key) এবং 'ভ্যালু' (Value) কে আলাদা বা সুনির্দিষ্ট করে ম্যাপ করার জন্য মাঝখানে এই চিহ্ন বসে।",
+          "why_use": "কোনো ডেটার নামের সাথে তার আসল মানটিকে চিরস্থায়ীভাবে বেঁধে দিতে এটি লাগে।",
+          "syntax_example": "user_data = {\"id\": 101, \"status\": \"active\"}"
+        },
+        {
+          "context": "Block Initiation",
+          "languages": ["Python"],
+          "bangla_explanation": "if কন্ডিশন, লুপ, বা ফাংশন লেখার হেডারের শেষে বসে নতুন একটি কোড ব্লক শুরু করার সংকেত দেয়।",
+          "why_use": "পাইথনে কার্লি ব্র্যাকেট নেই, তাই কোড ব্লক কোথা থেকে এক্সিকিউট হওয়া শুরু হবে তা কম্পাইলারকে বোঝাতে এটি বাধ্যতামূলক।",
+          "syntax_example": "if score > 80:"
+        }
+      ]
+    },
+    "comma_separator": {
+      "character": ",",
+      "official_name": "Comma / Sequence Separator",
+      "bangla_name": "কমা / উপাদান পৃথককারী চিহ্ন",
+      "primary_purposes": [
+        {
+          "context": "Element Separation",
+          "languages": ["All Programming Languages"],
+          "bangla_explanation": "কোনো লিস্ট, অ্যারে, অবজেক্ট বা ফাংশনের ভেতরে একাধিক ডেটা বা প্যারামিটারকে একে অপরের থেকে আলাদা করে সাজিয়ে রাখতে এই চিহ্ন বসে।",
+          "why_use": "কম্পিউটার যেন বুঝতে পারে যে একটি উপাদানের মেমোরি ব্লক শেষ হয়েছে এবং আরেকটি নতুন উপাদান শুরু হয়েছে।",
+          "syntax_example": "numbers = [10, 20, 30, 40]"
+        }
+      ]
+    },
+    "underscore_symbol": {
+      "character": "_",
+      "official_name": "Underscore / Low Line",
+      "bangla_name": "আন্ডারস্কোর চিহ্ন",
+      "primary_purposes": [
+        {
+          "context": "Snake Case Naming Convention",
+          "languages": ["Python", "Ruby", "C"],
+          "bangla_explanation": "ভ্যারিয়েবল বা ফাংশনের নাম বড় হলে মাঝখানের স্পেসের বিকল্প হিসেবে এই চিহ্ন ব্যবহার করা হয় (কারণ নামের মাঝে ফাকা স্পেস দেওয়া নিষিদ্ধ)।",
+          "why_use": "কোড যেন মানুষের কাছে এবং এআই-এর কাছে পড়তে সহজ ও দৃষ্টিনন্দন হয়।",
+          "syntax_example": "user_bank_balance = 5000"
+        },
+        {
+          "context": "Throwaway Variable / Dummy Variable",
+          "languages": ["Python", "JavaScript"],
+          "bangla_explanation": "লুপ বা ফাংশন থেকে কোনো ডেটা ফেরত আসলেও যদি ডেভলপারের সেই ডেটাটি ব্যবহার করার কোনো প্রয়োজন না থাকে, তবে মেমোরি নষ্ট না করে শুধু এই চিহ্নটি লিখে রাখা হয়।",
+          "why_use": "অপ্রয়োজনীয় ভ্যারিয়েবল তৈরি থেকে মেমোরিকে সুরক্ষিত রাখতে।",
+          "syntax_example": "for _ in range(5): print(\"Hello\")"
+        }
+      ]
+    },
+    "less_than": {
+      "character": "<",
+      "official_name": "Less Than Operator",
+      "bangla_name": "ছোট বা লেস-দ্যান অপারেটর",
+      "primary_purposes": [
+        {
+          "context": "Relational Comparison",
+          "languages": ["All Languages"],
+          "bangla_explanation": "বাম পাশের মানটি ডান পাশের মানের চেয়ে ছোট কিনা তা যাচাই করে। সত্য হলে 'True' এবং মিথ্যা হলে 'False' আউটপুট দেয়।",
+          "syntax_example": "if (current_page < total_pages)"
+        }
+      ]
+    },
+    "greater_than": {
+      "character": ">",
+      "official_name": "Greater Than Operator",
+      "bangla_name": "বড় বা গ্রেটার-দ্যান অপারেটর",
+      "primary_purposes": [
+        {
+          "context": "Relational Comparison",
+          "languages": ["All Languages"],
+          "bangla_explanation": "বাম পাশের মানটি ডান পাশের মানের চেয়ে বড় কিনা তা লজিক্যালি পরীক্ষা করে সত্য বা মিথ্যা আউটপুট দেয়।",
+          "syntax_example": "if (user_age > 18)"
+        }
+      ]
+    },
+    "universal_numeric_literals": {
+      "registry_0_to_9": {
+        "0": { "token": "0", "name": "Zero", "type": "Integer Constant", "bangla_use": "শূন্য বা মেমোরিতে ফলস (False) স্টেট প্রকাশ করতে।" },
+        "1": { "token": "1", "name": "One", "type": "Integer Constant", "bangla_use": "এক বা মেমোরিতে ট্রু (True) বা একটিভ স্টেট প্রকাশ করতে।" },
+        "2": { "token": "2", "name": "Two", "type": "Integer Constant", "bangla_use": "বাইনারি বা জোড়-বিজোড় গণনার গুরুত্বপূর্ণ বেস বা সংখ্যা।" },
+        "3": { "token": "3", "name": "Three", "type": "Integer Constant", "bangla_use": "গাণিতিক ধ্রুবক বা সাধারণ পূর্ণসংখ্যার হিসাব।" },
+        "4": { "token": "4", "name": "Four", "type": "Integer Constant", "bangla_use": "মেমোরি বাইট ডিস্ট্রিবিউশনের স্ট্যান্ডার্ড একক সংখ্যা।" },
+        "5": { "token": "5", "name": "Five", "type": "Integer Constant", "bangla_use": "যেকোনো সাধারণ সংখ্যা বা লুপ বাউন্ডারি সেট করতে।" },
+        "6": { "token": "6", "name": "Six", "type": "Integer Constant", "bangla_use": "যেকোনো সাধারণ গাণিতিক হিসাব বা কাউন্টার।" },
+        "7": { "token": "7", "name": "Seven", "type": "Integer Constant", "bangla_use": "যেকোনো সাধারণ গাণিতিক হিসাব বা ইনডেক্স মান।" },
+        "8": { "token": "8", "name": "Eight", "type": "Integer Constant", "bangla_use": "কম্পিউটারের ১ বাইট (8 Bits) মেমোরি আর্কিটেকচারের মূল ভিত্তি সংখ্যা।" },
+        "9": { "token": "9", "name": "Nine", "type": "Integer Constant", "bangla_use": "দশভিত্তিক (Decimal) গণনা পদ্ধতির সর্বোচ্চ একক ডিজিট সংখ্যা।" }
+      },
+      "ai_numeric_rule": "All native numeric tokens from 0-9 must be parsed directly as standard integer mathematical literals for ALU calculation."
+    }
+  }
+        }

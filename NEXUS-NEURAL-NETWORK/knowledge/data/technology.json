@@ -1,0 +1,255 @@
+{
+  "meta": {
+    "name": "NEXUS Technology Knowledge",
+    "version": "1.0.0",
+    "last_updated": "2024"
+  },
+  "artificial_intelligence": {
+    "branches": {
+      "machine_learning": {
+        "description": "Computers learning from data without explicit programming",
+        "types": {
+          "supervised": "Learning from labeled data",
+          "unsupervised": "Finding patterns in unlabeled data",
+          "reinforcement": "Learning through rewards and punishments"
+        },
+        "algorithms": {
+          "regression": ["Linear Regression", "Polynomial Regression"],
+          "classification": ["Logistic Regression", "SVM", "Decision Trees", "Random Forest", "Naive Bayes"],
+          "clustering": ["K-Means", "Hierarchical", "DBSCAN"],
+          "dimensionality_reduction": ["PCA", "t-SNE"]
+        }
+      },
+      "deep_learning": {
+        "description": "Neural networks with multiple layers",
+        "architectures": {
+          "cnn": {"name": "Convolutional Neural Network", "used_for": ["Image recognition", "Computer vision"]},
+          "rnn": {"name": "Recurrent Neural Network", "used_for": ["Sequential data", "NLP", "Time series"]},
+          "lstm": {"name": "Long Short-Term Memory", "used_for": ["Long-term dependencies"]},
+          "transformer": {"name": "Transformer", "used_for": ["NLP", "Translation", "GPT", "BERT"]},
+          "gan": {"name": "Generative Adversarial Network", "used_for": ["Image generation", "Deepfakes"]}
+        },
+        "frameworks": ["TensorFlow", "PyTorch", "Keras", "JAX"]
+      },
+      "nlp": {
+        "name": "Natural Language Processing",
+        "tasks": ["Text classification", "Sentiment analysis", "Translation", "Chatbots", "Text generation"],
+        "models": ["GPT", "BERT", "T5", "Claude", "Gemini"]
+      },
+      "computer_vision": {
+        "description": "Teaching computers to see",
+        "tasks": ["Object detection", "Image segmentation", "Face recognition", "OCR"],
+        "models": ["YOLO", "Faster R-CNN", "ResNet", "EfficientNet"]
+      }
+    },
+    "concepts": {
+      "neural_network": "Artificial neurons inspired by brain",
+      "training": "Adjusting weights to minimize error",
+      "overfitting": "Model memorizes training data (bad)",
+      "underfitting": "Model too simple to learn (bad)",
+      "hyperparameters": "Settings chosen before training"
+    }
+  },
+  "web_development": {
+    "frontend": {
+      "technologies": {
+        "html": {"version": "HTML5", "purpose": "Structure"},
+        "css": {"version": "CSS3", "purpose": "Styling"},
+        "javascript": {"purpose": "Interactivity"}
+      },
+      "frameworks": {
+        "react": {"company": "Meta", "features": ["Component-based", "Virtual DOM", "Hooks"]},
+        "vue": {"company": "Community", "features": ["Easy to learn", "Reactive"]},
+        "angular": {"company": "Google", "features": ["TypeScript", "Full framework"]},
+        "svelte": {"company": "Community", "features": ["No virtual DOM", "Compile time"]}
+      },
+      "tools": {
+        "build": ["Webpack", "Vite", "esbuild", "Parcel"],
+        "styling": ["Tailwind CSS", "SASS", "Styled Components"],
+        "testing": ["Jest", "Cypress", "Playwright"]
+      }
+    },
+    "backend": {
+      "languages": ["Node.js", "Python", "Java", "Go", "Rust", "PHP", "C#"],
+      "frameworks": {
+        "nodejs": ["Express", "NestJS", "Fastify"],
+        "python": ["Django", "Flask", "FastAPI"],
+        "java": ["Spring Boot", "Hibernate"],
+        "go": ["Gin", "Echo", "Fiber"]
+      },
+      "concepts": {
+        "rest_api": "Representational State Transfer",
+        "graphql": "Query language for APIs",
+        "websockets": "Real-time bidirectional communication"
+      }
+    },
+    "database": {
+      "relational": ["MySQL", "PostgreSQL", "Oracle", "SQL Server"],
+      "nosql": {
+        "document": ["MongoDB", "CouchDB"],
+        "key_value": ["Redis", "DynamoDB"],
+        "column": ["Cassandra", "HBase"],
+        "graph": ["Neo4j", "Amazon Neptune"]
+      }
+    }
+  },
+  "mobile_development": {
+    "ios": {
+      "language": "Swift",
+      "framework": "SwiftUI",
+      "old_framework": "UIKit",
+      "ide": "Xcode"
+    },
+    "android": {
+      "language": "Kotlin (preferred), Java",
+      "framework": "Jetpack Compose",
+      "old_framework": "XML layouts",
+      "ide": "Android Studio"
+    },
+    "cross_platform": {
+      "react_native": {"company": "Meta", "language": "JavaScript/TypeScript"},
+      "flutter": {"company": "Google", "language": "Dart"},
+      "xamarin": {"company": "Microsoft", "language": "C#"},
+      "ionic": {"language": "JavaScript/TypeScript", "framework": "Angular/React/Vue"}
+    }
+  },
+  "cloud_computing": {
+    "providers": {
+      "aws": {
+        "services": {
+          "compute": ["EC2", "Lambda", "ECS", "EKS"],
+          "storage": ["S3", "EFS", "EBS"],
+          "database": ["RDS", "DynamoDB", "ElastiCache"],
+          "networking": ["VPC", "CloudFront", "Route 53"],
+          "ai": ["SageMaker", "Rekognition", "Polly", "Lex"]
+        }
+      },
+      "gcp": {
+        "services": {
+          "compute": ["Compute Engine", "Cloud Functions", "Kubernetes", "App Engine"],
+          "storage": ["Cloud Storage", "BigQuery"],
+          "ai": ["Vertex AI", "Vision AI", "Natural Language API"]
+        }
+      },
+      "azure": {
+        "services": {
+          "compute": ["Virtual Machines", "Azure Functions", "AKS"],
+          "storage": ["Blob Storage", "Azure SQL"],
+          "ai": ["Azure ML", "Cognitive Services"]
+        }
+      }
+    },
+    "concepts": {
+      "iaas": "Infrastructure as a Service (VMs, storage)",
+      "paas": "Platform as a Service (managed apps)",
+      "saas": "Software as a Service (ready-to-use apps)",
+      "serverless": "No server management, pay per use",
+      "containers": "Lightweight, portable application packaging"
+    }
+  },
+  "blockchain": {
+    "basics": {
+      "blockchain": "Distributed, immutable ledger",
+      "consensus": {
+        "pow": "Proof of Work - mining",
+        "pos": "Proof of Stake - staking",
+        "pbft": "Practical Byzantine Fault Tolerance"
+      }
+    },
+    "cryptocurrencies": {
+      "bitcoin": {"founder": "Satoshi Nakamoto", "year": 2009, "concept": "Digital gold"},
+      "ethereum": {"founder": "Vitalik Buterin", "year": 2015, "concept": "Smart contracts"}
+    },
+    "web3": {
+      "defi": "Decentralized Finance",
+      "nft": "Non-Fungible Token",
+      "dao": "Decentralized Autonomous Organization",
+      "metaverse": "Virtual reality web"
+    }
+  },
+  "cybersecurity": {
+    "threats": {
+      "malware": ["Virus", "Trojan", "Ransomware", "Spyware", "Adware"],
+      "social_engineering": ["Phishing", "Spear phishing", "Pretexting", "Baiting"],
+      "network_attacks": ["DDoS", "Man-in-the-Middle", "SQL Injection", "XSS"]
+    },
+    "defense": {
+      "encryption": ["AES", "RSA", "TLS/SSL"],
+      "authentication": ["Password", "2FA/MFA", "Biometrics", "OAuth"],
+      "practices": ["Regular updates", "Backups", "Firewall", "Antivirus"]
+    },
+    "concepts": {
+      "CIA_triad": ["Confidentiality", "Integrity", "Availability"],
+      "zero_trust": "Never trust, always verify",
+      "vulnerability": "Weakness that can be exploited",
+      "exploit": "Method of taking advantage of vulnerability"
+    }
+  },
+  "iot": {
+    "definition": "Internet of Things - Connected devices",
+    "applications": {
+      "smart_home": ["Smart lights", "Thermostats", "Security cameras", "Locks"],
+      "industrial": ["Predictive maintenance", "Asset tracking", "Quality control"],
+      "healthcare": ["Wearables", "Remote monitoring", "Smart pills"]
+    },
+    "protocols": {
+      "communication": ["WiFi", "Bluetooth", "Zigbee", "Z-Wave", "LoRa"],
+      "data": ["MQTT", "CoAP", "HTTP"]
+    },
+    "challenges": ["Security", "Privacy", "Interoperability", "Power consumption"]
+  },
+  "quantum_computing": {
+    "basics": {
+      "qubit": "Quantum bit - can be 0, 1, or both simultaneously",
+      "superposition": "Multiple states at once",
+      "entanglement": "Qubits connected regardless of distance"
+    },
+    "applications": {
+      "cryptography": "Breaking current encryption, creating quantum-safe encryption",
+      "simulation": "Molecular modeling",
+      "optimization": "Complex problem solving"
+    },
+    "companies": ["IBM", "Google", "Microsoft", "IonQ", "Rigetti"]
+  },
+  "robotics": {
+    "types": {
+      "industrial": "Manufacturing, welding, assembly",
+      "service": "Cleaning, delivery, healthcare",
+      "autonomous_vehicles": "Self-driving cars, drones",
+      "humanoid": "Human-like robots"
+    },
+    "components": {
+      "sensors": ["Cameras", "LIDAR", "Radar", "Ultrasonic"],
+      "actuators": ["Motors", "Servos", "Hydraulics"],
+      "control": ["Microcontrollers", "Single-board computers", "PLC"]
+    },
+    "concepts": {
+      "kinematics": "Motion study",
+      "path_planning": "Finding optimal path",
+      "computer_vision": "Seeing and understanding environment"
+    }
+  },
+  "emerging_tech": {
+    "metaverse": "Virtual/augmented reality world",
+    "edge_computing": "Processing data closer to source",
+    "5g_6g": "Next-gen mobile networks",
+    "ar_vr_mr": {
+      "ar": "Augmented Reality - overlay on real world",
+      "vr": "Virtual Reality - fully immersive",
+      "mr": "Mixed Reality - blend of both"
+    },
+    "3d_printing": {
+      "technologies": ["FDM", "SLA", "SLS", "DMLS"],
+      "materials": ["PLA", "ABS", "Resin", "Metal"],
+      "applications": ["Prototyping", "Medical implants", "Food", "Construction"]
+    },
+    "gene_editing": {
+      "crispr": "Clustered Regularly Interspaced Short Palindromic Repeats",
+      "applications": ["Disease treatment", "Agriculture", "Research"]
+    },
+    "space_tech": {
+      "companies": ["SpaceX", "Blue Origin", "NASA", "ISRO"],
+      "concepts": ["Reusable rockets", "Satellite internet", "Space tourism", "Mars colonization"]
+    }
+  }
+}

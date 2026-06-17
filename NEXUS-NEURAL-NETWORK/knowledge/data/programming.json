@@ -1,0 +1,362 @@
+{
+  "meta": {
+    "name": "NEXUS Programming Knowledge Base",
+    "version": "1.0.0",
+    "total_entries": 500,
+    "last_updated": "2024"
+  },
+  "languages": {
+    "python": {
+      "id": "python",
+      "name": "Python",
+      "description": "একটি high-level, interpreted প্রোগ্রামিং ভাষা। সহজ syntax এবং readability-এর জন্য বিখ্যাত।",
+      "created_year": 1991,
+      "creator": "Guido van Rossum",
+      "current_version": "3.12",
+      "features": ["Easy syntax", "Dynamic typing", "Huge library", "Cross-platform"],
+      "used_for": ["Web Development", "AI/ML", "Data Science", "Automation"],
+      "frameworks": {
+        "web": ["Django", "Flask", "FastAPI"],
+        "ml_ai": ["TensorFlow", "PyTorch", "Scikit-learn"],
+        "data": ["Pandas", "NumPy"]
+      },
+      "syntax": {
+        "hello_world": "print('Hello, World!')",
+        "variables": "x = 10\nname = 'Nexus'\nprice = 99.99",
+        "data_types": ["int", "float", "str", "bool", "list", "dict"],
+        "lists": "my_list = [1, 2, 3, 'hello']",
+        "dictionaries": "my_dict = {'name': 'Nexus', 'age': 25}",
+        "conditionals": "if x > 10:\n    print('Greater')\nelif x > 5:\n    print('Medium')\nelse:\n    print('Smaller')",
+        "for_loop": "for i in range(10):\n    print(i)",
+        "while_loop": "while condition:\n    # code",
+        "functions": "def greet(name):\n    return f'Hello, {name}!'",
+        "classes": "class Person:\n    def __init__(self, name):\n        self.name = name\n    def say_hello(self):\n        return f'Hello, {self.name}!'",
+        "list_comprehension": "squares = [x**2 for x in range(10)]",
+        "lambda": "square = lambda x: x ** 2",
+        "try_except": "try:\n    result = 10 / 0\nexcept ZeroDivisionError:\n    print('Cannot divide by zero')",
+        "file_read": "with open('file.txt', 'r') as f:\n    content = f.read()",
+        "file_write": "with open('file.txt', 'w') as f:\n    f.write('Hello')",
+        "api_request": "import requests\nresponse = requests.get('https://api.example.com')\ndata = response.json()"
+      },
+      "important_libraries": {
+        "numpy": "Numerical computing",
+        "pandas": "Data manipulation",
+        "requests": "HTTP library",
+        "flask": "Web framework",
+        "fastapi": "Modern web framework",
+        "pytorch": "Deep learning",
+        "tensorflow": "ML platform",
+        "beautifulsoup4": "Web scraping"
+      },
+      "common_errors": {
+        "SyntaxError": "Wrong syntax",
+        "IndentationError": "Wrong indentation",
+        "NameError": "Variable not defined",
+        "TypeError": "Wrong type operation",
+        "IndexError": "List index out of range",
+        "KeyError": "Dict key not found"
+      }
+    },
+    "javascript": {
+      "id": "javascript",
+      "name": "JavaScript",
+      "description": "ওয়েবের প্রধান scripting ভাষা",
+      "created_year": 1995,
+      "creator": "Brendan Eich",
+      "features": ["Runs in browser", "Async programming", "Prototype OOP", "Huge ecosystem"],
+      "used_for": ["Web Frontend", "Web Backend", "Mobile Apps", "Games"],
+      "frameworks": {
+        "frontend": ["React", "Vue", "Angular", "Svelte"],
+        "backend": ["Node.js", "Express", "NestJS"],
+        "mobile": ["React Native", "Ionic"]
+      },
+      "syntax": {
+        "hello_world": "console.log('Hello, World!');",
+        "variables": "let x = 10;\nconst PI = 3.14159;",
+        "arrays": "const arr = [1, 2, 3];\narr.map(x => x * 2);\narr.filter(x => x > 2);",
+        "objects": "const person = {\n  name: 'Nexus',\n  greet() { return `Hello ${this.name}`; }\n};",
+        "conditionals": "if (x > 10) {\n  console.log('Greater');\n} else {\n  console.log('Smaller');\n}",
+        "for_loop": "for (let i = 0; i < 10; i++) {\n  console.log(i);\n}",
+        "functions": "function greet(name) {\n  return `Hello, ${name}!`;\n}\nconst greetArrow = (name) => `Hello, ${name}!`;",
+        "classes": "class Person {\n  constructor(name) {\n    this.name = name;\n  }\n  greet() {\n    return `Hello, ${this.name}`;\n  }\n}",
+        "async_await": "async function fetchData() {\n  const response = await fetch('/api/data');\n  return await response.json();\n}",
+        "dom": "document.getElementById('myId');\ndocument.querySelectorAll('.myClass');"
+      }
+    },
+    "java": {
+      "id": "java",
+      "name": "Java",
+      "description": "Object-oriented, platform-independent ভাষা",
+      "created_year": 1995,
+      "creator": "James Gosling",
+      "features": ["Platform Independent", "Object-Oriented", "Strongly Typed", "Multi-threaded"],
+      "used_for": ["Enterprise Apps", "Android", "Web Apps", "Big Data"],
+      "frameworks": ["Spring", "Hibernate", "Spring Boot"],
+      "syntax": {
+        "hello_world": "public class Main {\n    public static void main(String[] args) {\n        System.out.println(\"Hello!\");\n    }\n}",
+        "variables": "int age = 25;\nString name = \"Nexus\";\ndouble price = 99.99;",
+        "data_types": ["byte", "short", "int", "long", "float", "double", "boolean", "char"],
+        "arrays": "int[] nums = {1, 2, 3};\nString[] names = new String[5];",
+        "conditionals": "if (age >= 18) {\n    System.out.println(\"Adult\");\n} else {\n    System.out.println(\"Minor\");\n}",
+        "for_loop": "for (int i = 0; i < 10; i++) {\n    System.out.println(i);\n}",
+        "while_loop": "while (condition) {\n    // code\n}",
+        "methods": "public int add(int a, int b) {\n    return a + b;\n}",
+        "classes": "public class Person {\n    private String name;\n    public Person(String name) {\n        this.name = name;\n    }\n    public String getName() { return name; }\n}"
+      }
+    },
+    "cpp": {
+      "id": "cpp",
+      "name": "C++",
+      "description": "High-performance সিস্টেম প্রোগ্রামিং ভাষা",
+      "created_year": 1983,
+      "creator": "Bjarne Stroustrup",
+      "features": ["High Performance", "Low-level Memory", "OOP", "STL"],
+      "used_for": ["Game Dev", "Systems Programming", "Embedded", "Trading"],
+      "frameworks": ["Qt", "Boost", "Unreal Engine"],
+      "syntax": {
+        "hello_world": "#include <iostream>\nusing namespace std;\nint main() {\n    cout << \"Hello!\" << endl;\n    return 0;\n}",
+        "variables": "int x = 10;\nfloat y = 3.14;\nstring name = \"Nexus\";",
+        "pointers": "int x = 10;\nint* ptr = &x;\ncout << *ptr;",
+        "classes": "class Person {\nprivate:\n    string name;\npublic:\n    Person(string n) : name(n) {}\n    void greet() {\n        cout << \"Hello \" << name;\n    }\n};"
+      }
+    },
+    "csharp": {
+      "id": "csharp",
+      "name": "C#",
+      "description": "Microsoft-এর modern OOP ভাষা",
+      "created_year": 2000,
+      "creator": "Anders Hejlsberg",
+      "features": ["Type-safe", "Modern", "LINQ", "Async"],
+      "used_for": ["Windows Apps", "Games", "Web Apps", "Cloud"]
+    },
+    "go": {
+      "id": "go",
+      "name": "Go (Golang)",
+      "description": "Google-এর fast, simple ভাষা",
+      "created_year": 2009,
+      "creator": "Google Team",
+      "features": ["Fast compile", "Concurrency", "Simple", "Garbage collected"],
+      "used_for": ["Web Servers", "Cloud", "DevOps", "Microservices"],
+      "syntax": {
+        "hello_world": "package main\nimport \"fmt\"\nfunc main() {\n    fmt.Println(\"Hello!\")\n}",
+        "goroutines": "go func() {\n    fmt.Println(\"Running concurrently\")\n}()",
+        "channels": "ch := make(chan int)\nch <- 42"
+      }
+    },
+    "rust": {
+      "id": "rust",
+      "name": "Rust",
+      "description": "Safe, concurrent, practical ভাষা",
+      "created_year": 2010,
+      "creator": "Graydon Hoare",
+      "features": ["Memory Safety", "Zero-cost abstractions", "Concurrency"],
+      "used_for": ["Systems Programming", "WebAssembly", "CLI Tools"]
+    },
+    "swift": {
+      "id": "swift",
+      "name": "Swift",
+      "description": "Apple-এর iOS/macOS ভাষা",
+      "created_year": 2014,
+      "creator": "Apple",
+      "features": ["Safe", "Fast", "Modern"],
+      "used_for": ["iOS Apps", "macOS Apps", "Apple Watch"]
+    },
+    "kotlin": {
+      "id": "kotlin",
+      "name": "Kotlin",
+      "description": "JVM-based modern ভাষা",
+      "created_year": 2011,
+      "creator": "JetBrains",
+      "features": ["Concise", "Null safety", "Coroutines"],
+      "used_for": ["Android", "Web Backend"]
+    },
+    "typescript": {
+      "id": "typescript",
+      "name": "TypeScript",
+      "description": "JavaScript-এর superset with types",
+      "created_year": 2012,
+      "creator": "Microsoft",
+      "features": ["Static typing", "OOP", "ES6+", "IDE support"],
+      "used_for": ["Large Web Apps", "Enterprise"]
+    },
+    "php": {
+      "id": "php",
+      "name": "PHP",
+      "description": "Server-side scripting ভাষা",
+      "created_year": 1995,
+      "creator": "Rasmus Lerdorf",
+      "features": ["Easy", "Database support", "Web-focused"],
+      "used_for": ["Web Backend", "WordPress", "E-commerce"],
+      "frameworks": ["Laravel", "CodeIgniter", "Symfony"]
+    },
+    "ruby": {
+      "id": "ruby",
+      "name": "Ruby",
+      "description": "Productive, elegant ভাষা",
+      "created_year": 1995,
+      "creator": "Yukihiro Matsumoto",
+      "frameworks": ["Ruby on Rails", "Sinatra"]
+    },
+    "sql": {
+      "id": "sql",
+      "name": "SQL",
+      "description": "Database query ভাষা",
+      "commands": {
+        "select": "SELECT * FROM table_name WHERE condition;",
+        "insert": "INSERT INTO table_name VALUES (val1, val2);",
+        "update": "UPDATE table_name SET col = val WHERE condition;",
+        "delete": "DELETE FROM table_name WHERE condition;",
+        "create": "CREATE TABLE table_name (col1 type, col2 type);",
+        "join": "SELECT * FROM t1 JOIN t2 ON t1.id = t2.id;"
+      },
+      "joins": {
+        "inner": "Matching rows from both tables",
+        "left": "All rows from left + matching from right",
+        "right": "All rows from right + matching from left",
+        "full": "All rows when there's a match"
+      }
+    },
+    "html": {
+      "id": "html",
+      "name": "HTML",
+      "description": "Web page structure markup",
+      "tags": {
+        "basic": ["html", "head", "body", "title", "meta"],
+        "text": ["h1-h6", "p", "span", "div", "a", "ul", "ol", "li"],
+        "form": ["form", "input", "button", "select", "textarea"],
+        "media": ["img", "video", "audio", "iframe", "canvas"],
+        "semantic": ["header", "nav", "main", "article", "section", "footer"]
+      },
+      "input_types": ["text", "password", "email", "number", "date", "file", "checkbox", "radio", "submit"]
+    },
+    "css": {
+      "id": "css",
+      "name": "CSS",
+      "description": "Web page styling language",
+      "selectors": ["element", ".class", "#id", "[attr]", ":hover"],
+      "properties": {
+        "layout": ["display", "flex", "grid", "position"],
+        "spacing": ["margin", "padding", "border"],
+        "styling": ["color", "background", "font-size", "border"]
+      },
+      "flexbox": {
+        "container": "display: flex;\njustify-content: center;\nalign-items: center;"
+      },
+      "grid": {
+        "container": "display: grid;\ngrid-template-columns: repeat(3, 1fr);"
+      }
+    },
+    "bash": {
+      "id": "bash",
+      "name": "Bash",
+      "description": "Linux command line scripting",
+      "commands": {
+        "navigation": ["ls -la", "cd", "pwd", "cd .."],
+        "files": ["touch", "mkdir", "rm", "cp", "mv", "cat"],
+        "search": ["grep", "find", "which"],
+        "permissions": ["chmod", "chown"],
+        "network": ["ping", "curl", "ssh", "scp"]
+      }
+    }
+  },
+  "concepts": {
+    "algorithms": {
+      "sorting": {
+        "bubble_sort": {"complexity": "O(n²)", "description": "Compare adjacent and swap"},
+        "selection_sort": {"complexity": "O(n²)", "description": "Find minimum and place at start"},
+        "insertion_sort": {"complexity": "O(n²)", "description": "Insert each element in sorted position"},
+        "merge_sort": {"complexity": "O(n log n)", "description": "Divide, sort, merge"},
+        "quick_sort": {"complexity": "O(n log n)", "description": "Partition around pivot"},
+        "heap_sort": {"complexity": "O(n log n)", "description": "Use heap data structure"}
+      },
+      "searching": {
+        "linear_search": {"complexity": "O(n)", "description": "Sequential check"},
+        "binary_search": {"complexity": "O(log n)", "description": "Divide sorted array"},
+        "dfs": {"description": "Depth First Search - go deep first"},
+        "bfs": {"description": "Breadth First Search - go wide first"}
+      }
+    },
+    "data_structures": {
+      "array": {"access": "O(1)", "search": "O(n)"},
+      "linked_list": {"access": "O(n)", "insert": "O(1)"},
+      "stack": {"principle": "LIFO", "uses": ["Undo", "Function calls"]},
+      "queue": {"principle": "FIFO", "uses": ["Scheduling", "BFS"]},
+      "binary_tree": {"traversals": ["Inorder", "Preorder", "Postorder", "Level order"]},
+      "hash_table": {"operations": "O(1) average"},
+      "graph": {"types": ["Directed", "Undirected", "Weighted"]}
+    },
+    "design_patterns": {
+      "creational": {
+        "singleton": "One instance only",
+        "factory": "Create objects without specifying class",
+        "builder": "Construct complex objects step by step"
+      },
+      "structural": {
+        "adapter": "Make incompatible interfaces work together",
+        "decorator": "Add behavior at runtime",
+        "facade": "Simple interface to complex system"
+      },
+      "behavioral": {
+        "observer": "Notify dependent objects of state change",
+        "strategy": "Interchangeable algorithms",
+        "command": "Encapsulate request as object"
+      }
+    },
+    "databases": {
+      "relational": ["MySQL", "PostgreSQL", "Oracle", "SQL Server", "SQLite"],
+      "nosql": {
+        "document": "MongoDB",
+        "key_value": "Redis, DynamoDB",
+        "column": "Cassandra",
+        "graph": "Neo4j"
+      }
+    },
+    "devops": {
+      "containers": ["Docker", "Kubernetes"],
+      "ci_cd": ["Jenkins", "GitHub Actions", "GitLab CI"],
+      "cloud": {
+        "aws": ["EC2", "S3", "Lambda", "RDS"],
+        "gcp": ["Compute Engine", "Cloud Storage"],
+        "azure": ["VMs", "Blob Storage", "Azure Functions"]
+      },
+      "monitoring": ["Prometheus", "Grafana", "ELK Stack"]
+    },
+    "networking": {
+      "http_methods": {
+        "GET": "Retrieve data",
+        "POST": "Submit data",
+        "PUT": "Update/Replace",
+        "DELETE": "Remove data",
+        "PATCH": "Partial update"
+      },
+      "http_status": {
+        "200": "OK",
+        "201": "Created",
+        "400": "Bad Request",
+        "401": "Unauthorized",
+        "403": "Forbidden",
+        "404": "Not Found",
+        "500": "Server Error",
+        "502": "Bad Gateway",
+        "503": "Service Unavailable"
+      },
+      "osi_layers": {
+        "7_application": "HTTP, FTP, DNS",
+        "6_presentation": "SSL, JPEG",
+        "5_session": "NetBIOS",
+        "4_transport": "TCP, UDP",
+        "3_network": "IP, ICMP",
+        "2_data_link": "Ethernet",
+        "1_physical": "Cables"
+      }
+    }
+  },
+  "best_practices": [
+    "Meaningful variable names ব্যবহার করো",
+    "Functions ছোট রাখো",
+    "DRY principle follow করো",
+    "Error handling করো",
+    "Code review করো",
+    "Testing করো"
+  ]
+}

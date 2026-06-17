@@ -1,0 +1,435 @@
+{
+  "meta": {
+    "name": "NEXUS Science & Mathematics Knowledge Base",
+    "version": "1.0.0",
+    "last_updated": "2024"
+  },
+  "physics": {
+    "fundamentals": {
+      "branches": ["Mechanics", "Thermodynamics", "Electromagnetism", "Quantum Mechanics", "Relativity", "Optics", "Acoustics", "Nuclear Physics"],
+      "fundamental_forces": [
+        {"name": "Gravity", "range": "Infinite", "strength_relative": "6×10⁻³⁹"},
+        {"name": "Electromagnetic", "range": "Infinite", "strength_relative": "1"},
+        {"name": "Weak Nuclear", "range": "10⁻¹⁸ m", "strength_relative": "10⁻⁶"},
+        {"name": "Strong Nuclear", "range": "10⁻¹⁵ m", "strength_relative": "1"}
+      ],
+      "constants": {
+        "speed_of_light": "c = 3×10⁸ m/s",
+        "gravitational_constant": "G = 6.674×10⁻¹¹ N·m²/kg²",
+        "planck_constant": "h = 6.626×10⁻³⁴ J·s",
+        "boltzmann_constant": "k = 1.38×10⁻²³ J/K",
+        "avogadro_number": "Nₐ = 6.022×10²³ mol⁻¹",
+        "elementary_charge": "e = 1.602×10⁻¹⁹ C",
+        "electron_mass": "mₑ = 9.109×10⁻³¹ kg",
+        "proton_mass": "mₚ = 1.673×10⁻²⁷ kg",
+        "vacuum_permittivity": "ε₀ = 8.854×10⁻¹² F/m",
+        "vacuum_permeability": "μ₀ = 1.257×10⁻⁶ H/m",
+        "fine_structure_constant": "α ≈ 1/137"
+      }
+    },
+    "laws": {
+      "newton": {
+        "1st_law": "Inertia - Object stays at rest or motion unless acted upon by external force",
+        "2nd_law": "F = ma - Force equals mass times acceleration",
+        "3rd_law": "Action-Reaction - Every action has equal and opposite reaction",
+        "universal_gravitation": "F = Gm₁m₂/r²"
+      },
+      "thermodynamics": {
+        "0th_law": "Thermal equilibrium - If A=B and B=C, then A=C",
+        "1st_law": "Energy conservation - ΔU = Q - W",
+        "2nd_law": "Entropy increases - Heat flows from hot to cold spontaneously",
+        "3rd_law": "Absolute zero unattainable - Cannot reach 0 K"
+      },
+      "maxwell": {
+        "gauss_law_electric": "∇·E = ρ/ε₀",
+        "gauss_law_magnetic": "∇·B = 0",
+        "faraday_law": "∇×E = -∂B/∂t",
+        "ampere_maxwell_law": "∇×B = μ₀J + μ₀ε₀∂E/∂t"
+      },
+      "einstein": {
+        "mass_energy": "E = mc²",
+        "time_dilation": "t' = t/√(1-v²/c²)",
+        "length_contraction": "L' = L√(1-v²/c²)",
+        "mass_increase": "m' = m/√(1-v²/c²)"
+      }
+    },
+    "mechanics": {
+      "kinematics": {
+        "displacement": "s = vt",
+        "velocity": "v = u + at",
+        "position": "s = ut + ½at²",
+        "velocity_squared": "v² = u² + 2as"
+      },
+      "dynamics": {
+        "force": "F = ma",
+        "momentum": "p = mv",
+        "impulse": "J = FΔt = Δp",
+        "kinetic_energy": "KE = ½mv²",
+        "potential_energy": "PE = mgh",
+        "work": "W = Fd cosθ"
+      },
+      "circular_motion": {
+        "centripetal_force": "F = mv²/r",
+        "angular_velocity": "ω = v/r = 2πf",
+        "period": "T = 2πr/v",
+        "centripetal_acceleration": "a = v²/r = ω²r"
+      },
+      "gravitation": {
+        "force": "F = Gm₁m₂/r²",
+        "orbital_velocity": "v = √(GM/r)",
+        "escape_velocity": "v = √(2GM/r)",
+        "orbital_period": "T² = 4π²r³/GM"
+      },
+      "shm": {
+        "period": "T = 2π√(m/k)",
+        "frequency": "f = 1/T = ω/2π",
+        "displacement": "x = A cos(ωt + φ)",
+        "velocity": "v = -Aω sin(ωt + φ)",
+        "acceleration": "a = -Aω² cos(ωt + φ)"
+      }
+    },
+    "waves": {
+      "wave_equation": "v = fλ",
+      "intensity": "I = P/A",
+      "doppler_effect": "f' = f(v ± v₀)/(v ∓ vs)",
+      "interference": "Constructive: Δx = nλ, Destructive: Δx = (n+½)λ",
+      "diffraction": "Single slit: a sinθ = nλ",
+      "standing_wave": "λn = 2L/n"
+    },
+    "optics": {
+      "snell's_law": "n₁ sinθ₁ = n₂ sinθ₂",
+      "lens_equation": "1/f = 1/do + 1/di",
+      "magnification": "M = -di/do = hi/ho",
+      "critical_angle": "sinθc = n₂/n₁",
+      "mirror_equation": "1/f = 1/do + 1/di"
+    },
+    "electricity": {
+      "coulomb_law": "F = kq₁q₂/r²",
+      "electric_field": "E = F/q = kQ/r²",
+      "electric_potential": "V = kQ/r",
+      "capacitance": "C = Q/V",
+      "current": "I = Q/t",
+      "resistance": "V = IR",
+      "power": "P = IV = I²R = V²/R",
+      "ohms_law": "V = IR",
+      "kirchhoff_voltage": "ΣV = 0",
+      "kirchhoff_current": "ΣI = 0"
+    },
+    "magnetism": {
+      "magnetic_force": "F = qvB sinθ",
+      "magnetic_field_wire": "B = μ₀I/2πr",
+      "magnetic_field_solenoid": "B = μ₀nI",
+      "magnetic_flux": "Φ = BA cosθ",
+      "faraday_induction": "ε = -dΦ/dt",
+      "inductance": "ε = -L(dI/dt)"
+    },
+    "modern_physics": {
+      "photoelectric": "E = hf - φ",
+      "de_broglie": "λ = h/p = h/mv",
+      "heisenberg": "ΔxΔp ≥ ħ/2",
+      "schrodinger": "iħ∂Ψ/∂t = -ħ²/2m ∇²Ψ + VΨ",
+      "hydrogen_energy": "En = -13.6/n² eV",
+      "relativistic_energy": "E² = (pc)² + (mc²)²"
+    },
+    "nuclear": {
+      "binding_energy": "E = Δmc²",
+      "radioactive_decay": "N = N₀e⁻λt",
+      "half_life": "t½ = ln2/λ",
+      "fission": "Heavy nucleus splits into lighter nuclei",
+      "fusion": "Light nuclei combine to form heavier nucleus"
+    }
+  },
+  "chemistry": {
+    "periodic_table": {
+      "groups": {
+        "1": {"name": "Alkali Metals", "elements": ["Li", "Na", "K", "Rb", "Cs", "Fr"], "properties": "Highly reactive, soft metals"},
+        "2": {"name": "Alkaline Earth Metals", "elements": ["Be", "Mg", "Ca", "Sr", "Ba", "Ra"]},
+        "3-12": {"name": "Transition Metals", "elements": ["Sc", "Ti", "V", "Cr", "Mn", "Fe", "Co", "Ni", "Cu", "Zn", "and more"]},
+        "13": {"name": "Boron Group", "elements": ["B", "Al", "Ga", "In", "Ti"]},
+        "14": {"name": "Carbon Group", "elements": ["C", "Si", "Ge", "Sn", "Pb"]},
+        "15": {"name": "Nitrogen Group", "elements": ["N", "P", "As", "Sb", "Bi"]},
+        "16": {"name": "Oxygen Group", "elements": ["O", "S", "Se", "Te", "Po"]},
+        "17": {"name": "Halogens", "elements": ["F", "Cl", "Br", "I", "At"], "properties": "Highly reactive non-metals"},
+        "18": {"name": "Noble Gases", "elements": ["He", "Ne", "Ar", "Kr", "Xe", "Rn"], "properties": "Unreactive gases"}
+      },
+      "periods": {
+        "1": ["H", "He"],
+        "2": ["Li", "Be", "B", "C", "N", "O", "F", "Ne"],
+        "3": ["Na", "Mg", "Al", "Si", "P", "S", "Cl", "Ar"]
+      },
+      "important_elements": {
+        "hydrogen": {"symbol": "H", "atomic_number": 1, "mass": 1.008},
+        "carbon": {"symbol": "C", "atomic_number": 6, "mass": 12.011},
+        "nitrogen": {"symbol": "N", "atomic_number": 7, "mass": 14.007},
+        "oxygen": {"symbol": "O", "atomic_number": 8, "mass": 15.999},
+        "sodium": {"symbol": "Na", "atomic_number": 11, "mass": 22.990},
+        "iron": {"symbol": "Fe", "atomic_number": 26, "mass": 55.845},
+        "copper": {"symbol": "Cu", "atomic_number": 29, "mass": 63.546},
+        "silver": {"symbol": "Ag", "atomic_number": 47, "mass": 107.87},
+        "gold": {"symbol": "Au", "atomic_number": 79, "mass": 196.97}
+      }
+    },
+    "chemical_bonds": {
+      "ionic": {
+        "description": "Electron transfer between metal and non-metal",
+        "example": "NaCl - Sodium Chloride",
+        "properties": "High melting point, soluble in water, conducts electricity when dissolved"
+      },
+      "covalent": {
+        "description": "Electron sharing between non-metals",
+        "types": {"single": "C-H", "double": "C=O", "triple": "C≡C"},
+        "properties": "Lower melting point, may not conduct electricity"
+      },
+      "metallic": {
+        "description": "Delocalized electrons in metal lattice",
+        "properties": "Conduct electricity, malleable, ductile"
+      },
+      "hydrogen_bond": {
+        "description": "H bonded to F, O, or N",
+        "properties": "Strong intermolecular force, high boiling point"
+      }
+    },
+    "reactions": {
+      "types": {
+        "combination": "A + B → AB",
+        "decomposition": "AB → A + B",
+        "single_replacement": "A + BC → AC + B",
+        "double_replacement": "AB + CD → AD + CB",
+        "combustion": "Fuel + O₂ → CO₂ + H₂O",
+        "redox": "Oxidation and reduction occur simultaneously"
+      },
+      "balancing": "Same atoms on both sides of equation",
+      "acid_base": {
+        "arrhenius_acid": "Produces H⁺ in water",
+        "arrhenius_base": "Produces OH⁻ in water",
+        "neutralization": "Acid + Base → Salt + Water"
+      }
+    },
+    "organic_chemistry": {
+      "hydrocarbons": {
+        "alkanes": {"bond": "Single bonds", "formula": "CₙH₂ₙ₊₂", "examples": ["Methane CH₄", "Ethane C₂H₆"]},
+        "alkenes": {"bond": "One double bond", "formula": "CₙH₂ₙ", "examples": ["Ethene C₂H₄", "Propene C₃H₆"]},
+        "alkynes": {"bond": "One triple bond", "formula": "CₙH₂ₙ₋₂", "examples": ["Ethyne C₂H₂", "Propyne C₃H₄"]},
+        "aromatic": {"description": "Benzene ring structure", "example": "Benzene C₆H₆"}
+      },
+      "functional_groups": {
+        "alcohol": {"suffix": "-ol", "group": "-OH", "example": "Ethanol"},
+        "aldehyde": {"suffix": "-al", "group": "-CHO", "example": "Acetaldehyde"},
+        "ketone": {"suffix": "-one", "group": "-CO-", "example": "Acetone"},
+        "carboxylic_acid": {"suffix": "-oic acid", "group": "-COOH", "example": "Acetic acid"},
+        "amine": {"suffix": "-amine", "group": "-NH₂", "example": "Methylamine"},
+        "ether": {"suffix": "-ether", "group": "-O-", "example": "Diethyl ether"},
+        "ester": {"suffix": "-oate", "group": "-COO-", "example": "Ethyl acetate"},
+        "amide": {"suffix": "-amide", "group": "-CONH₂", "example": "Acetamide"}
+      }
+    },
+    "solutions": {
+      "concentration": {
+        "molarity": "M = moles solute / liters solution",
+        "molality": "m = moles solute / kg solvent",
+        "mass_percent": "% = (mass solute / mass solution) × 100",
+        "ppm": "parts per million = (mass solute / mass solution) × 10⁶"
+      },
+      "colligative": {
+        "boiling_point_elevation": "ΔTb = Kbm",
+        "freezing_point_depression": "ΔTf = Kfm",
+        "osmotic_pressure": "π = iMRT"
+      }
+    },
+    "electrochemistry": {
+      "oxidation": "Loss of electrons, increase in oxidation number",
+      "reduction": "Gain of electrons, decrease in oxidation number",
+      "galvanic_cell": "Spontaneous reaction, produces electricity",
+      "electrolytic_cell": "Non-spontaneous reaction, requires electricity",
+      "standard_electrode_potential": "E° = reduction potential"
+    }
+  },
+  "biology": {
+    "cell_biology": {
+      "cell_types": {
+        "prokaryotic": {
+          "examples": ["Bacteria", "Archaea"],
+          "features": ["No nucleus", "No membrane organelles", "Circular DNA", "Smaller (1-10 μm)"]
+        },
+        "eukaryotic": {
+          "examples": ["Plants", "Animals", "Fungi", "Protists"],
+          "features": ["Nucleus", "Membrane organelles", "Linear DNA", "Larger (10-100 μm)"]
+        }
+      },
+      "organelles": {
+        "nucleus": "Contains DNA, controls cell activities",
+        "mitochondria": "Energy production (ATP) - powerhouse of cell",
+        "ribosomes": "Protein synthesis",
+        "endoplasmic_reticulum": {"rough": "Protein synthesis and modification", "smooth": "Lipid synthesis, detoxification"},
+        "golgi_body": "Protein packaging and transport",
+        "chloroplast": "Photosynthesis (plants only)",
+        "vacuole": "Storage (larger in plants)",
+        "lysosome": "Cellular digestion",
+        "cell_membrane": "Boundary, transport, communication",
+        "centrosome": "Cell division (animal cells)"
+      },
+      "cell_cycle": {
+        "interphase": {"G1": "Cell growth", "S": "DNA synthesis/replication", "G2": "Preparation for division"},
+        "mitosis": ["Prophase", "Metaphase", "Anaphase", "Telophase", "Cytokinesis"],
+        "meiosis": "Produces gametes (4 cells, haploid)",
+        "regulation": "Cyclins and CDKs control progression"
+      }
+    },
+    "genetics": {
+      "mendel_laws": {
+        "dominance": "Dominant allele masks recessive",
+        "segregation": "Alleles separate during gamete formation",
+        "independent_assortment": "Genes on different chromosomes assort independently"
+      },
+      "dna": {
+        "structure": "Double helix",
+        "backbone": "Sugar-phosphate",
+        "base_pairs": {"A": "Adenine", "T": "Thymine", "G": "Guanine", "C": "Cytosine"},
+        "pairing": "A-T, G-C",
+        "replication": "Semi-conservative"
+      },
+      "rna": {
+        "types": ["mRNA", "tRNA", "rRNA"],
+        "base_pairs": {"A": "Adenine", "U": "Uracil", "G": "Guanine", "C": "Cytosine"},
+        "pairing": "A-U, G-C"
+      },
+      "inheritance": {
+        "dominant": "TT, Tt = Tall phenotype",
+        "recessive": "tt = Short phenotype",
+        "codominant": "Both alleles fully expressed",
+        "incomplete_dominance": "Blended phenotype"
+      },
+      "mutations": {
+        "gene_level": {"substitution": "Point mutation", "insertion": "Extra base", "deletion": "Missing base"},
+        "chromosomal": ["Deletion", "Duplication", "Inversion", "Translocation"],
+        "disorders": ["Down syndrome", "Cystic fibrosis", "Sickle cell anemia", "Hemophilia", "Color blindness"]
+      },
+      "genetic_code": {
+        "codon": "3 nucleotides = 1 amino acid",
+        "start": "AUG (Methionine)",
+        "stop": ["UAA", "UAG", "UGA"]
+      }
+    },
+    "human_body": {
+      "skeletal_system": {
+        "bones": 206,
+        "functions": ["Support", "Protection", "Movement", "Blood production", "Mineral storage"],
+        "main_parts": {"skull": "Protection", "spine": "Structure", "ribcage": "Heart/lung protection", "limbs": "Movement"}
+      },
+      "muscular_system": {
+        "types": {"skeletal": "Voluntary movement", "cardiac": "Heart pumping", "smooth": "Involuntary (digestion)"},
+        "functions": ["Movement", "Posture", "Heat production", "Protection"]
+      },
+      "circulatory_system": {
+        "heart": {"chambers": ["Right atrium", "Right ventricle", "Left atrium", "Left ventricle"], "valves": ["Tricuspid", "Mitral", "Pulmonary", "Aortic"]},
+        "blood_vessels": {"arteries": "Carry blood away from heart", "veins": "Carry blood to heart", "capillaries": "Exchange site"},
+        "blood": {"components": ["Red blood cells", "White blood cells", "Platelets", "Plasma"], "functions": ["Transport", "Protection", "Regulation"]}
+      },
+      "respiratory_system": {
+        "organs": ["Nose", "Pharynx", "Larynx", "Trachea", "Bronchi", "Lungs"],
+        "gas_exchange": "O₂ in, CO₂ out in alveoli",
+        "breathing": "Diaphragm contracts/relaxes"
+      },
+      "digestive_system": {
+        "organs": ["Mouth", "Esophagus", "Stomach", "Small intestine", "Large intestine", "Rectum"],
+        "accessory": ["Salivary glands", "Liver", "Pancreas", "Gallbladder"],
+        "enzymes": {"mouth": "Amylase (starch)", "stomach": "Pepsin (protein)", "pancreas": "Trypsin, Lipase", "intestine": "Maltase, Peptidase"}
+      },
+      "nervous_system": {
+        "central": ["Brain", "Spinal cord"],
+        "peripheral": {"somatic": "Voluntary", "autonomic": {"sympathetic": "Fight/flight", "parasympathetic": "Rest/digest"}},
+        "neurons": {"sensory": "Input", "motor": "Output", "interneurons": "Processing"}
+      },
+      "endocrine_system": {
+        "glands": ["Pituitary (master)", "Thyroid", "Parathyroid", "Adrenal", "Pancreas", "Ovaries", "Testes", "Pineal", "Thymus"],
+        "hormones": {
+          "insulin": "Lowers blood sugar",
+          "glucagon": "Raises blood sugar",
+          "thyroxine": "Metabolism regulation",
+          "adrenaline": "Fight or flight response",
+          "estrogen": "Female characteristics",
+          "testosterone": "Male characteristics",
+          "growth_hormone": "Growth and development",
+          "melatonin": "Sleep cycle"
+        }
+      },
+      "immune_system": {
+        "innate": ["Skin", "Mucous membranes", "Phagocytes", "NK cells", "Inflammation"],
+        "adaptive": {"cells": ["T cells (cell-mediated)", "B cells (antibody-mediated)"], "memory": "Long-term protection"},
+        "antibodies": "Y-shaped proteins that recognize specific antigens"
+      }
+    },
+    "ecology": {
+      "levels": ["Organism", "Population", "Community", "Ecosystem", "Biome", "Biosphere"],
+      "food_chain": "Producer → Primary Consumer → Secondary Consumer → Tertiary Consumer → Decomposer",
+      "food_web": "Interconnected food chains",
+      "biogeochemical_cycles": {
+        "carbon": "CO₂ → Plants → Animals → Decomposition → CO₂",
+        "nitrogen": "N₂ → Ammonia → Nitrates → Plants → Animals",
+        "water": "Evaporation → Condensation → Precipitation → Collection"
+      },
+      "ecosystems": {
+        "terrestrial": ["Tropical rainforest", "Desert", "Grassland", "Temperate forest", "Taiga", "Tundra"],
+        "aquatic": {"marine": ["Coral reefs", "Ocean depths"], "freshwater": ["Lakes", "Rivers", "Wetlands"]}
+      },
+      "biodiversity": {
+        "importance": ["Ecosystem services", "Food security", "Medicine", "Climate regulation"],
+        "threats": ["Habitat loss", "Climate change", "Pollution", "Overexploitation", "Invasive species"]
+      }
+    },
+    "evolution": {
+      "natural_selection": {
+        "description": "Organisms with favorable traits survive and reproduce",
+        "evidence": ["Fossils", "Homology", "Vestigial structures", "Biogeography", "DNA evidence"]
+      },
+      "mechanisms": {
+        "mutation": "Source of genetic variation",
+        "gene_flow": "Movement of genes between populations",
+        "genetic_drift": "Random changes in small populations",
+        "natural_selection": "Differential survival and reproduction"
+      },
+      "speciation": {
+        "allopatric": "Geographic isolation",
+        "sympatric": "Same location, different niches"
+      }
+    }
+  },
+  "earth_science": {
+    "earth_layers": {
+      "crust": {"thickness": "5-70 km", "types": ["Continental (lighter)", "Oceanic (denser)"]},
+      "mantle": {"thickness": "2900 km", "composition": "Silicate rocks, semi-solid"},
+      "outer_core": {"thickness": "2200 km", "composition": "Liquid iron-nickel"},
+      "inner_core": {"thickness": "1200 km", "composition": "Solid iron-nickel"}
+    },
+    "plate_tectonics": {
+      "types": {
+        "divergent": "Plates move apart - mid-ocean ridges",
+        "convergent": "Plates move together - mountains, trenches",
+        "transform": "Plates slide past - faults"
+      },
+      "phenomena": ["Earthquakes", "Volcanoes", "Mountain ranges", "Ocean trenches", "Island arcs"]
+    },
+    "rocks": {
+      "igneous": {"formation": "From magma/lava", "examples": ["Granite", "Basalt", "Obsidian", "Pumice"]},
+      "sedimentary": {"formation": "From sediments", "examples": ["Sandstone", "Limestone", "Shale", "Coal"]},
+      "metamorphic": {"formation": "Transformed by heat/pressure", "examples": ["Marble", "Slate", "Quartzite", "Gneiss"]},
+      "rock_cycle": "Igneous → Sedimentary → Metamorphic (and back)"
+    },
+    "atmosphere": {
+      "layers": {
+        "troposphere": "0-12 km - Weather occurs here",
+        "stratosphere": "12-50 km - Ozone layer",
+        "mesosphere": "50-80 km - Coldest layer",
+        "thermosphere": "80-700 km - Aurora, satellites",
+        "exosphere": "700+ km - Outermost"
+      },
+      "composition": {"nitrogen": "78%", "oxygen": "21%", "argon": "0.93%", "other": "0.07%"},
+      "greenhouse_gases": ["CO₂", "CH₄", "H₂O", "N₂O", "O₃"]
+    },
+    "weather_climate": {
+      "weather_elements": ["Temperature", "Pressure", "Humidity", "Wind", "Precipitation"],
+      "phenomena": ["Rain", "Snow", "Hail", "Thunderstorm", "Hurricane", "Tornado", "Monsoon"],
+      "climate_zones": ["Tropical", "Subtropical", "Temperate", "Polar", "Arid"]
+    }
+  }
+}

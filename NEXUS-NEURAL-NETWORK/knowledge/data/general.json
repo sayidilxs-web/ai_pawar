@@ -1,0 +1,437 @@
+{
+  "meta": {
+    "name": "NEXUS General Knowledge",
+    "version": "1.0.0",
+    "last_updated": "2024"
+  },
+  "law": {
+    "bangladesh": {
+      "constitution": {
+        "adopted": "1972",
+        "preamble": "প্রজাতন্ত্র হবে গণতান্ত্রিক রাষ্ট্র",
+        "fundamental": {
+          "state_religion": "Islam (but secular)",
+          "language": "Bengali",
+          "capital": "Dhaka"
+        },
+        "fundamental_rights": [
+          "সমতার অধিকার",
+          "বাকস্বাধীনতা",
+          "ধর্মের স্বাধীনতা",
+          "শিক্ষার অধিকার",
+          "সম্পত্তির অধিকার"
+        ]
+      },
+      "criminal_law": {
+        "penal_code": "ভারতীয় দণ্ডবিধি (adapted)",
+        "sections": {
+          "302": "Murder - মৃত্যুদণ্ড বা যাবজ্জীবন",
+          "304": "Culpable homicide - সর্বোচ্চ ১০ বছর",
+          "325": "Grievous hurt - সর্বোচ্চ ৭ বছর",
+          "379": "Theft - সর্বোচ্চ ৩ বছর",
+          "420": "Cheating - সর্বোচ্চ ৭ বছর",
+          "506": "Criminal intimidation - সর্বোচ্চ ২ বছর",
+          "509": "Word/gesture intended to insult modesty - সর্বোচ্চ ১ বছর"
+        }
+      },
+      "civil_law": {
+        "property_rights": ["স্থাবর সম্পত্তি", "অস্থাবর সম্পত্তি"],
+        "family_law": {
+          "marriage": "বিবাহ নিবন্ধন আইন ১৯৭৪",
+          "divorce": "মুসলিম বিবাহ বিচ্ছেদ আইন ১৯৩৯",
+          "inheritance": "মুসলিম পারিবারিক আইন"
+        },
+        "contract": "চুক্তিবদ্ধ হওয়ার যোগ্যতা, শর্তাবলী"
+      },
+      "court_system": {
+        "supreme_court": {
+          "appellate_division": "সর্বোচ্চ আপীল",
+          "high_court_division": "প্রধান বিচারিক বিভাগ"
+        },
+        "lower_courts": ["জেলা জজ আদালত", "চিফ জুডিশিয়াল ম্যাজিস্ট্রেট", "সহকারী জুডিশিয়াল ম্যাজিস্ট্রেট"]
+      }
+    },
+    "international": {
+      "human_rights": {
+        "udhr": "Universal Declaration of Human Rights - 1948",
+        "rights": [
+          "জীবন ও স্বাধীনতার অধিকার",
+          "নির্যাতন নিষিদ্ধ",
+          "বিচার পাওয়ার অধিকার",
+          "ভাব প্রকাশের স্বাধীনতা",
+          "ধর্মের স্বাধীনতা"
+        ]
+      },
+      "un": {
+        "founded": "1945",
+        "charter": "শান্তি ও নিরাপত্তা রক্ষা",
+        "organs": ["General Assembly", "Security Council", "ICJ", "Secretariat"]
+      }
+    }
+  },
+  "economics": {
+    "basic_concepts": {
+      "microeconomics": {
+        "definition": "Individual economic units behavior",
+        "topics": ["Demand", "Supply", "Price determination", "Consumer behavior", "Production"]
+      },
+      "macroeconomics": {
+        "definition": "Economy as a whole",
+        "topics": ["GDP", "Inflation", "Unemployment", "Monetary policy", "Fiscal policy"]
+      }
+    },
+    "key_terms": {
+      "gdp": "Gross Domestic Product - মোট দেশজ উৎপাদ",
+      "gnp": "Gross National Product",
+      "inflation": "সাধারণ মূল্য বৃদ্ধি",
+      "deflation": "সাধারণ মূল্য হ্রাস",
+      "recession": "দুই বা ততোধিক ত্রৈমাসিক জিডিপি পতন",
+      "unemployment": "বেকারত্ব",
+      "interest_rate": "সুদের হার",
+      "exchange_rate": "বিনিময় হার"
+    },
+    "bangladesh_economy": {
+      "gdp": "৪৫০+ বিলিয়ন USD",
+      "growth_rate": "৬-৭%",
+      "currency": "Taka (৳)",
+      "exchange_rate": "১ USD ≈ ১১০ টাকা",
+      "sectors": {
+        "agriculture": "১১% - ধান, পাট, চা, মাছ",
+        "industry": "২৮% - পোশাক, চামড়া, ওষুধ",
+        "services": "৫২% - ব্যাংকিং, টেলিকম, খুচরা"
+      },
+      "exports": {
+        "rmg": "পোশাক (৮৫%+)",
+        "others": ["চা", "চিংড়ি", "পাট পণ্য", "চামড়া"]
+      },
+      "imports": ["যন্ত্রপাতি", "খাদ্য", "তেল", "ওষুধ"]
+    },
+    "world_economies": {
+      "largest_by_gdp": {
+        "1": "USA - ২৫+ ট্রিলিয়ন USD",
+        "2": "China - ১৮+ ট্রিলিয়ন USD",
+        "3": "Japan - ৫ ট্রিলিয়ন USD",
+        "4": "Germany - ৪+ ট্রিলিয়ন USD",
+        "5": "India - ৩.৫ ট্রিলিয়ন USD"
+      },
+      "trade": {
+        "wto": "World Trade Organization",
+        "blocs": {
+          "eu": "European Union",
+          "nafta_usmca": "US-Mexico-Canada Agreement",
+          "saarc": "South Asian Association",
+          "asean": "Association of Southeast Asian Nations"
+        }
+      }
+    },
+    "banking": {
+      "types": {
+        "central_bank": "মুদ্রা নীতি, ব্যাংকের ব্যাংক (বাংলাদেশ ব্যাংক, ফেডারেল রিজার্ভ)",
+        "commercial_bank": "সাধারণ ব্যাংকিং সেবা",
+        "investment_bank": "মূলধন বাজার সেবা",
+        "Islamic_bank": "শরীয়াহ-ভিত্তিক ব্যাংকিং"
+      },
+      "products": {
+        "deposits": ["সঞ্চয়ী", "চলতি", "মেয়াদী"],
+        "loans": ["কনসিউমার", "ব্যবসায়িক", "কৃষি", "গৃহায়ণ"]
+      },
+      "financial_markets": {
+        "stock_market": "শেয়ার কেনা-বেচা",
+        "bond_market": "বন্ড কেনা-বেচা",
+        "forex": "মুদ্রা বিনিময়"
+      }
+    }
+  },
+  "cooking": {
+    "bangla_cuisine": {
+      "breakfast": {
+        "parata": "ময়মনসিংহের বিখ্যাত পরটা",
+        "khichuri": "ভাত, ডাল, সবজি মিশ্রণ",
+        "chotpoti": "চূড়া মসলা দিয়ে ছোলার ডাল",
+        "shingara": "আলু ও মসলা ভর্তা পুর",
+        "begun_bhaja": "বেগুন ভাজি",
+        "dal": "ডাল"
+      },
+      "lunch_dinner": {
+        "rice": "ভাত - প্রধান খাবার",
+        "fish": {
+          "ilish": "ইলিশ - জাতীয় মাছ",
+            "cooking": ["ভাপা ইলিশ", "ইলিশ ভাপ", "কালিয়া"],
+            "hilsha": "চিংড়ি মাছ",
+            "ruhu": "রুই মাছ",
+            "katli": "কাটলা মাছ"
+        },
+        "meats": {
+            "beef": "গরুর মাংস",
+            "mutton": "খাসির মাংস",
+            "chicken": "মুরগির মাংস",
+            "curry": "বিভিন্ন তরকারি"
+        },
+        "vegetables": {
+            "sabji": ["আলু ভাজি", "ফুলকপি ভাজি", "বেগুন ভাজি", "লাউ শাক", "পুঁই শাক"],
+            "bhuna": ["আলু ভুনা", "বেগুন ভুনা"]
+        },
+        "dal": "মসুর ডাল, মুগ ডাল",
+        "sweets": {
+            "rosogolla": "রসগোল্লা",
+            "sandesh": "সন্দেশ",
+            "rasmalai": "রসমালাই",
+            "cham_cham": "চমচম",
+            "kheer": "খীর/পায়েস"
+        }
+      }
+    },
+    "basic_recipes": {
+      "dal": {
+        "ingredients": ["মুসুর ডাল ১ কাপ", "তেল ২ টেবিল চামচ", "পেঁয়াজ কাটা", "রসুন", "হলুদ ১ চা চামচ", "লবণ", "জিরা গুঁড়া"],
+        "steps": ["ডাল ধুয়ে ১০ মিনিট ভিজিয়ে রাখুন", "পেঁয়াজ ভাজুন", "রসুন দিন", "হলুদ, লবণ, জিরা দিন", "পানি দিন এবং সিদ্ধ করুন", "পরিবেশন করুন"]
+      },
+      "fish_curry": {
+        "ingredients": ["রুই মাছ ৪ টুকরা", "পেঁয়াজ কাটা", "আদা-রসুন বাটা", "হলুদ", "মরিচ গুঁড়া", "সরিষার তেল", "টমেটো"],
+        "steps": ["মাছ ধুয়ে হলুদ মাখান", "তেলে পেঁয়াজ ভাজুন", "আদা-রসুন দিন", "মসলা দিন", "পানি দিন", "মাছ দিন", "সিদ্ধ হলে পরিবেশন করুন"]
+      }
+    },
+    "indian_cuisine": {
+      "biryani": "কোকরা/চিনি মিশ্র ভাত",
+      "curry": "মাংস/সবজি তরকারি",
+      "tandoori": "তন্দুরিত",
+      "naan": "লেবু মিশ্রিত রুটি",
+      "samosa": "মসলা ভর্তা পুর",
+      "pakora": "সবজি ভাজা ব্যাটারে"
+    },
+    "world_cuisine": {
+      "chinese": {
+        "dishes": ["Fried rice", "Noodles", "Dim sum", "Kung Pao chicken", "Sweet and sour"],
+        "methods": ["Stir-fry", "Steaming", "Deep frying"]
+      },
+      "italian": {
+        "dishes": ["Pasta", "Pizza", "Risotto", "Lasagna"],
+        "pasta_types": ["Spaghetti", "Penne", "Fusilli", "Ravioli"]
+      },
+      "mexican": {
+        "dishes": ["Tacos", "Burritos", "Enchiladas", "Quesadilla"],
+        "ingredients": ["Tortilla", "Beans", "Rice", "Chili", "Cheese"]
+      }
+    }
+  },
+  "sports": {
+    "cricket": {
+      "bangladesh": {
+        "odi_debut": "১৯৯৯ (vsPakistan)",
+        "test_debut": "২০০০ (vsIndia)",
+        "t20_debut": "২০০৬",
+        "achievements": ["World Cup: Quarter-final 2015", "Asia Cup Final 2018", "CT Semi-final 2017"]
+      },
+      "rules": {
+        "overs": "৫০ overs per side (ODI)",
+        "t20": "২০ overs per side",
+        "test": "No limit, up to 5 days",
+        "wickets": 10,
+        "runs_per_ball": "সাধারণত ১-৬ রান"
+      },
+      "positions": ["Batsman", "Bowler", "All-rounder", "Wicket-keeper", "Fielder"]
+    },
+    "football": {
+      "bangladesh": {
+        "founded": "১৯৭২",
+        "league": "বাংলাদেশ প্রিমিয়ার লিগ"
+      },
+      "fifa_world_cup": {
+        "winners": ["Brazil (5)", "Germany/Italy (4)", "Argentina/France (3)", "Uruguay (2)"],
+        "last_2022": "Argentina (Messi)"
+      },
+      "rules": {
+        "players": "১১ জন প্রতি দল",
+        "duration": "২×৪৫ মিনিট",
+        "offside": "শেষ প্রতিরক্ষকের সামনে থাকা",
+        "fouls": "পেনাল্টি"
+      }
+    },
+    "olympics": {
+      "modern": {
+        "started": "১৮৯৬ (Athens)",
+        "motto": "Faster, Higher, Stronger",
+        "events": "৩০০+ ইভেন্ট"
+      },
+      "bangladesh_medals": "কোনো পদক জিতেনি",
+      "winter": "Winter Olympics - শীতকালীন খেলা"
+    },
+    "chess": {
+      "bangladesh": {
+        "players": ["GM Ziaur Rahman", "GM Niaz Murshed", "IM Rahman"],
+        "achievements": "Commonwealth Gold 2011"
+      },
+      "pieces": {
+        "king": "রাজা - সবচেয়ে গুরুত্বপূর্ণ",
+        "queen": "মন্ত্রী - সবচেয়ে শক্তিশালী",
+        "rook": "হাতি - সরলরেখায়",
+        "bishop": "বিষপ - কোণে কোণে",
+        "knight": "ঘোড়া - L-আকৃতিতে",
+        "pawn": "গোল্লা - এক ঘর সামনে"
+      }
+    },
+    "athletics": {
+      "track": ["100m", "200m", "400m", "800m", "1500m", "Marathon (42.195km)"],
+      "field": ["Long jump", "High jump", "Shot put", "Javelin", "Discus"]
+    }
+  },
+  "arts": {
+    "music": {
+      "bangla": {
+        "rabindrasangeet": "রবীন্দ্রনাথ ঠাকুরের ২২২১টি গান",
+        "nazrul_geeti": "কাজী নজরুল ইসলামের বিদ্রোহী গান",
+        "folk": {
+          "baul": "লালন শাহ, শাহ আবদুল করিম",
+          "bhatiali": "নদীমাতা গান",
+          "jatra": "যাত্রা গান"
+        }
+      },
+      "classical": {
+        "hindustani": "ভারতীয় শাস্ত্রীয় সংগীত (উত্তর ভারত)",
+        "carnatic": "দক্ষিণ ভারতীয় শাস্ত্রীয়",
+        "western": "সিম্ফনি, অপেরা"
+      },
+      "modern": {
+        "genres": ["Rock", "Pop", "Jazz", "Hip-hop", "R&B", "EDM"]
+      }
+    },
+    "painting": {
+      "bangladeshi": {
+        "painters": ["Zainul Abedin", "Shafi M. R. Choudhury", "A. S. M. Mosharraf", "Kazi Ghiyasuddin"],
+        "zamana": "Zainul Abedin - ময়মনসিংহের দুর্ভিক্ষের ছবি"
+      },
+      "world": {
+        "renaissance": ["Leonardo da Vinci", "Michelangelo", "Raphael"],
+        "modern": ["Pablo Picasso", "Salvador Dali", "Claude Monet", "Vincent van Gogh"]
+      }
+    },
+    "film": {
+      "bangladesh": {
+        "first": "The Last Kiss (১৯৫৬) - পূর্ব পাকিস্তান",
+        "golden_age": "খান সাহেব",
+        "recent": "শহীদুল ইসলাম খোকন, নাসির উদ্দিন ইউসুফ"
+      },
+      "india": {
+        "bollywood": "মুম্বাই ফিল্ম ইন্ডাস্ট্রি",
+        "tollywood": "কলকাতা ফিল্ম ইন্ডাস্ট্রি"
+      },
+      "world": {
+        "hollywood": "আমেরিকান ফিল্ম",
+        "oscars": "Academy Awards"
+      }
+    },
+    "dance": {
+      "bangladesh": {
+        "folk": ["Baul dance", "Manipuri", "Lalon dance"],
+        "classical": "Odissi, Kathak"
+      },
+      "world": ["Ballet", "Contemporary", "Salsa", "Tango"]
+    }
+  },
+  "philosophy": {
+    "schools": {
+      "western": {
+        "ancient": {
+          "socrates": "জ্ঞান হলো স্মরণ (Anamnesis)",
+          "plato": "আইডিয়ার জগত, রূপান্তরবাদ",
+          "aristotle": "যুক্তিবিদ্যা, নৈতিকতা"
+        },
+        "modern": {
+          "descartes": "Cogito ergo sum - আমি ভাবছি, তাহলে আমি আছি",
+          "kant": "Transcendental idealism, Categorical imperative",
+          "hegel": "Dialectical method",
+          "nietzsche": "God is dead, Will to power"
+        },
+        "contemporary": {
+          "sartre": "Existentialism - Existence precedes essence",
+          "camus": "Absurdism",
+          "foucault": "Power and knowledge"
+        }
+      },
+      "eastern": {
+        "buddhism": {
+          "founder": "Siddhartha Gautama (Buddha)",
+          "teachings": ["Four Noble Truths", "Eightfold Path", "Middle Way", "Nirvana"]
+        },
+        "hinduism": {
+          "concepts": ["Dharma", "Karma", "Moksha", "Atman"],
+          "texts": ["Vedas", "Upanishads", "Bhagavad Gita"]
+        },
+        "confucianism": {
+          "founder": "Confucius",
+          "teachings": ["Filial piety", "Five relationships", "仁 (Ren - Benevolence)"]
+        },
+        "taoism": {
+          "founder": "Laozi",
+          "concepts": ["Tao (Way)", "Wu wei (Non-action)", "Yin-Yang"]
+        }
+      },
+      "islamic": {
+        "philosophers": ["Al-Farabi", "Ibn Sina (Avicenna)", "Ibn Rushd (Averroes)", "Al-Ghazali"],
+        "concepts": ["Tawhid", "Islamic ethics", "Reason and revelation"]
+      }
+    }
+  },
+  "religion": {
+    "islam": {
+      "founder": "Prophet Muhammad (SAW)",
+      "founded": "7th century CE, Arabia",
+      "holy_book": "Quran (কোরআন)",
+      "pillars": {
+        "1": "Shahada - বিশ্বাসের সাক্ষ্য",
+        "2": "Salah - প্রতিদিন ৫ ওয়াক্ত নামাজ",
+        "3": "Sawm - রমজানে রোজা",
+        "4": "Zakat - সম্পদের ২.৫% দান",
+        "5": "Hajj - মক্কায় তীর্থযাত্রা (যদি সামর্থ্য থাকে)"
+      },
+      "beliefs": ["Allah is One", "Prophets", "Angels", "Holy Books", "Day of Judgment", "Predestination"],
+      "sects": ["Sunni", "Shia", "Sufi"]
+    },
+    "christianity": {
+      "founder": "Jesus Christ",
+      "founded": "1st century CE, Israel",
+      "holy_book": "Bible (বাইবেল)",
+      "holy_book_parts": {
+        "old_testament": "Hebrew Bible",
+        "new_testament": "Gospels, Acts, Epistles, Revelation"
+      },
+      "beliefs": ["One God (Trinity)", "Jesus as Son of God", "Salvation through grace", "Afterlife"],
+      "branches": ["Catholicism", "Eastern Orthodoxy", "Protestantism"]
+    },
+    "hinduism": {
+      "founded": "Ancient, no single founder",
+      "holy_books": ["Vedas", "Upanishads", "Bhagavad Gita", "Ramayana", "Mahabharata"],
+      "core_concepts": ["Dharma (duty)", "Karma (action)", "Samsara (rebirth)", "Moksha (liberation)"],
+      "deities": ["Brahma (Creator)", "Vishnu (Preserver)", "Shiva (Destroyer)", "Lakshmi", "Saraswati", "Durga"],
+      "practices": ["Yoga", "Meditation", "Puja", "Mantras"]
+    },
+    "buddhism": {
+      "founder": "Siddhartha Gautama (The Buddha)",
+      "founded": "6th century BCE, India",
+      "holy_books": ["Tripitaka", "Mahayana Sutras"],
+      "four_noble_truths": [
+        "Dukkha (Suffering exists)",
+        "Samudaya (Cause of suffering is craving)",
+        "Nirodha (Cessation of suffering is possible)",
+        "Marga (Path to end suffering)"
+      ],
+      "eightfold_path": ["Right understanding", "Right thought", "Right speech", "Right action", "Right livelihood", "Right effort", "Right mindfulness", "Right concentration"]
+    },
+    "other_religions": {
+      "sikhism": {
+        "founder": "Guru Nanak",
+        "holy_book": "Guru Granth Sahib",
+        "belief": "Monotheism, Equality"
+      },
+      "judaism": {
+        "founder": "Abraham",
+        "holy_book": "Torah (Tanakh)",
+        "belief": "One God, Covenant"
+      },
+      "baha_i": {
+        "founded": "19th century",
+        "belief": "Unity of God, Unity of religions"
+      }
+    }
+  }
+}

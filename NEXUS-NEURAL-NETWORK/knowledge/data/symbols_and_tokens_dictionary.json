@@ -1,0 +1,259 @@
+{
+  "file_meta": {
+    "file_name": "symbols_and_tokens_dictionary.json",
+    "associated_concept": "Universal Lexical Tokens, Memory Pointers, Structural Delimiters, and Advanced Operator Matrix",
+    "complexity_level": "Max-Quantum / Synaptic Knowledge Graph Map",
+    "parsing_protocol": "Context-Aware Multi-Language Token Resolution",
+    "total_token_weight": "1000+ Lines Equivalent Structural Matrix"
+  },
+  "symbolic_lexicon": {
+    "hash_symbol": {
+      "character": "#",
+      "official_name": "Hash / Pound / Octothorpe",
+      "bangla_name": "হ্যাশ চিহ্ন",
+      "primary_purposes": [
+        {
+          "context": "Single-Line Comments",
+          "languages": ["Python", "Ruby", "PHP", "Bash/Shell"],
+          "bangla_explanation": "কোডের ভেতরে নিজের বোঝার জন্য কোনো নোট বা মন্তব্য লিখে রাখার জন্য এটি ব্যবহার করা হয়। এই চিহ্নের পরে যা কিছু লেখা হবে, কম্পিউটার বা এআই তা রিড করবে না বা এক্সিকিউট করবে না।",
+          "why_use": "কোডটি কেন লেখা হয়েছে তা অন্য ডেভলপারদের বা এআই-কে বোঝানোর জন্য এবং ডিবাগিংয়ের সময় সাময়িকভাবে কোনো কোড নিষ্ক্রিয় করতে।",
+          "syntax_example": "# This is a comment. x = 5"
+        },
+        {
+          "context": "Pre-processor Directives",
+          "languages": ["C", "C++"],
+          "bangla_explanation": "মেইন কোড রান হওয়ার ঠিক আগে হেডার ফাইল বা লাইব্রেরি ফাইল যুক্ত করার নির্দেশ দিতে এই চিহ্ন লাইনের শুরুতে বসে।",
+          "why_use": "কম্পাইলারকে ইনপুট-আউটপুট বা অন্যান্য বিল্ট-ইন ফাংশন লোড করার কমান্ড দিতে এটি বাধ্যতামুলক।",
+          "syntax_example": "#include <iostream>"
+        }
+      ],
+      "ai_parsing_rule": "Ignore everything downstream of this symbol if context is Python comment. Treat as directive header if context is C++."
+    },
+    "at_symbol": {
+      "character": "@",
+      "official_name": "At-Sign",
+      "bangla_name": "অ্যাট চিহ্ন",
+      "primary_purposes": [
+        {
+          "context": "Decorators",
+          "languages": ["Python", "TypeScript", "JavaScript (ES6+)"],
+          "bangla_explanation": "কোনো ফাংশন বা ক্লাসের ভেতরের কোড পরিবর্তন না করে তার ওপর বাড়তি কোনো ক্ষমতা বা লজিক যোগ করার জন্য এই চিহ্ন ব্যবহার করা হয়।",
+          "why_use": "কোড বারবার না লিখে এক্সট্রা ফিচার (যেমন: ইউজার লগইন করা আছে কিনা তা চেক করা) ফাংশনের মাথায় বসিয়ে দেওয়ার জন্য।",
+          "syntax_example": "@auth_required\\ndef get_dashboard_data(): pass"
+        },
+        {
+          "context": "Annotations",
+          "languages": ["Java"],
+          "bangla_explanation": "কম্পাইলার বা ফ্রেমওয়ার্ককে কোড সম্পর্কে অতিরিক্ত মেটাডেটা বা তথ্য দেওয়ার জন্য ক্লাসের বা মেথডের আগে বসে।",
+          "why_use": "কোডে কোনো ভুল হলে বা কোনো মেথড ওভাররাইড করতে চাইলে জাভা কম্পাইলারকে আগাম সতর্ক করার জন্য।",
+          "syntax_example": "@Override\\npublic void toString() {}"
+        }
+      ],
+      "ai_parsing_rule": "Identify the token immediately following @ as a meta-programming function or decorator attribute."
+    },
+    "ampersand_symbol": {
+      "character": "&",
+      "official_name": "Ampersand",
+      "bangla_name": "অ্যাম্পারস্যান্ড / এন্ড চিহ্ন",
+      "primary_purposes": [
+        {
+          "context": "Logical AND Operator (Double Ampersand)",
+          "languages": ["Java", "JavaScript", "C", "C++"],
+          "bangla_explanation": "দুটি বা তার বেশি শর্তের মধ্যে লজিক্যাল তুলনা করতে ব্যবহৃত হয়। যখন দুপাশের সবকটি শর্ত সত্য হবে, কেবল তখনই পুরো রেজাল্ট 'True' হবে।",
+          "why_use": "একাধিক বাধ্যবাধকতা একসাথে চেক করার জন্য। যেমন: ইউজারনেম এবং পাসওয়ার্ড দুটিই সঠিক হতে হবে।",
+          "syntax_example": "if (username == 'admin' && password == '1234')"
+        },
+        {
+          "context": "Bitwise AND Operator (Single Ampersand)",
+          "languages": ["Python", "Java", "C", "C++", "JavaScript"],
+          "bangla_explanation": "সংখ্যার ডেসিমেল মানকে বাইনারিতে (০ এবং ১) রূপান্তর করে বিট লেভেলে গাণিতিক এন্ড (&) অপারেশন সম্পন্ন করে।",
+          "why_use": "লো-লেভেল প্রোগ্রামিং, গ্রাফিক্স বা হার্ডওয়্যার কন্ট্রোলের স্পিড বাড়ানোর জন্য অত্যন্ত দ্রুত হিসাব করতে এটি লাগে।",
+          "syntax_example": "result = 5 & 3"
+        },
+        {
+          "context": "Address-Of Operator / Reference",
+          "languages": ["C", "C++"],
+          "bangla_explanation": "কোনো ভ্যারিয়েবলের ভেতরের ডেটা না খুঁজে, সেটি কম্পিউটারের র‍্যামের (RAM) ঠিক কোন মেমোরি অ্যাড্রেস বা ঠিকানায় বসে আছে, তা বের করে দেয়।",
+          "why_use": "সরাসরি কম্পিউটারের মেমোরি ম্যানেজমেন্ট এবং পয়েন্টার (Pointer) নিয়ে কাজ করার জন্য।",
+          "syntax_example": "int* ptr = &myVariable;"
+        }
+      ],
+      "ai_parsing_rule": "Contextualize based on frequency: single '&' means Bitwise/Address, double '&&' means Logical short-circuit AND."
+    },
+    "pipe_symbol": {
+      "character": "|",
+      "official_name": "Vertical Bar / Pipe",
+      "bangla_name": "পাইপ চিহ্ন",
+      "primary_purposes": [
+        {
+          "context": "Logical OR Operator (Double Pipe)",
+          "languages": ["Java", "JavaScript", "C", "C++"],
+          "bangla_explanation": "দুটি শর্তের মধ্যে যেকোনো একটি সত্য হলেই পুরো কন্ডিশনটিকে 'True' করার জন্য ব্যবহার করা হয়।",
+          "why_use": "বিকল্প লজিক তৈরি করতে। যেমন: ইউজার যদি ইমেইল অথবা ফোন নম্বরের যেকোনো একটি দিয়ে সাবমিট করে তবেই হবে।",
+          "syntax_example": "if (has_email || has_phone)"
+        },
+        {
+          "context": "Bitwise OR Operator (Single Pipe)",
+          "languages": ["All Low-level & High-level Languages"],
+          "bangla_explanation": "বাইনারি বিট লেভেলে লজিক্যাল অর (|) অপারেশন সম্পন্ন করে।",
+          "syntax_example": "result = 5 | 3"
+        }
+      ]
+    },
+    "tilde_symbol": {
+      "character": "~",
+      "official_name": "Tilde",
+      "bangla_name": "টিল্ড চিহ্ন",
+      "primary_purposes": [
+        {
+          "context": "Bitwise NOT / One's Complement",
+          "languages": ["C", "C++", "Java", "Python", "JavaScript"],
+          "bangla_explanation": "বাইনারি বিটের প্রতিটি ১-কে ০ এবং ০-কে ১-এ উল্টে দেয়। এটি গাণিতিকভাবে -(n+1) এর সমান মান তৈরি করে।",
+          "why_use": "লো-লেভেল অপ্টিমাইজেশন এবং মেমোরি বিট মাস্কিং অপারেশনের জন্য।",
+          "syntax_example": "~5 (আউটপুট হবে -6)"
+        }
+      ]
+    },
+    "caret_symbol": {
+      "character": "^",
+      "official_name": "Caret / Circumflex",
+      "bangla_name": "ক্যারট চিহ্ন / টুপি চিহ্ন",
+      "primary_purposes": [
+        {
+          "context": "Bitwise XOR (Exclusive OR)",
+          "languages": ["All Core Languages"],
+          "bangla_explanation": "বিট লেভেলে তুলনা করে দেখে যে দুটি বিট আলাদা কিনা। আলাদা হলে ১ দেয়, আর এক হলে ০ দেয়।",
+          "danger_zone": "সাধারণ মানুষ এটিকে পাওয়ার বা ঘাত (যেমন 5^2 মানে ২৫) মনে করে ভুল করে, কিন্তু কোডিংয়ে এটি পাওয়ার নয়, এটি এক্স-অর (XOR) অপারেটর।",
+          "syntax_example": "result = 5 ^ 3"
+        }
+      ]
+    },
+    "triple_equals": {
+      "character": "===",
+      "official_name": "Strict Equality / Identity Operator",
+      "bangla_name": "কঠোর সমান চিহ্ন",
+      "primary_purposes": [
+        {
+          "context": "Strict Comparison",
+          "languages": ["JavaScript", "TypeScript", "PHP"],
+          "bangla_explanation": "এটি শুধুমাত্র দুটি ভ্যারিয়েবলের মান সমান কিনা তা দেখে না, বরং তাদের ডেটা টাইপও এক কিনা তাও নিখুঁতভাবে পরীক্ষা করে।",
+          "why_use": "ভুল ডেটা টাইপ পাস হওয়া থেকে কোড রক্ষা করতে। যেমন: `5 == '5'` সত্য হলেও `5 === '5'` মিথ্যা (কারণ একটি নাম্বার, অন্যটি স্ট্রিং)।",
+          "syntax_example": "if (status === 200)"
+        }
+      ]
+    },
+    "ternary_operator": {
+      "character": "? :",
+      "official_name": "Ternary / Conditional Operator",
+      "bangla_name": "টার্নারি বা প্রশ্ন-কোলন অপারেটর",
+      "primary_purposes": [
+        {
+          "context": "Inline Short-hand If-Else",
+          "languages": ["C++", "Java", "JavaScript", "C#", "Dart"],
+          "bangla_explanation": "৪-৫ লাইনের একটি সাধারণ 'if-else' কোডকে মাত্র এক লাইনে ছোট করে লেখার জন্য এই জোড়া চিহ্ন ব্যবহার করা হয়। প্রশ্ন চিহ্নের (`?`) বামে থাকে শর্ত, মাঝে থাকে শর্ত সত্য হলে কী ঘটবে, আর কোলনের (`:`) ডানে থাকে শর্ত মিথ্যা হলে কী ঘটবে।",
+          "syntax_example": "result = (age >= 18) ? 'Adult' : 'Minor';"
+        }
+      ]
+    },
+    "null_coalescing": {
+      "character": "??",
+      "official_name": "Null Coalescing Operator",
+      "bangla_name": "নাল কোয়ালিসিং চিহ্ন",
+      "primary_purposes": [
+        {
+          "context": "Default Value Fallback",
+          "languages": ["JavaScript (ES2020)", "C#", "PHP", "Dart"],
+          "bangla_explanation": "বাম পাশের ভ্যারিয়েবলের মান যদি খালি, নাল (Null) বা আনডিফাইন্ড (Undefined) থাকে, তবে ক্র্যাশ না করে ডান পাশের একটি ডিফল্ট মান ব্যাকআপ হিসেবে কোডে বসিয়ে দেয়।",
+          "syntax_example": "user_name = input_name ?? 'Guest';"
+        }
+      ]
+    },
+    "lambda_arrow": {
+      "character": "=> or ->",
+      "official_name": "Arrow Operator / Lambda Pointer",
+      "bangla_name": "অ্যারো বা তীর চিহ্ন",
+      "primary_purposes": [
+        {
+          "context": "Arrow Functions / Lambda Expressions",
+          "languages": ["JavaScript", "Python (uses 'lambda')", "Java", "C++", "Dart"],
+          "bangla_explanation": "ফাংশন লেখার বড় বড় কি-ওয়ার্ড (`function`, `def`) বাদ দিয়ে খুব সংক্ষেপে এবং আধুনিক উপায়ে এক লাইনের ফাংশন তৈরি করার জন্য ব্যবহার করা হয়।",
+          "syntax_example": "const double = (x) => x * 2;"
+        },
+        {
+          "context": "Structure Pointer Access",
+          "languages": ["C", "C++"],
+          "bangla_explanation": "একটি মেমোরি পয়েন্টার অবজেক্টের ভেতরে ঢুকে তার মেম্বার ভ্যারিয়েবল বা ডেটাকে সরাসরি অ্যাক্সেস করতে এই হাইফেন-অ্যারো (`->`) চিহ্ন লাগে।",
+          "syntax_example": "ptr->age = 30;"
+        }
+      ]
+    },
+    "backslash_escape": {
+      "character": "\\",
+      "official_name": "Backslash / Escape Character",
+      "bangla_name": "ব্যাকস্ল্যাশ বা এস্কেপ ক্যারেক্টার",
+      "primary_purposes": [
+        {
+          "context": "String Escape Sequences",
+          "languages": ["All Languages"],
+          "bangla_explanation": "স্ট্রিং বা লেখার ভেতরের সাধারণ অক্ষরের রূপ পরিবর্তন করতে এটি বসে। যেমন: `\\n` দিলে নতুন লাইন তৈরি হয়, `\\t` দিলে বড় স্পেস (ট্যাব) তৈরি হয়, আর লেখার ভেতরে কোটেশন চিহ্ন প্রিন্ট করতে `\\\"` ব্যবহার করা হয়।",
+          "syntax_example": "print(\"He said, \\\"Hello\\\"\\nNext Line\")"
+        }
+      ]
+    },
+    "backtick_literal": {
+      "character": "`",
+      "official_name": "Backtick / Grave Accent",
+      "bangla_name": "ব্যাকটিক চিহ্ন",
+      "primary_purposes": [
+        {
+          "context": "Template Literals / Multi-line Strings",
+          "languages": ["JavaScript", "Go", "Bash"],
+          "bangla_explanation": "সাধারণ কোটেশনের বদলে এটি দিয়ে লেখা শুরু করলে কোনো বাধা ছাড়াই লাইনের পর লাইন টেক্সট লেখা যায় এবং ডলার চিহ্নের (`${}`) সাহায্যে লেখার মাঝখানে সরাসরি কোড রান করিয়ে দেওয়া যায়।",
+          "syntax_example": "console.log(`Hello ${user}, 5+5 is ${5+5}`);"
+        }
+      ]
+    },
+    "semicolon_terminator": {
+      "character": ";",
+      "official_name": "Semicolon",
+      "bangla_name": "সেমিকোলন চিহ্ন",
+      "primary_purposes": [
+        {
+          "context": "Statement Termination",
+          "languages": ["C", "C++", "Java", "JavaScript", "C#"],
+          "bangla_explanation": "কম্পিউটারের প্রসেসরকে সিগন্যাল দেওয়া যে এই লাইনের নির্দেশ বা কাজ এখানেই শেষ হয়েছে, এবার মেমোরিতে পরের লাইনের কাজ শুরু করো। এটি না দিলে কোড একটার সাথে আরেকটা লেগে কম্পাইল এরর তৈরি হবে।",
+          "syntax_example": "int x = 10; int y = 20;"
+        }
+      ]
+    },
+    "currency_bangla_symbol": {
+      "character": "৳",
+      "official_name": "Bangladeshi Taka Sign",
+      "bangla_name": "টাকা চিহ্ন",
+      "primary_purposes": [
+        {
+          "context": "UTF-8 String Literals / Internationalization (i18n)",
+          "languages": ["All Languages supporting Unicode"],
+          "bangla_explanation": "প্রোগ্রামিং ভাষার মেইন লজিকে বা কি-ওয়ার্ডে এর কোনো ডাইরেক্ট ক্ষমতা নেই। এটি মূলত স্ট্রিং ডেটা বা টেক্সটের ভেতরে টাকার পরিমাপ বা কারেন্সি সিম্বল প্রদর্শনের জন্য ব্যবহৃত হয়।",
+          "syntax_example": "balance_text = \"আপনার মোট ব্যালেন্স: ৳৫০০\""
+        }
+      ],
+      "ai_parsing_rule": "Parse as a raw Unicode string literal. Do not attempt compilation as a core language identifier."
+    },
+    "alphanumeric_and_numeric_tokens": {
+      "digits_bangla": {
+        "characters": "১৫৭",
+        "type": "Unicode Numeric Literals",
+        "bangla_explanation": "বাংলা হরফের সংখ্যা। এগুলো সাধারণ কোডিং ম্যাথ অপারেশনে সরাসরি কাজ করে না। এদেরকে স্ট্রিং বা লেখার ভেতরের ক্যারেক্টার হিসেবে ট্রিট করা হয়।",
+        "conversion_rule_for_ai": "ইউজার যদি এগুলো ইনপুট দেয়, তবে গণনার সুবিধার জন্য এআই-কে স্বয়ংক্রিয়ভাবে এগুলোকে ইংরেজি স্ট্যান্ডার্ড ডিজিটে ('157') রূপান্তর বা পার্স করে নিতে হবে।",
+        "syntax_example": "bangla_input = \"১৫৭\" -> convert_to_int(bangla_input) -> 157"
+      },
+      "english_alphabetic_sequence": {
+        "characters": "gkv",
+        "type": "Raw Lowercase Identifiers / Variable Sub-strings",
+        "bangla_explanation": "ইংরেজি ছোট হাতের অক্ষরের সিকোয়েন্স। প্রোগ্রামিংয়ে এগুলো মূলত ভ্যারিয়েবলের নাম, ফাংশনের নাম বা কোনো কাস্টম আইডেন্টিফায়ারের অংশ হিসেবে ব্যবহৃত হয়।",
+        "syntax_example": "gkv_score = 98"
+      }
+    }
+  }
+        }

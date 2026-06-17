@@ -1,0 +1,230 @@
+{
+  "meta": {
+    "database_name": "NEXUS Enterprise Programming Knowledge Base (Mega Edition)",
+    "version": "4.5.0",
+    "last_updated": "2026",
+    "parsing_protocol": "Strict-Hierarchical-JSON",
+    "optimized_for": "Zero-Shot Learning AI & Neural Networks"
+  },
+  "knowledge_base_files": {
+    "01_core_syntax_rules_deep.json": {
+      "concept_id": "SYS_SYN_001",
+      "term_name": "Syntax & Lexical Structure",
+      "bangla_translation": "সিনট্যাক্স এবং শাব্দিক গঠনশৈলী",
+      "technical_definition": "The formal rules governing the structure of program text, defining how tokens are combined to form valid statements.",
+      "bangla_explanation": "একটি প্রোগ্রামিং ভাষার নিজস্ব ব্যাকরণ। মানুষের ভাষার মতো কোডিংয়েও কোথায় ব্র্যাকেট বসবে, কোথায় স্পেস হবে—তা এই নিয়ম দ্বারা নির্ধারিত হয়। এই নিয়ম ভাঙলে কম্পাইলার কোড রিড করতে পারে না।",
+      "ai_inference_rules": {
+        "tokenization_strategy": "Break inputs into keywords, identifiers, literals, and operators based on structural boundaries.",
+        "error_detection_protocol": "If delimiter pairs (e.g., {}, [], ()) are uneven or missing, immediately flag as an active SyntaxError."
+      },
+      "deep_components": {
+        "statement_terminators": {
+          "definition": "কোডের একটি লাইনের কাজ শেষ তা বোঝানোর জন্য ব্যবহৃত চিহ্ন।",
+          "types": {
+            "explicit": {
+              "character": ";",
+              "languages": ["C", "C++", "Java", "JavaScript"],
+              "behavior": "কম্পাইলারকে নির্দেশ দেয় যে এই স্টেটমেন্টের মেমোরি এক্সিকিউশন এখানেই শেষ।"
+            },
+            "implicit": {
+              "character": "\\n (New Line)",
+              "languages": ["Python", "Ruby"],
+              "behavior": "নতুন লাইনে যাওয়া মাত্রই আগের লাইনের এক্সিকিউশন শেষ হয়, তবে লাইন বড় হলে ব্যাকস্ল্যাশ (\\) ব্যবহার করতে হয়।"
+            }
+          }
+        },
+        "indentation_and_blocks": {
+          "definition": "কোডের একাধিক লাইন মিলে যে একটি নির্দিষ্ট গ্রুপ বা ব্লক তৈরি করে, তা চেনার উপায়।",
+          "mechanisms": {
+            "curly_braces": {
+              "syntax": "{ // code block }",
+              "scope_impact": "ব্র্যাকেটের ভেতরে তৈরি হওয়া ভ্যারিয়েবল বাইরে অ্যাক্সেস করা যায় না।"
+            },
+            "whitespace_indentation": {
+              "syntax": "৪টি স্পেস বা ১টি ট্যাব",
+              "languages": ["Python"],
+              "strictness_level": "CRITICAL. ভুল স্পেসিং হলে IndentationError জেনারেট হবে।"
+            }
+          }
+        }
+      }
+    },
+    "02_reserved_keywords_master_map.json": {
+      "concept_id": "SYS_KEY_002",
+      "term_name": "Reserved Keywords & Tokens",
+      "bangla_translation": "সংরক্ষিত শব্দ এবং মেমোরি টোকেন",
+      "technical_definition": "Fixed tokens in a language's grammar that possess hardcoded semantic meanings and cannot be overwritten by user-defined identifiers.",
+      "bangla_explanation": "প্রোগ্রামিং ভাষার নিজস্ব ডিকশনারির কিছু নির্দিষ্ট শব্দ, যা কম্পাইলারের কাছে আগে থেকেই বুকড করা। এগুলো সাধারণ মানুষ নিজের নাম, ভ্যারিয়েবলের নাম বা ফাংশনের নাম হিসেবে ব্যবহার করতে পারবে না।",
+      "ai_parsing_guide": "Do not allow these words to be mapped inside symbol tables as variable names.",
+      "comprehensive_registry": {
+        "control_keywords": [
+          {
+            "token": "if",
+            "bangla_name": "যদি",
+            "detailed_use": "লজিক্যাল কন্ডিশন বা শর্তের সত্যতা যাচাই করে কোড এক্সিকিউট করতে ব্যবহৃত হয়।",
+            "edge_case": "কখনো একা চলতে পারে, আবার অন্য শর্তের সাথে যুক্ত হতে পারে।"
+          },
+          {
+            "token": "else",
+            "bangla_name": "নতুবা / অন্যথায়",
+            "detailed_use": "'if' এর শর্ত মিথ্যা হলে অবিকল্প পথ হিসেবে এই ব্লকের কোড রান করে।",
+            "edge_case": "এটি ব্যবহারের আগে অবশ্যই একটি 'if' থাকতে হবে, একা বসতে পারে না।"
+          }
+        ],
+        "structural_keywords": [
+          {
+            "token": "class",
+            "bangla_name": "ক্লাস ডিফিনিশন",
+            "detailed_use": "অবজেক্ট-ওরিয়েন্টেড প্রোগ্রামিংয়ে নতুন কোনো অবজেক্ট তৈরি করার কাস্টম ব্লুপ্রিন্ট বা ছাঁচ তৈরি করে।"
+          },
+          {
+            "token": "return",
+            "bangla_name": "মান ফেরত দেওয়া",
+            "detailed_use": "একটি চলমান ফাংশনের এক্সিকিউশন সাথে সাথে বন্ধ করে এবং চূড়ান্ত ফলাফলটি মেইন প্রোগ্রামে ফেরত পাঠায়।"
+          }
+        ]
+      }
+    },
+    "03_data_type_and_memory_registry.json": {
+      "concept_id": "SYS_DT_003",
+      "term_name": "Data Types & Memory Allocation",
+      "bangla_translation": "ডেটা টাইপ এবং মেমোরি ডিস্ট্রিবিউশন",
+      "technical_definition": "An attribute of data which tells the compiler or interpreter how the programmer intends to use the data and allocates corresponding memory bytes.",
+      "bangla_explanation": "কম্পিউটারকে বলে দেওয়া যে একটি ভ্যারিয়েবলের ভেতর রাখা ডেটাটি আসলে কী ধরণের—এটি কি কোনো সাধারণ লেখা, পূর্ণসংখ্যা, নাকি দশমিক সংখ্যা। এর ওপর ভিত্তি করেই র‍্যামে (RAM) জায়গা বরাদ্দ হয়।",
+      "architecture": {
+        "primitive_types": {
+          "Integer": {
+            "bangla_name": "ইন্টিজার বা পূর্ণসংখ্যা",
+            "memory_allocation": "4 Bytes (32-bit) or 8 Bytes (64-bit)",
+            "range": "-2,147,483,648 থেকে 2,147,483,647",
+            "bangla_use": "দশমিক ছাড়া যেকোনো নিখুঁত গণনা, যেমন মানুষের বয়স, আইডি নম্বর বা রোল নম্বর।",
+            "edge_case": "এই রেঞ্জের বাইরে সংখ্যা চলে গেলে 'Integer Overflow' এরর দেখা দেয়।"
+          },
+          "Float_Double": {
+            "bangla_name": "ফ্লোট / দশমিক যুক্ত সংখ্যা",
+            "memory_allocation": "4 Bytes (Float) / 8 Bytes (Double)",
+            "bangla_use": "যেকোনো নিখুঁত গাণিতিক ভগ্নাংশ বা পরিমাপ, যেমন জিপিএ, পণ্যের দাম বা তাপমাত্রা।",
+            "edge_case": "ফ্লোটিং পয়েন্টের কারণে সামান্য রাউন্ডিং এরর (যেমন: 0.1 + 0.2 == 0.30000000000000004) হতে পারে।"
+          },
+          "Boolean": {
+            "bangla_name": "বুলিয়ান লজিক",
+            "memory_allocation": "1 Bit (বা মেমোরি বিন্যাসের কারণে 1 Byte)",
+            "possible_values": ["True / 1", "False / 0"],
+            "bangla_use": "যেকোনো বাইনারি সিদ্ধান্ত, যেমন ইউজার কি লগইন করা আছে নাকি নাই, বা পরীক্ষার রেজাল্ট পাস নাকি ফেল।"
+          }
+        },
+        "composite_types": {
+          "String": {
+            "bangla_name": "স্ট্রিং বা টেক্সট ক্যারেক্টার সিকোয়েন্স",
+            "structure": "অ্যারে অফ ক্যারেক্টারস (Array of Characters)",
+            "syntax_requirement": "অবশ্যই ডাবল কোটেশন \"...\" বা সিঙ্গেল কোটেশন '...' এর ভেতরে থাকতে হবে।",
+            "behavior": "কিছু ভাষায় স্ট্রিং Immutable (পরিবর্তন অযোগ্য), অর্থাৎ একবার তৈরি করলে মেমোরিতে নতুন স্ট্রিং তৈরি করে এডিট করতে হয়।"
+          }
+        }
+      }
+    },
+    "04_operators_precedence_matrix.json": {
+      "concept_id": "SYS_OP_004",
+      "term_name": "Operators & Precedence Matrix",
+      "bangla_translation": "অপারেটর এবং তাদের অগ্রাধিকারের তালিকা",
+      "technical_definition": "Symbols that perform operations on variables and values, evaluated according to mathematical and logic hierarchy.",
+      "bangla_explanation": "কোডের ভেতরের বিভিন্ন গাণিতিক ও যৌক্তিক প্রতীক। যখন এক লাইনে অনেকগুলো চিহ্ন থাকে, তখন কোন চিহ্নের কাজ আগে হবে আর কোনটির পরে—তা এই ম্যাট্রিক্স ঠিক করে।",
+      "precedence_order": [
+        {
+          "level": 1,
+          "category": "Parentheses (বন্ধনী)",
+          "symbols": ["()", "[]"],
+          "bangla_rule": "সবচেয়ে বেশি অগ্রাধিকার। ব্র্যাকেটের ভেতরের হিসাব বাকি সবকিছুর আগে সম্পন্ন হবে।"
+        },
+        {
+          "level": 2,
+          "category": "Arithmetic Multiplicative",
+          "symbols": ["*", "/", "%"],
+          "bangla_rule": "গুণ, ভাগ এবং ভাগশেষ (Modulus) বের করার কাজ যোগ-বিয়োগের আগে হবে।"
+        },
+        {
+          "level": 3,
+          "category": "Arithmetic Additive",
+          "symbols": ["+", "-"],
+          "bangla_rule": "সাধারণ যোগ এবং বিয়োগের কাজ।"
+        },
+        {
+          "level": 4,
+          "category": "Comparison / Relational",
+          "symbols": ["==", "!=", ">", "<", ">=", "<="],
+          "bangla_rule": "দুটি মানের মধ্যে তুলনা করে সত্য বা মিথ্যা (True/False) বের করে।"
+        }
+      ]
+    },
+    "05_control_flow_execution_graph.json": {
+      "concept_id": "SYS_CF_005",
+      "term_name": "Control Flow & Execution Graph",
+      "bangla_translation": "কন্ট্রোল ফ্লো এবং কোড এক্সিকিউশন গ্রাফ",
+      "technical_definition": "The chronological runtime path followed by a program's execution engine based on internal logic conditions.",
+      "bangla_explanation": "কোড চলার গতিপথ বা দিকনির্দেশনা। একটি সাধারণ প্রোগ্রাম ওপর থেকে নিচে ক্রমানুসারে চলে, কিন্তু কন্ট্রোল ফ্লো ব্যবহার করে কোডের গতিপথ পরিবর্তন করা যায়, কোনো অংশ বারবার চালানো যায় বা কোনো অংশ স্কিপ করা যায়।",
+      "nodes": {
+        "conditional_branching": {
+          "type": "Decision Node",
+          "mechanics": "যদি কন্ডিশনাল এক্সপ্রেশনটি 'True' রিটার্ন করে, তবে একমুখী গ্রাফ চালু হবে; 'False' হলে অন্যমুখী গ্রাফ সচল হবে।",
+          "keywords_involved": ["if", "else if", "else", "switch"]
+        },
+        "loop_iterations": {
+          "type": "Cyclic Node",
+          "mechanics": "একটি নির্দিষ্ট কোড ব্লককে বারবার চক্রাকারে ঘুরায় যতক্ষণ না স্টপিং কন্ডিশন (Stopping Condition) হিট করে।",
+          "sub_types": {
+            "for_loop": "যখন ডেভলপার আগে থেকেই জানে লুপটি ঠিক কতবার ঘুরবে (যেমন: ১ থেকে ১০০ পর্যন্ত)।",
+            "while_loop": "যখন ঘূর্ণন সংখ্যা অজানা থাকে এবং লুপটি শুধুমাত্র একটি নির্দিষ্ট শর্তের ওপর নির্ভর করে ঘোরে (যেমন: ইন্টারনেট কানেকশন চালু থাকা পর্যন্ত)।"
+          },
+          "interrupts": {
+            "break": "চলমান চক্র বা লুপকে সাথে সাথে ভেঙে ফেলে লুপের বাইরে নিয়ে আসে।",
+            "continue": "চলমান লুপের বর্তমান চক্করটি স্কিপ করে সাথে সাথে পরবর্তী চক্করে চলে যায়।"
+          }
+        }
+      }
+    },
+    "06_function_and_scope_architecture.json": {
+      "concept_id": "SYS_FN_006",
+      "term_name": "Function Subroutines & Scope Lifecycle",
+      "bangla_translation": "ফাংশন সাবরুটিন এবং স্কোপ লাইফসাইকেল",
+      "technical_definition": "A modular, reusable unit of code that abstracts logic, manages local execution memory stacks, and isolates scopes.",
+      "bangla_explanation": "একটি বড় প্রোগ্রামের ছোট ছোট স্বাধীন অংশ। একই কোড বারবার টাইপ না করে একটি কাজের জন্য একটি ফাংশন তৈরি করে রাখা হয়। পরে যখনই ওই কাজ লাগবে, শুধু ফাংশনের নাম ধরে 'কল' করলেই কাজ হয়ে যায়।",
+      "anatomy": {
+        "parameters": "ফাংশন তৈরি করার সময় ব্র্যাকেটের ভেতর যে কাল্পনিক চলক বা ভ্যারিয়েবলগুলোর নাম দেওয়া থাকে, যা ইনপুট রিসিভ করার পাত্র হিসেবে কাজ করে।",
+        "arguments": "ফাংশনটি কল করার সময় বাস্তব যে ডেটা বা ভ্যালুগুলো ওই পাত্রের ভেতরে পাঠানো হয়।",
+        "scope_rules": {
+          "global_scope": "যে ভ্যারিয়েবলগুলো কোনো ফাংশনের ভেতরে থাকে না, পুরো প্রোগ্রামের যেকোনো জায়গা থেকে এদের দেখা ও ব্যবহার করা যায়।",
+          "local_scope": "ফাংশনের ভেতরে তৈরি হওয়া ভ্যারিয়েবল। ফাংশনের বাইরে এদের কোনো অস্তিত্ব থাকে না। ফাংশনের কাজ শেষ হওয়া মাত্রই মেমোরি স্ট্যাক থেকে এরা মুছে যায়।"
+        }
+      }
+    },
+    "07_oop_paradigm_and_design_patterns.json": {
+      "concept_id": "SYS_OOP_007",
+      "term_name": "Object-Oriented Programming (OOP) Paradigm",
+      "bangla_translation": "অবজেক্ট-ওরিয়েন্টেড প্রোগ্রামিং মূলনীতি",
+      "technical_definition": "A design philosophy where real-world assets are modeled into data fields (attributes) and programmatic actions (methods).",
+      "bangla_explanation": "কোড করার একটি আধুনিক এবং শক্তিশালী ফিলোসফি বা দর্শন। বাস্তব পৃথিবীর যেকোনো জিনিসকে (যেমন: মানুষ, গাড়ি, ব্যাংক অ্যাকাউন্ট) অবজেক্ট হিসেবে ধরে কোড সাজানো হয়। এর ফলে কোড অনেক বেশি গোছানো, সিকিউর এবং বড় প্রজেক্ট হ্যান্ডেল করার উপযোগী হয়।",
+      "pillars_expanded": {
+        "Class": {
+          "bangla_name": "ক্লাস বা ব্লুপ্রিন্ট",
+          "explanation": "একটি অবজেক্ট কেমন দেখতে হবে এবং সে কী কী কাজ করতে পারবে তার কাল্পনিক নকশা।"
+        },
+        "Object": {
+          "bangla_name": "অবজেক্ট বা ইনস্ট্যান্স",
+          "explanation": "ক্লাস নামক নকশা দেখে তৈরি করা বাস্তব রূপ। যেমন 'মানুষ' একটি ক্লাস হলে, 'রহিম' বা 'করিম' হলো তার এক একটি অবজেক্ট।"
+        },
+        "Encapsulation": {
+          "bangla_name": "এনক্যাপসুলেশন / ডেটা ক্যাপসুলায়ন",
+          "explanation": "ক্লাসের ভেতরের সংবেদনশীল ডেটা সরাসরি বাইরে থেকে দেখতে বা পরিবর্তন করতে না দিয়ে মেথড (যেমন Getter/Setter) দিয়ে মুড়িয়ে বা লক করে রাখা।"
+        },
+        "Inheritance": {
+          "bangla_name": "ইনহেরিটেন্স / উত্তরাধিকার",
+          "explanation": "আগে থেকে তৈরি থাকা কোনো ক্লাসের সব গুণাবলী এবং কাজ নতুন আরেকটি ক্লাসে স্বয়ংক্রিয়ভাবে নিয়ে আসা, যেন একই কোড দুইবার লিখতে না হয়।"
+        },
+        "Polymorphism": {
+          "bangla_name": "পলিমরফিজম / বহুরূপতা",
+          "explanation": "একই নামের মেথড বা ফাংশন ভিন্ন ভিন্ন অবজেক্টের জন্য ভিন্ন ভিন্ন আচরণ করার ক্ষমতা। যেমন 'শব্দ করো' মেথডটি কুকুরের জন্য 'ঘেউ ঘেউ' করবে, বিড়ালের জন্য 'মিউ মিউ' করবে।"
+        }
+      }
+    }
+  }
+  }

@@ -1,0 +1,463 @@
+{
+  "meta": {
+    "name": "NEXUS Mathematics Knowledge Base",
+    "version": "1.0.0",
+    "last_updated": "2024"
+  },
+  "arithmetic": {
+    "operations": {
+      "addition": {"symbol": "+", "name": "যোগ", "example": "5 + 3 = 8"},
+      "subtraction": {"symbol": "-", "name": "বিয়োগ", "example": "8 - 3 = 5"},
+      "multiplication": {"symbol": "×", "name": "গুণ", "example": "5 × 3 = 15"},
+      "division": {"symbol": "÷", "name": "ভাগ", "example": "15 ÷ 3 = 5"},
+      "modulo": {"symbol": "%", "name": "ভাগশেষ", "example": "17 % 5 = 2"},
+      "exponentiation": {"symbol": "^", "name": "घাত", "example": "2^3 = 8"}
+    },
+    "properties": {
+      "commutative": {"addition": "a + b = b + a", "multiplication": "a × b = b × a"},
+      "associative": {"addition": "(a+b)+c = a+(b+c)", "multiplication": "(a×b)×c = a×(b×c)"},
+      "distributive": "a × (b + c) = a×b + a×c",
+      "identity": {"addition": "a + 0 = a", "multiplication": "a × 1 = a"},
+      "inverse": {"addition": "a + (-a) = 0", "multiplication": "a × (1/a) = 1"}
+    },
+    "order_of_operations": "PEMDAS/BODMAS: Parentheses → Exponents → Multiply/Divide → Add/Subtract",
+    "factors_multiples": {
+      "factors": "উৎপাদক - যা দিয়ে ভাগ যায়",
+      "multiples": "গুণিতক - যার গুণ করলে পাওয়া যায়",
+      "lcm": "Least Common Multiple - ক্ষুদ্রতম সাধারণ গুণিতক",
+      "gcd": "Greatest Common Divisor - বৃহত্তম সাধারণ ভাজক"
+    }
+  },
+  "algebra": {
+    "basics": {
+      "variable": "অজানা মানের প্রতীক (x, y, z)",
+      "expression": "সংখ্যা ও চলকের সমন্বয় (3x + 5)",
+      "equation": "সমান চিহ্নযুক্ত (2x + 3 = 7)",
+      "inequality": ">, <, ≥, ≤ চিহ্নযুক্ত প্রকাশ"
+    },
+    "linear_equations": {
+      "one_variable": "ax + b = 0 → x = -b/a",
+      "two_variables": {
+        "form1": "ax + by = c",
+        "form2": "dx + ey = f",
+        "solution_method": "Substitution বা Elimination"
+      },
+      "slope_form": "y = mx + c (m = slope, c = y-intercept)",
+      "point_slope": "y - y₁ = m(x - x₁)"
+    },
+    "quadratic_equations": {
+      "standard": "ax² + bx + c = 0",
+      "discriminant": "D = b² - 4ac",
+      "roots": "x = (-b ± √D) / 2a",
+      "nature_of_roots": {
+        "D > 0": "দুটি বাস্তব এবং অসমান মূল",
+        "D = 0": "দুটি সমান বাস্তব মূল",
+        "D < 0": "দুটি কাল্পনিক মূল"
+      },
+      "sum_of_roots": "α + β = -b/a",
+      "product_of_roots": "αβ = c/a"
+    },
+    "polynomials": {
+      "degree": "সর্বোচ্চ ঘাতের মান",
+      "factoring": {
+        "common_factor": "ab + ac = a(b + c)",
+        "difference_of_squares": "a² - b² = (a+b)(a-b)",
+        "perfect_square": "a² + 2ab + b² = (a+b)²",
+        "sum_of_cubes": "a³ + b³ = (a+b)(a² - ab + b²)",
+        "difference_of_cubes": "a³ - b³ = (a-b)(a² + ab + b²)"
+      }
+    },
+    "logarithms": {
+      "definition": "logₐx = y means aʸ = x",
+      "laws": [
+        "logₐ(xy) = logₐx + logₐy",
+        "logₐ(x/y) = logₐx - logₐy",
+        "logₐ(xⁿ) = n logₐx",
+        "logₐa = 1",
+        "logₐ1 = 0"
+      ],
+      "change_of_base": "logₐx = log_bx / log_ba",
+      "natural_log": "ln(x) = logₑx"
+    },
+    "exponents": {
+      "laws": [
+        "aᵐ × aⁿ = aᵐ⁺ⁿ",
+        "aᵐ ÷ aⁿ = aᵐ⁻ⁿ",
+        "(aᵐ)ⁿ = aᵐⁿ",
+        "a⁰ = 1",
+        "a⁻ⁿ = 1/aⁿ",
+        "aᵐ/n = ⁿ√(aᵐ)"
+      ]
+    }
+  },
+  "geometry": {
+    "basics": {
+      "point": "অবস্থান (কোনো মাত্রা নেই)",
+      "line": "দুই প্রান্ত বিস্তৃত",
+      "ray": "এক প্রান্ত বিস্তৃত",
+      "line_segment": "দুই প্রান্ত সীমাবদ্ধ",
+      "plane": "সমতল পৃষ্ঠ (2D)"
+    },
+    "angles": {
+      "acute": "0° < θ < 90°",
+      "right": "θ = 90°",
+      "obtuse": "90° < θ < 180°",
+      "straight": "θ = 180°",
+      "reflex": "180° < θ < 360°",
+      "supplementary": "দুটি কোণের যোগফল 180°",
+      "complementary": "দুটি কোণের যোগফল 90°"
+    },
+    "triangles": {
+      "types": {
+        "equilateral": "৩ বাহু সমান, ৩ কোণ 60°",
+        "isosceles": "২ বাহু সমান",
+        "scalene": "কোনো বাহু সমান নয়",
+        "right": "একটি কোণ 90°"
+      },
+      "area": "½ × base × height",
+      "perimeter": "a + b + c",
+      "pythagorean": "a² + b² = c² (right triangle)",
+      "trigonometric_ratios": {
+        "sin": "opposite / hypotenuse",
+        "cos": "adjacent / hypotenuse",
+        "tan": "opposite / adjacent",
+        "cot": "1/tan",
+        "sec": "1/cos",
+        "cosec": "1/sin"
+      }
+    },
+    "quadrilaterals": {
+      "square": {
+        "properties": ["৪ সমান বাহু", "৪ সমান কোণ (90°)"],
+        "area": "a²",
+        "perimeter": "4a",
+        "diagonal": "a√2"
+      },
+      "rectangle": {
+        "properties": ["বিপরীত বাহু সমান", "৪ কোণ 90°"],
+        "area": "l × w",
+        "perimeter": "2(l + w)",
+        "diagonal": "√(l² + w²)"
+      },
+      "parallelogram": {
+        "properties": ["বিপরীত বাহু সমান ও সমান্তরাল"],
+        "area": "b × h",
+        "perimeter": "2(a + b)"
+      },
+      "rhombus": {
+        "properties": ["৪ বাহু সমান", "বিপরীত কোণ সমান"],
+        "area": "½ × d₁ × d₂",
+        "perimeter": "4a"
+      },
+      "trapezoid": {
+        "properties": ["একজোড়া সমান্তরাল বাহু"],
+        "area": "½(a + b) × h"
+      }
+    },
+    "circles": {
+      "circumference": "2πr = πd",
+      "area": "πr²",
+      "arc_length": "θ/360 × 2πr",
+      "sector_area": "θ/360 × πr²",
+      "segment_area": "Sector - Triangle",
+      "tangent": "radius ⟂ tangent at point of contact",
+      "theorems": [
+        "Equal chords subtend equal angles at center",
+        "Perpendicular bisector of chord passes through center",
+        "Angle in semicircle = 90°"
+      ]
+    },
+    "3d_shapes": {
+      "cube": {
+        "faces": 6,
+        "volume": "a³",
+        "surface_area": "6a²",
+        "diagonal": "a√3"
+      },
+      "cuboid": {
+        "volume": "l × w × h",
+        "surface_area": "2(lw + lh + wh)"
+      },
+      "sphere": {
+        "volume": "4/3 πr³",
+        "surface_area": "4πr²"
+      },
+      "cylinder": {
+        "volume": "πr²h",
+        "surface_area": "2πr² + 2πrh"
+      },
+      "cone": {
+        "volume": "1/3 πr²h",
+        "surface_area": "πr² + πrl",
+        "slant_height": "l = √(r² + h²)"
+      },
+      "pyramid": {
+        "volume": "1/3 × base_area × h"
+      }
+    }
+  },
+  "trigonometry": {
+    "angle_types": {
+      "degree": "° (degree)",
+      "radian": "rad (radian)",
+      "conversion": "180° = π rad"
+    },
+    "ratios": {
+      "for_angle_A": {
+        "sin_A": "প্রতিবেশী/অতিভুজ = opposite/hypotenuse",
+        "cos_A": "ভূমি/অতিভুজ = adjacent/hypotenuse",
+        "tan_A": "প্রতিবেশী/ভূমি = opposite/adjacent"
+      }
+    },
+    "standard_angles": {
+      "0°": {"sin": "0", "cos": "1", "tan": "0"},
+      "30°": {"sin": "½", "cos": "√3/2", "tan": "1/√3"},
+      "45°": {"sin": "√2/2", "cos": "√2/2", "tan": "1"},
+      "60°": {"sin": "√3/2", "cos": "½", "tan": "√3"},
+      "90°": {"sin": "1", "cos": "0", "tan": "undefined"}
+    },
+    "identities": {
+      "pythagorean": [
+        "sin²θ + cos²θ = 1",
+        "1 + tan²θ = sec²θ",
+        "1 + cot²θ = cosec²θ"
+      ],
+      "cofunction": [
+        "sin(90°-θ) = cosθ",
+        "cos(90°-θ) = sinθ",
+        "tan(90°-θ) = cotθ"
+      ],
+      "double_angle": [
+        "sin2θ = 2sinθ cosθ",
+        "cos2θ = cos²θ - sin²θ",
+        "tan2θ = 2tanθ/(1-tan²θ)"
+      ],
+      "half_angle": [
+        "sin(θ/2) = ±√((1-cosθ)/2)",
+        "cos(θ/2) = ±√((1+cosθ)/2)"
+      ]
+    },
+    "laws": {
+      "sine": "a/sinA = b/sinB = c/sinC",
+      "cosine": "c² = a² + b² - 2ab·cosC"
+    }
+  },
+  "calculus": {
+    "limits": {
+      "definition": "lim(x→a) f(x) = L",
+      "properties": [
+        "lim(f+g) = lim f + lim g",
+        "lim(f·g) = lim f · lim g",
+        "lim(f/g) = lim f / lim g"
+      ],
+      "special": [
+        "lim(x→0) sinx/x = 1",
+        "lim(x→∞) (1+1/x)ˣ = e"
+      ]
+    },
+    "derivatives": {
+      "definition": "dy/dx = lim(h→0) [f(x+h) - f(x)]/h",
+      "rules": {
+        "constant": "d/dx(c) = 0",
+        "power": "d/dx(xⁿ) = nxⁿ⁻¹",
+        "product": "d/dx(uv) = u·dv/dx + v·du/dx",
+        "quotient": "d/dx(u/v) = (v·du/dx - u·dv/dx)/v²",
+        "chain": "d/dx[f(g(x))] = f'(g(x))·g'(x)"
+      },
+      "common": {
+        "d/dx(eˣ) = eˣ": "exponential",
+        "d/dx(aˣ) = aˣ·lna": "",
+        "d/dx(ln x) = 1/x": "logarithm",
+        "d/dx(logₐx) = 1/(x·lna)": "",
+        "d/dx(sin x) = cos x": "",
+        "d/dx(cos x) = -sin x": "",
+        "d/dx(tan x) = sec²x": "",
+        "d/dx(cot x) = -cosec²x": "",
+        "d/dx(sec x) = sec x tan x": "",
+        "d/dx(cosec x) = -cosec x cot x": ""
+      },
+      "applications": [
+        "Finding tangent line",
+        "Optimization (max/min)",
+        "Related rates",
+        "Curve sketching"
+      ]
+    },
+    "integration": {
+      "definition": "Reverse of differentiation, area under curve",
+      "rules": {
+        "power": "∫xⁿ dx = xⁿ⁺¹/(n+1) + C",
+        "constant": "∫c dx = cx + C",
+        "sum": "∫(f+g) dx = ∫f dx + ∫g dx"
+      },
+      "common": {
+        "∫eˣ dx = eˣ + C": "",
+        "∫aˣ dx = aˣ/ln a + C": "",
+        "∫1/x dx = ln|x| + C": "",
+        "∫cos x dx = sin x + C": "",
+        "∫sin x dx = -cos x + C": "",
+        "∫sec²x dx = tan x + C": "",
+        "∫cosec²x dx = -cot x + C": ""
+      },
+      "techniques": {
+        "substitution": "u-substitution method",
+        "parts": "∫u dv = uv - ∫v du",
+        "partial_fractions": "Rational functions"
+      },
+      "definite_integral": "∫[a,b] f(x) dx = F(b) - F(a)",
+      "applications": [
+        "Area under curve",
+        "Volume of revolution",
+        "Arc length",
+        "Surface area"
+      ]
+    }
+  },
+  "statistics": {
+    "descriptive": {
+      "central_tendency": {
+        "mean": {"definition": "সকল মানের যোগফল ÷ মানের সংখ্যা", "formula": "μ = Σx/n"},
+        "median": "মধ্যমা - sorted list-এ মাঝখানের মান",
+        "mode": "সর্বাধিক ফ্রিকোয়েন্সি বিশিষ্ট মান"
+      },
+      "dispersion": {
+        "range": "max - min",
+        "variance": "σ² = Σ(x-μ)²/n",
+        "std_dev": "σ = √variance",
+        "quartiles": {"Q1": "25th percentile", "Q2": "Median", "Q3": "75th percentile"},
+        "IQR": "Q3 - Q1"
+      }
+    },
+    "probability": {
+      "definition": "P(event) = favorable outcomes / total outcomes",
+      "range": "0 ≤ P ≤ 1",
+      "rules": {
+        "addition": "P(A∪B) = P(A) + P(B) - P(A∩B)",
+        "multiplication": "P(A∩B) = P(A) × P(B|A)",
+        "complement": "P(A') = 1 - P(A)",
+        "conditional": "P(A|B) = P(A∩B)/P(B)"
+      },
+      "distributions": {
+        "discrete": {
+          "binomial": {"trials": "n", "success_prob": "p", "P(X=k) = C(n,k)pᵏqⁿ⁻ᵏ"},
+          "poisson": {"mean": "λ", "P(X=k) = λᵏe⁻λ/k!"}
+        },
+        "continuous": {
+          "normal": {"mean": "μ", "std_dev": "σ", "bell_curve": true},
+          "standard_normal": "μ=0, σ=1, z = (x-μ)/σ"
+        }
+      }
+    },
+    "hypothesis_testing": {
+      "null_hypothesis": "H₀ - প্রচলিত ধারণা",
+      "alternative": "H₁ - বিকল্প ধারণা",
+      "errors": {"Type_I": "Reject H₀ when true", "Type_II": "Accept H₀ when false"},
+      "significance": {"α": "Level of significance (usually 0.05)", "p_value": "Probability of observing data if H₀ is true"}
+    }
+  },
+  "number_theory": {
+    "natural_numbers": "1, 2, 3, 4, ... (N বা ℕ)",
+    "whole_numbers": "0, 1, 2, 3, ... (W বা ℕ₀)",
+    "integers": "...-2, -1, 0, 1, 2, ... (Z বা ℤ)",
+    "rational": "p/q form where q ≠ 0 (Q বা ℚ)",
+    "irrational": "Cannot be expressed as p/q (π, √2, e)",
+    "real": "Rational + Irrational (R বা ℝ)",
+    "complex": "a + bi where i² = -1 (C বা ℂ)",
+    "prime": {
+      "definition": "শুধু ১ ও নিজে দ্বারা বিভাজ্য",
+      "first_primes": [2, 3, 5, 7, 11, 13, 17, 19, 23, 29, 31, 37, 41, 43, 47],
+      "theorems": [
+        "Fundamental Theorem: প্রতিটি সংখ্যার অনন্য মৌলিক উৎপাদক",
+        "Euclid: অসংখ্য মৌলিক আছে"
+      ]
+    },
+    "divisibility": {
+      "2": "শেষে জোড় সংখ্যা",
+      "3": "অঙ্কের যোগফল ৩ দ্বারা বিভাজ্য",
+      "4": "শেষ দুই অঙ্ক ৪ দ্বারা বিভাজ্য",
+      "5": "শেষে ০ বা ৫",
+      "6": "২ এবং ৩ দ্বারা বিভাজ্য",
+      "9": "অঙ্কের যোগফল ৯ দ্বারা বিভাজ্য",
+      "10": "শেষে ০"
+    },
+    "special_numbers": {
+      "fibonacci": [1, 1, 2, 3, 5, 8, 13, 21, 34, 55, 89, 144],
+      "perfect": [6, 28, 496, 8128],
+      "golden_ratio": "φ = (1+√5)/2 ≈ 1.618",
+      "euler": "e ≈ 2.71828",
+      "pi": "π ≈ 3.14159"
+    }
+  },
+  "linear_algebra": {
+    "matrices": {
+      "types": {
+        "row_matrix": "1 row",
+        "column_matrix": "1 column",
+        "square": "rows = columns",
+        "diagonal": "i≠j → aᵢⱼ = 0",
+        "identity": "Iₙ - diagonal all 1",
+        "zero": "all elements 0"
+      },
+      "operations": {
+        "addition": "Same dimensions, element-wise",
+        "scalar_mult": "Multiply each element",
+        "multiplication": "rows × columns"
+      },
+      "determinant": "det(A) for square matrix",
+      "inverse": "A⁻¹ such that AA⁻¹ = I"
+    },
+    "vectors": {
+      "definition": "Magnitude and direction",
+      "operations": {
+        "addition": "Component-wise",
+        "dot_product": "a·b = |a||b|cosθ",
+        "cross_product": "a × b = |a||b|sinθ n̂"
+      },
+      "magnitude": "|v| = √(v₁² + v₂² + ...)"
+    },
+    "systems_of_equations": {
+      "methods": ["Substitution", "Elimination", "Matrix (Cramer's rule)", "Gaussian elimination"],
+      "matrix_form": "Ax = b"
+    }
+  },
+  "discrete_math": {
+    "logic": {
+      "operators": {"AND": "∧", "OR": "∨", "NOT": "¬", "IMPLIES": "→", "IFF": "↔"},
+      "truth_tables": "T/F for all combinations",
+      "laws": {
+        "demorgan": ["¬(A∧B) = ¬A ∨ ¬B", "¬(A∨B) = ¬A ∧ ¬B"],
+        "distributive": ["A∧(B∨C) = (A∧B)∨(A∧C)", "A∨(B∧C) = (A∨B)∧(A∨C)"]
+      }
+    },
+    "set_theory": {
+      "operations": {"union": "A ∪ B", "intersection": "A ∩ B", "difference": "A - B", "complement": "A'"},
+      "properties": {
+        "commutative": "A ∪ B = B ∪ A, A ∩ B = B ∩ A",
+        "associative": "(A ∪ B) ∪ C = A ∪ (B ∪ C)",
+        "distributive": "A ∪ (B ∩ C) = (A ∪ B) ∩ (A ∪ C)"
+      },
+      "cardinality": "|A| = number of elements"
+    },
+    "combinations_permutations": {
+      "permutation": "Order matters - P(n,r) = n!/(n-r)!",
+      "combination": "Order doesn't matter - C(n,r) = n!/[r!(n-r)!]",
+      "binomial": "(a+b)ⁿ = Σ C(n,r)aⁿ⁻ʳbʳ"
+    },
+    "graph_theory": {
+      "definitions": {
+        "vertex": "Node",
+        "edge": "Connection between vertices",
+        "degree": "Number of edges at vertex"
+      },
+      "types": {
+        "complete": "Every pair connected",
+        "bipartite": "Vertices in two sets, edges between sets",
+        "tree": "Connected, no cycles"
+      },
+      "eulerian": {
+        "path": "Path using every edge exactly once",
+        "circuit": "Closed Eulerian path"
+      }
+    }
+  }
+}

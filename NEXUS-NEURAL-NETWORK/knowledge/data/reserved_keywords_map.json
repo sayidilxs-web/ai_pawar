@@ -1,0 +1,92 @@
+{
+  "file_meta": {
+    "file_name": "reserved_keywords_map.json",
+    "associated_concept": "Lexical Tokens & Language Keywords",
+    "complexity_level": "Enterprise / Deep AI Integration",
+    "parsing_type": "Strict Token Mapping"
+  },
+  "keyword_registry": {
+    "conditional_tokens": {
+      "if": {
+        "token_id": "KW_COND_001",
+        "bangla_name": "শর্তমূলক নোড (যদি)",
+        "technical_role": "Initiates a conditional branching logic in the execution thread.",
+        "bangla_explanation": "লজিক্যাল কন্ডিশন বা শর্ত পরীক্ষা করার মূল দরজা। এর ভেতরে থাকা এক্সপ্রেশনটি যদি 'True' বা সত্য হয়, তবেই এটি তার ভেতরের কোড ব্লককে রান করতে দেয়।",
+        "memory_behavior": "Evaluates the Boolean state of the adjacent expression stack.",
+        "ai_usage_rules": "Always expect an expression after this token. Do not allow 'if' to be used as a variable name.",
+        "edge_cases": "Can exist without an 'else' block, but cannot exist without an expression."
+      },
+      "else": {
+        "token_id": "KW_COND_002",
+        "bangla_name": "বিকল্প নোড (নতুবা / অন্যথায়)",
+        "technical_role": "Defines the fallback execution path when all preceding conditions evaluate to False.",
+        "bangla_explanation": "এটি হলো অবিকল্প বা শেষ আশ্রয়। 'if' বা অন্যান্য শর্তগুলো যদি মিথ্যা (False) প্রমাণিত হয়, তবে কোনো শর্ত ছাড়াই এই ব্লকের ভেতরের কোডটি স্বয়ংক্রিয়ভাবে রান করে।",
+        "memory_behavior": "Executed only when the conditional flag of the primary 'if' is 0.",
+        "ai_usage_rules": "Must be attached to a preceding 'if' or 'else if' block. Independent 'else' tokens must throw a SyntaxError.",
+        "edge_cases": "Does not take any condition or expression directly next to it."
+      },
+      "elif_else_if": {
+        "token_id": "KW_COND_003",
+        "bangla_name": "মাধ্যমিক শর্ত (অথবা যদি)",
+        "technical_role": "Introduces a secondary sequential condition if the primary condition is False.",
+        "bangla_explanation": "যখন একটি প্রোগ্রামে একের বেশি শর্ত চেক করার প্রয়োজন হয়, তখন প্রথম 'if' এর পর এবং শেষ 'else' এর আগে এটি ব্যবহার করা হয়। প্রথম শর্তটি মিথ্যা হলে কম্পিউটার এই শর্তটি চেক করে।",
+        "languages_variations": {
+          "python": "elif",
+          "javascript": "else if",
+          "c_plus_plus": "else if"
+        },
+        "ai_usage_rules": "Can only be placed after an 'if' token and before an 'else' token."
+      }
+    },
+    "loop_and_iteration_tokens": {
+      "for": {
+        "token_id": "KW_LOOP_001",
+        "bangla_name": "নির্দিষ্ট পুনরাবৃত্তি লুপ",
+        "technical_role": "Implements deterministic iteration over a finite range, sequence, or collection.",
+        "bangla_explanation": "একটি কোড ব্লককে নির্দিষ্ট কতবার ঘুরাতে হবে তা আগে থেকে জানা থাকলে এই লুপ ব্যবহার করা হয়। এটি কোনো একটি তালিকা বা সংখ্যার সীমার (Range) শুরু থেকে শেষ পর্যন্ত ক্রমানুসারে ডেটা প্রসেস করে।",
+        "memory_behavior": "Allocates a temporary iterator variable in the local stack that increments/decrements per cycle.",
+        "ai_usage_rules": "Ensure the presence of a loop counter initialization, a boundary condition, and a step expression."
+      },
+      "while": {
+        "token_id": "KW_LOOP_002",
+        "bangla_name": "শর্তাধীন অনির্দিষ্ট লুপ",
+        "technical_role": "Implements non-deterministic iteration that continues as long as a predicate remains True.",
+        "bangla_explanation": "কোডটি কতবার ঘুরবে তা যখন ডেভলপার আগে থেকে জানে না, শুধু জানে একটি নির্দিষ্ট শর্ত সত্যি থাকা পর্যন্ত ঘুরাতে হবে, তখন এটি ব্যবহার করা হয়। শর্ত মিথ্যা হওয়া মাত্রই ঘূর্ণন বন্ধ হয়ে যায়।",
+        "memory_behavior": "Re-evaluates the conditional expression at the beginning of each loop cycle.",
+        "edge_cases": "If the condition never becomes False, it creates an 'Infinite Loop' causing system memory exhaustion."
+      }
+    },
+    "loop_interrupt_tokens": {
+      "break": {
+        "token_id": "KW_INT_001",
+        "bangla_name": "চক্র ভঙ্গকারী",
+        "technical_role": "Terminates the innermost enclosing loop or switch statement immediately.",
+        "bangla_explanation": "কোনো লুপ বা চক্কর স্বাভাবিকভাবে শেষ হওয়ার আগেই যদি মাঝপথে সেটিকে জোরপূর্বক বন্ধ করে লুপের বাইরে চলে আসতে হয়, তবে এই কি-ওয়ার্ডটি ব্যবহার করা হয়।",
+        "ai_usage_rules": "Must only reside within a loop or switch control block. Isolated 'break' statements are illegal."
+      },
+      "continue": {
+        "token_id": "KW_INT_002",
+        "bangla_name": "পরবর্তী চক্রে গমনকারী",
+        "technical_role": "Skips the remainder of the current loop iteration and proceeds to the next cycle.",
+        "bangla_explanation": "লুপের ভেতরের কোনো বিশেষ ডেটার জন্য বর্তমান চক্করের বাকি কোডটুকু না চালিয়ে, সরাসরি স্কিপ করে লুপের ঠিক পরের চক্করে বা ঘূর্ণনে চলে যাওয়ার নির্দেশ দেয়।",
+        "ai_usage_rules": "Skips downstream code inside the loop but does not terminate the loop itself."
+      }
+    },
+    "structural_and_scope_tokens": {
+      "return": {
+        "token_id": "KW_STR_001",
+        "bangla_name": "মান ফেরত পাঠানো / ফাংশন সমাপ্তি",
+        "technical_role": "Terminates function execution and passes a specified value back to the caller subroutine.",
+        "bangla_explanation": "একটি চলমান ফাংশনের কাজ সাথে সাথে বন্ধ করে দেয় এবং ফাংশনের ভেতরের চূড়ান্ত হিসাবকৃত ফলাফল বা মানটি মেইন প্রোগ্রামে ফেরত পাঠিয়ে দেয়, যেখানে ফাংশনটিকে কল করা হয়েছিল।",
+        "memory_behavior": "Pops the current frame off the call stack and restores execution to the previous stack frame.",
+        "edge_cases": "Any code written inside the function *after* the 'return' statement will become dead code (unreachable code) and will never execute."
+      },
+      "class": {
+        "token_id": "KW_STR_002",
+        "bangla_name": "অবজেক্ট নকশা / ব্লুপ্রিন্ট",
+        "technical_role": "Declares a new user-defined data type and encapsulates its attributes and methods.",
+        "bangla_explanation": "অবজেক্ট-ওরিয়েন্টেড প্রোগ্রামিংয়ের মূল ভিত্তি। বাস্তব পৃথিবীর কোনো উপাদানের বৈশিষ্ট্য ও কাজকে কোডিংয়ের ছাঁচে ফেলার জন্য এই কি-ওয়ার্ড দিয়ে একটি নতুন কাস্টম ডেটা টাইপ বা ব্লুপ্রিন্ট তৈরি করা হয়।"
+      }
+    }
+  }
+      }

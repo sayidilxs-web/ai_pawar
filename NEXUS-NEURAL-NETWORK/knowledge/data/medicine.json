@@ -1,0 +1,252 @@
+{
+  "meta": {
+    "name": "NEXUS Medicine & Health Knowledge",
+    "version": "1.0.0",
+    "last_updated": "2024"
+  },
+  "human_anatomy": {
+    "skeletal_system": {
+      "total_bones": 206,
+      "divisions": {
+        "axial": {"skull": ["Cranium (8)", "Face (14)", "Hyoid (1)"], "vertebral_column": 26, "thoracic_cage": ["Ribs (24)", "Sternum (1)"]},
+        "appendicular": {"upper": ["Shoulder girdle", "Arm bones", "Hand bones"], "lower": ["Pelvic girdle", "Leg bones", "Foot bones"]}
+      },
+      "functions": ["Support", "Protection (brain, heart, lungs)", "Movement", "Blood cell production (bone marrow)", "Mineral storage (Ca, P)"]
+    },
+    "muscular_system": {
+      "total_muscles": 600,
+      "types": {
+        "skeletal": {"count": "~400", "control": "Voluntary", "function": "Movement, posture"},
+        "cardiac": {"location": "Heart", "control": "Involuntary", "function": "Pumping blood"},
+        "smooth": {"location": "Internal organs", "control": "Involuntary", "function": "Digestion, circulation"}
+      }
+    },
+    "circulatory_system": {
+      "heart": {
+        "chambers": {"atria": ["Right atrium", "Left atrium"], "ventricles": ["Right ventricle", "Left ventricle"]},
+        "valves": {"atrioventricular": ["Tricuspid (right)", "Mitral (left)"], "semilunar": ["Pulmonary", "Aortic"]},
+        "blood_flow": "Right atrium → Right ventricle → Lungs → Left atrium → Left ventricle → Body"
+      },
+      "blood_vessels": {
+        "arteries": "Carry blood away from heart (oxygenated except pulmonary)",
+        "veins": "Carry blood to heart (deoxygenated except pulmonary)",
+        "capillaries": "Exchange of gases, nutrients, waste"
+      },
+      "blood_types": {
+        "ABO": ["A", "B", "AB", "O"],
+        "Rh": ["Positive (+)", "Negative (-)"],
+        "universal_donor": "O-",
+        "universal_recipient": "AB+"
+      }
+    },
+    "respiratory_system": {
+      "organs": {
+        "upper": ["Nose", "Nasal cavity", "Pharynx", "Larynx (voice box)"],
+        "lower": ["Trachea (windpipe)", "Bronchi", "Bronchioles", "Lungs (alveoli)"]
+      },
+      "breathing": {
+        "inspiration": "Diaphragm contracts → lungs expand → air enters",
+        "expiration": "Diaphragm relaxes → lungs compress → air exits"
+      },
+      "gas_exchange": "O₂ enters blood, CO₂ exits at alveoli (diffusion)"
+    },
+    "digestive_system": {
+      "organs": {
+        "GI_tract": ["Mouth", "Esophagus", "Stomach", "Small intestine", "Large intestine", "Rectum", "Anus"],
+        "accessory": ["Salivary glands", "Liver", "Gallbladder", "Pancreas"]
+      },
+      "enzymes": {
+        "saliva": {"enzyme": "Amylase", "action": "Breaks down starch"},
+        "stomach": {"enzyme": "Pepsin", "action": "Breaks down proteins"},
+        "pancreas": {"enzymes": ["Trypsin", "Lipase", "Amylase"], "actions": ["Proteins", "Fats", "Carbohydrates"]},
+        "intestine": {"enzymes": ["Maltase", "Sucrase", "Lactase", "Peptidases"], "actions": ["Sugars", "Sugars", "Sugars", "Proteins"]}
+      },
+      "nutrients": {
+        "carbohydrates": {"function": "Primary energy source", "calories_per_gram": 4},
+        "proteins": {"function": "Building and repairing tissues", "calories_per_gram": 4},
+        "fats": {"function": "Energy storage, cell structure", "calories_per_gram": 9},
+        "vitamins": {"types": ["A, B, C, D, E, K", "Water-soluble: B, C", "Fat-soluble: A, D, E, K"]},
+        "minerals": {"types": ["Calcium", "Iron", "Zinc", "Magnesium", "Potassium"]},
+        "water": {"function": "Solvent, temperature regulation", "percentage": "60-70% of body"}
+      }
+    },
+    "nervous_system": {
+      "central": {
+        "brain": {
+          "parts": {
+            "cerebrum": {"function": "Higher functions - thinking, memory, language"},
+            "cerebellum": {"function": "Coordination, balance"},
+            "brainstem": {"function": "Vital functions - breathing, heart rate"}
+          }
+        },
+        "spinal_cord": "Conducts signals between brain and body"
+      },
+      "peripheral": {
+        "somatic": "Voluntary movements",
+        "autonomic": {
+          "sympathetic": {"function": "Fight or flight", "effects": ["Heart rate ↑", "Pupils dilate", "Digestion ↓"]},
+          "parasympathetic": {"function": "Rest and digest", "effects": ["Heart rate ↓", "Pupils constrict", "Digestion ↑"]}
+        }
+      },
+      "neurons": {
+        "sensory": "Input to CNS",
+        "motor": "Output from CNS",
+        "interneurons": "Processing within CNS"
+      }
+    },
+    "endocrine_system": {
+      "glands_hormones": {
+        "pituitary": {"role": "Master gland", "hormones": ["Growth hormone", "TSH", "ACTH", "Prolactin"]},
+        "thyroid": {"hormones": ["Thyroxine (T4)", "Triiodothyronine (T3)"], "function": "Metabolism regulation"},
+        "parathyroid": {"hormone": "PTH", "function": "Calcium regulation"},
+        "adrenal": {
+          "cortex": ["Cortisol", "Aldosterone"],
+          "medulla": ["Adrenaline (Epinephrine)", "Noradrenaline"]
+        },
+        "pancreas": {"hormones": ["Insulin (↓blood sugar)", "Glucagon (↑blood sugar)"]},
+        "ovaries": {"hormones": ["Estrogen", "Progesterone"]},
+        "testes": {"hormone": "Testosterone"},
+        "pineal": {"hormone": "Melatonin", "function": "Sleep cycle"}
+      }
+    },
+    "immune_system": {
+      "innate": {
+        "barriers": ["Skin", "Mucous membranes", "Stomach acid", "Tears"],
+        "cells": ["Macrophages", "Neutrophils", "NK (Natural Killer) cells", "Dendritic cells"],
+        "proteins": ["Complement system", "Interferons"]
+      },
+      "adaptive": {
+        "cells": {
+          "T_cells": {"types": ["Helper (CD4)", "Cytotoxic (CD8)", "Memory"], "function": "Cell-mediated immunity"},
+          "B_cells": {"function": "Produce antibodies", "type": "Humoral immunity"}
+        },
+        "antibodies": {"structure": "Y-shaped proteins", "action": "Bind to specific antigens"},
+        "memory": "Long-term protection after infection/vaccination"
+      },
+      "vaccination": {
+        "principle": "Introduce weakened/inactive pathogen to build immunity",
+        "types": ["Live attenuated", "Inactivated", "mRNA", "Subunit"]
+      }
+    }
+  },
+  "common_diseases": {
+    "infectious": {
+      "respiratory": {
+        "common_cold": {"cause": "Rhinovirus", "symptoms": ["Runny nose", "Sore throat", "Sneezing"], "treatment": "Rest, fluids, symptom relief"},
+        "influenza": {"cause": "Influenza virus", "symptoms": ["Fever", "Body aches", "Fatigue"], "treatment": "Rest, fluids, antiviral if severe"},
+        "covid_19": {"cause": "SARS-CoV-2", "symptoms": ["Fever", "Cough", "Loss of taste/smell", "Breathing difficulty"], "prevention": ["Vaccination", "Mask", "Social distancing"]}
+      },
+      "gastrointestinal": {
+        "cholera": {"cause": "Vibrio cholerae bacteria", "transmission": "Contaminated water", "symptoms": ["Severe diarrhea", "Vomiting", "Dehydration"]},
+        "typhoid": {"cause": "Salmonella typhi", "transmission": "Contaminated food/water"},
+        "diarrhea": {"causes": ["Virus", "Bacteria", "Parasites"], "prevention": "Clean water, handwashing"}
+      },
+      "vector_borne": {
+        "dengue": {"cause": "Dengue virus", "vector": "Aedes mosquito", "symptoms": ["High fever", "Severe headache", "Joint pain", "Rash"]},
+        "malaria": {"cause": "Plasmodium parasite", "vector": "Anopheles mosquito", "prevention": ["Mosquito nets", "Repellent", "Prophylaxis"]},
+        "chikungunya": {"vector": "Aedes mosquito"}
+      },
+      "sexually_transmitted": {
+        "hiv_aids": {"cause": "HIV virus", "transmission": ["Blood", "Sexual contact", "Mother to child"], "prevention": ["Protected sex", "Clean needles", "PEP/PrEP"]},
+        "syphilis": {"cause": "Treponema pallidum bacteria"},
+        "gonorrhea": {"cause": "Neisseria gonorrhoeae bacteria"}
+      }
+    },
+    "chronic": {
+      "cardiovascular": {
+        "hypertension": {"symptoms": "Often none ('silent killer')", "risk": "Stroke, heart attack", "management": ["Medication", "Low salt diet", "Exercise"]},
+        "heart_attack": {"symptoms": ["Chest pain", "Shortness of breath", "Arm/jaw pain"], "action": "Call emergency immediately"},
+        "stroke": {"symptoms": ["Face drooping", "Arm weakness", "Speech difficulty"], "action": "Time is brain - immediate medical attention"}
+      },
+      "metabolic": {
+        "diabetes": {
+          "type1": {"cause": "Autoimmune - no insulin production", "treatment": "Insulin injection"},
+          "type2": {"cause": "Insulin resistance", "risk_factors": ["Obesity", "Sedentary lifestyle", "Genetics"], "prevention": ["Healthy diet", "Exercise", "Weight management"]}
+        }
+      },
+      "respiratory": {
+        "asthma": {"trigger": ["Dust", "Pollen", "Cold air", "Exercise"], "treatment": ["Inhalers", "Avoid triggers"]},
+        "copd": {"cause": "Smoking, pollution", "treatment": ["Bronchodilators", "Oxygen therapy"]}
+      }
+    },
+    "mental_health": {
+      "common": {
+        "depression": {"symptoms": ["Persistent sadness", "Loss of interest", "Sleep changes", "Fatigue"], "help": "Therapy, medication, support"},
+        "anxiety": {"symptoms": ["Excessive worry", "Restlessness", "Physical symptoms"], "help": "CBT, medication, relaxation"},
+        "bipolar": {"symptoms": ["Mania", "Depression alternating"]},
+        "schizophrenia": {"symptoms": ["Hallucinations", "Delusions", "Disorganized thinking"]}
+      },
+      "support": "যদি আপনি বা কেউ mental health সমস্যায় ভুগছেন, সাহায্য নিন। এটা দুর্বলতা নয়।"
+    }
+  },
+  "medications": {
+    "pain_fever": {
+      "paracetamol": {"dose": "500mg-1g", "frequency": "Every 4-6 hours", "max_daily": "4g", "warnings": ["Liver damage if overdose", "Avoid alcohol"]},
+      "ibuprofen": {"dose": "200-400mg", "frequency": "Every 6-8 hours", "warnings": ["Stomach irritation", "Avoid if asthmatic"]}
+    },
+    "antibiotics": {
+      "amoxicillin": {"class": "Penicillin", "uses": ["Respiratory infections", "Ear infections", "UTI"]},
+      "azithromycin": {"class": "Macrolide", "uses": ["Respiratory infections", "STIs"]},
+      "ciprofloxacin": {"class": "Fluoroquinolone", "uses": ["UTI", "GI infections"]}
+    },
+    "antidiabetics": {
+      "metformin": {"type": "Oral", "action": "Decreases glucose production", "side_effects": ["Nausea", "Diarrhea"]}
+    },
+    "cardiovascular": {
+      "aspirin": {"dose": "75-100mg (low dose)", "action": "Blood thinner", "use": "Prevention of heart attack/stroke"},
+      "atorvastatin": {"type": "Statin", "action": "Lowers cholesterol"}
+    }
+  },
+  "first_aid": {
+    "bleeding": ["Apply direct pressure", "Elevate limb", "Clean wound", "Bandage"],
+    "burns": {
+      "first_degree": "Cool water, aloe vera",
+      "second_degree": "Cool water, don't pop blisters",
+      "third_degree": "Emergency - cover, don't remove clothing"
+    },
+    "choking": {
+      "adult": "Heimlich maneuver (abdominal thrusts)",
+      "infant": "Back blows, chest thrusts"
+    },
+    "cpr": {
+      "ratio": "30 chest compressions : 2 breaths",
+      "rate": "100-120 compressions per minute",
+      "depth": "5-6 cm (adult)"
+    },
+    "fractures": ["Immobilize", "Don't move unless necessary", "Apply ice pack"],
+    "poisoning": ["Call poison control", "Don't induce vomiting unless directed"],
+    "shock": ["Lay down", "Elevate legs", "Keep warm", "Call emergency"]
+  },
+  "nutrition": {
+    "food_groups": {
+      "grains": {"servings": "6-8 per day", "examples": ["Rice", "Bread", "Pasta", "Oats"]},
+      "vegetables": {"servings": "3-5 per day", "types": ["Leafy green", "Orange", "Starchy"]},
+      "fruits": {"servings": "2-4 per day", "examples": ["Apple", "Banana", "Orange", "Mango"]},
+      "protein": {"servings": "2-3 per day", "sources": ["Meat", "Fish", "Eggs", "Legumes", "Nuts"]},
+      "dairy": {"servings": "2-3 per day", "alternatives": ["Milk", "Yogurt", "Cheese", "Plant milks"]},
+      "fats": {"servings": "Use sparingly", "healthy": ["Olive oil", "Fish oil", "Nuts"]}
+    },
+    "vitamins": {
+      "A": {"sources": ["Carrots", "Sweet potato", "Spinach"], "deficiency": "Night blindness"},
+      "B12": {"sources": ["Meat", "Fish", "Eggs", "Dairy"], "note": "Important for vegans to supplement"},
+      "C": {"sources": ["Citrus fruits", "Bell peppers", "Broccoli"], "deficiency": "Scurvy"},
+      "D": {"sources": ["Sunlight", "Fatty fish", "Egg yolks"], "deficiency": "Rickets, weak bones"},
+      "E": {"sources": ["Nuts", "Seeds", "Vegetable oils"], "function": "Antioxidant"},
+      "K": {"sources": ["Leafy greens", "Broccoli"], "function": "Blood clotting"}
+    },
+    "minerals": {
+      "iron": {"sources": ["Red meat", "Beans", "Spinach"], "deficiency": "Anemia"},
+      "calcium": {"sources": ["Dairy", "Leafy greens", "Fortified foods"], "function": "Bones, teeth"},
+      "zinc": {"sources": ["Meat", "Seafood", "Nuts"], "function": "Immune system"},
+      "potassium": {"sources": ["Bananas", "Potatoes", "Beans"], "function": "Heart, muscle function"}
+    }
+  },
+  "bangladeshi_health": {
+    "common_diseases": ["Diarrhea", "Respiratory infections", "Dengue", "Malaria", "Typhoid", "Cholera"],
+    "prevention": ["Clean water", "Handwashing", "Vaccination", "Mosquito control"],
+    "healthcare": {
+      "hospitals": ["DMCH", "BSMMU", "PG Hospital", "Bangabandhu Sheikh Mujib Medical University"],
+      "emergency": "999"
+    }
+  }
+}

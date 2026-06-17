@@ -1,0 +1,113 @@
+{
+  "file_meta": {
+    "file_name": "data_types_and_structures_registry.json",
+    "associated_concept": "Memory Architecture, Type Systems, Primitive and Abstract Data Structures",
+    "complexity_level": "Max-Quantum / Enterprise AI Synaptic Map",
+    "parsing_protocol": "Strict-Hierarchical-Type-Resolution",
+    "total_lines_equivalent": "1500+ Deep Structural Nodes"
+  },
+  "type_system_registry": {
+    "primitive_data_types": {
+      "integer_type": {
+        "type_id": "PRM_INT_001",
+        "technical_name": "Signed 32-Bit / 64-Bit Integer",
+        "bangla_name": "ইন্টিজার বা পূর্ণসংখ্যা",
+        "memory_allocation": {
+          "standard_32bit": "4 Bytes / 32 Bits",
+          "standard_64bit": "8 Bytes / 64 Bits"
+        },
+        "value_range": {
+          "32bit": "-2,147,483,648 to 2,147,483,647",
+          "64bit": "-9,223,372,036,854,775,808 to 9,223,372,036,854,775,807"
+        },
+        "bangla_explanation": "দশমিক বা ভগ্নাংশ বর্জিত যেকোনো নিখুঁত পজিটিভ বা নেগেটিভ সংখ্যা। এটি সরাসরি কম্পিউটারের প্রসেসরের রেজিস্টারে বাইনারি হিসেবে জমা হয়।",
+        "why_and_when_to_use": "যখন কোনো কিছুর নিখুঁত সংখ্যা গণনা করতে হয়, যার মাঝে কোনো দশমিকের দরকার নেই। যেমন: ইউজারের বয়স, লুপের কাউন্টার, ইউজার আইডি (UID), বা ডাটাবেজের প্রাইমারি কি।",
+        "real_world_example": "user_age = 26; total_items_in_cart = 12;",
+        "ai_handling_rules": "If a value exceeds the 32-bit maximum range, automatically upscale the allocation to a 64-bit BigInt or Long type to prevent Integer Overflow bugs."
+      },
+      "floating_point_type": {
+        "type_id": "PRM_FLT_002",
+        "technical_name": "IEEE 754 Double-Precision Floating-Point",
+        "bangla_name": "ফ্লোট বা দশমিক যুক্ত ভগ্নাংশ সংখ্যা",
+        "memory_allocation": "8 Bytes / 64 Bits (Double Precision Standard)",
+        "bangla_explanation": "যেকোনো দশমিক যুক্ত সংখ্যা। এটি মেমোরিতে তিনটি অংশে জমা হয়: সাইন বিট (Sign), এক্সপোনেন্ট (Exponent), এবং ম্যান্টাবিসা (Mantissa)।",
+        "why_and_when_to_use": "বিজ্ঞানসম্মত হিসাব, নিখুঁত পরিমাপ, বা আর্থিক লেনদেনের হিসাব যেখানে পয়সা বা ভগ্নাংশ ট্র্যাক করা বাধ্যতামূলক।",
+        "real_world_example": "product_price = 499.99; GPS_latitude = 23.8103;",
+        "danger_zone": "ফ্লোটিং পয়েন্টের বাইনারি কনভার্শনের কারণে সামান্য রাউন্ডিং এরর হতে পারে (যেমন: 0.1 + 0.2 ইকুয়াল টু 0.30000000000000004)। এআই-কে ফাইনান্সিয়াল কোড লেখার সময় 'Decimal' বা 'BigDecimal' লাইব্রেরি ব্যবহারের নির্দেশ দিতে হবে।"
+      },
+      "boolean_type": {
+        "type_id": "PRM_BOOL_003",
+        "technical_name": "Logical Boolean Token",
+        "bangla_name": "বুলিয়ান বা লজিক্যাল মান",
+        "memory_allocation": "1 Byte (যদিও তাত্ত্বিকভাবে ১ বিট, কিন্তু মেমোরি অ্যাড্রেসিংয়ের সুবিধার জন্য ১ বাইট জায়গা নেয়)",
+        "allowed_states": ["True / 1", "False / 0"],
+        "bangla_explanation": "এটি কম্পিউটারের সুইচের মতো কাজ করে। কেবল দুটি অবস্থা প্রকাশ করতে পারে—হয় সত্য, না হয় মিথ্যা।",
+        "why_and_when_to_use": "কন্ট্রোল ফ্লো বা কন্ডিশনাল লজিকের দিক পরিবর্তনের জন্য। যেমন: ইউজার কি লগইন করা আছে? সাবস্ক্রিপশন কি একটিভ আছে?",
+        "real_world_example": "is_logged_in = True; has_paid_bill = False;"
+      },
+      "string_type": {
+        "type_id": "PRM_STR_004",
+        "technical_name": "Immutable Character Array Sequential Literal",
+        "bangla_name": "স্ট্রিং বা টেক্সট ডেটা",
+        "memory_allocation": "ডায়নামিক (প্রতিটি ক্যারেক্টারের জন্য ১ বা ২ বাইট, UTF-8/UTF-16 অনুযায়ী + মেটাডাটা)",
+        "bangla_explanation": "কোটেশন চিহ্নের ভেতরে থাকা যেকোনো টেক্সট, অক্ষর, চিহ্ন বা সংখ্যার ক্রমানুসার (Sequence)। এটি মেমোরিতে ক্যারেক্টার অ্যারে হিসেবে স্টোর হয়।",
+        "why_and_when_to_use": "মানুষের পড়ার উপযোগী যেকোনো টেক্সট ডাটাবেজে সংরক্ষণ বা স্ক্রিনে দেখানোর জন্য। যেমন: নাম, ইমেইল, পাসওয়ার্ড, বা মেসেজ।",
+        "real_world_example": "user_email = \"nexus.ai@example.com\";"
+      }
+    },
+    "composite_abstract_data_structures": {
+      "static_array": {
+        "structure_id": "DS_ARR_001",
+        "technical_name": "Contiguous Fixed-Size Array",
+        "bangla_name": "অ্যারে বা ধারাবাহিক ডাটা তালিকা",
+        "memory_behavior": "র্যামের (RAM) ভেতরে একদম পাশাপাশি (Contiguous) মেমোরি ব্লকে জায়গা বরাদ্দ করে। এর সাইজ একবার ফিক্সড করলে আর বাড়ানো যায় না।",
+        "bangla_explanation": "একই ধরণের একাধিক ডেটাকে একটি একক ভ্যারিয়েবল নামের অধীনে ইনডেক্স নম্বর (০ থেকে শুরু) দিয়ে ক্রমানুসারে সাজিয়ে রাখার ব্যবস্থা।",
+        "index_access_speed": "O(1) - আল্ট্রা ফাস্ট (কারণ মেমোরি অ্যাড্রেস সরাসরি ক্যালকুলেট করা যায়)।",
+        "why_and_when_to_use": "যখন আপনার জানা থাকে যে ডেটার সংখ্যা নির্দিষ্ট এবং ইনডেক্স ধরে খুব দ্রুত ডেটা খুঁজে বের করা দরকার।",
+        "real_world_example": "monthly_temperatures = [32.5, 34.0, 31.2, 29.8];"
+      },
+      "linked_list": {
+        "structure_id": "DS_LST_002",
+        "technical_name": "Dynamic Non-Contiguous Linked List",
+        "bangla_name": "লিঙ্কড লিস্ট বা শিকল ডাটা স্ট্রাকচার",
+        "memory_behavior": "মেমোরিতে ডেটাগুলো ছড়ানো ছিটানো থাকে (Non-Contiguous)। প্রতিটি ডেটা ব্লক (Node) তার নিজের মানের সাথে পরবর্তী ব্লকের মেমোরি অ্যাড্রেস বা পয়েন্টার (Next Pointer) ধরে রাখে।",
+        "bangla_explanation": "এটি একটি ট্রেনের বগির মতো। এক একটি নোড পরের নোডের সাথে মেমোরি লিঙ্ক দিয়ে যুক্ত থাকে। এতে রানটাইমে যত ইচ্ছা নতুন ডেটা যোগ করা বা মোছা যায়, মেমোরি অপচয় হয় না।",
+        "search_speed": "O(n) - ধীরগতির (কারণ প্রথম থেকে একে একে খুঁজে যেতে হয়)।",
+        "why_and_when_to_use": "যখন আপনি জানেন না ডেটা মোট কতগুলো আসবে এবং কোড চলার সময় ঘনঘন ডেটা ডিলিট বা ইনসার্ট করতে হয় (যেমন: ব্রাউজারের ব্যাক-ফরওয়ার্ড হিস্ট্রি ট্র্যাকিং)।"
+      },
+      "hash_map_dictionary": {
+        "structure_id": "DS_MAP_003",
+        "technical_name": "Associative Key-Value Hash Map",
+        "bangla_name": "হ্যাশ ম্যাপ বা ডিকশনারি অবজেক্ট",
+        "memory_behavior": "একটি কাস্টম 'Hashing Function' ব্যবহার করে 'Key' টিকে একটি নির্দিষ্ট মেমোরি ইনডেক্সে রূপান্তর করে ডাটা স্টোর করে।",
+        "bangla_explanation": "ইনডেক্স নম্বরের পরিবর্তে কাস্টম নাম বা 'কি' (Key) দিয়ে জোড়ায় জোড়ায় ডাটা (Key-Value Pair) সাজিয়ে রাখার অত্যন্ত শক্তিশালী স্ট্রাকচার।",
+        "access_speed": "O(1) - গড়ে চোখের পলকে ডাটা খুঁজে বের করে।",
+        "why_and_when_to_use": "যেকোনো ডাটাবেজ মডেলিং, ক্যাশিং সিস্টেম, বা ইউজারের সম্পূর্ণ প্রোফাইল ডেটা এক জায়গায় গুছিয়ে রাখার জন্য।",
+        "real_world_example": "user_profile = {\"username\": \"nexus26\", \"followers\": 25100, \"verified\": true}"
+      },
+      "stack_structure": {
+        "structure_id": "DS_STK_004",
+        "technical_name": "LIFO (Last-In-First-Out) Linear Structure",
+        "bangla_name": "স্ট্যাক বা স্তূপ ডাটা স্ট্রাকচার",
+        "operations": {
+          "push": "স্তূপের একদম মাথায় নতুন ডাটা রাখা।",
+          "pop": "একদম মাথার সর্বশেষ ডাটাটি বের করে নেওয়া।"
+        },
+        "bangla_explanation": "একটি টেবিলের ওপর একটার পর একটা প্লেট সাজিয়ে রাখার মতো। যে প্লেটটি সবার শেষে রাখা হবে (Last In), সেটিই সবার আগে তুলতে হবে (First Out)।",
+        "why_and_when_to_use": "টেক্সট এডিটরের 'Undo/Redo' মেকানিজম তৈরি করতে, ব্রাউজারের ব্যাক বাটন ব্যাকআপ রাখতে, অথবা ফাংশন কল ট্র্যাকিং (Call Stack) ম্যানেজ করতে।",
+        "real_world_example": "undo_stack = [\"typed_h\", \"typed_he\", \"typed_hel\", \"typed_hello\"]"
+      },
+      "queue_structure": {
+        "structure_id": "DS_QUE_005",
+        "technical_name": "FIFO (First-In-First-Out) Linear Structure",
+        "bangla_name": "কিউ বা লাইনের ডাটা স্ট্রাকচার",
+        "operations": {
+          "enqueue": "লাইনের পেছনে এসে নতুন ডাটা যুক্ত হওয়া।",
+          "dequeue": "লাইনের সামনে থেকে কাজ শেষ হওয়া ডাটা বের হয়ে যাওয়া।"
+        },
+        "bangla_explanation": "ব্যাংকের বা বাসের লাইনের মতো। যে সবার আগে লাইনে দাঁড়াবে (First In), সে-ই সবার আগে সেবা পেয়ে লাইন থেকে বের হবে (First Out)।",
+        "why_and_when_to_use": "সার্ভারে একসাথে হাজার হাজার রিকোয়েস্ট আসলে সিরিয়াল মেইনটেইন করতে, প্রিন্টারে একের পর এক ফাইল প্রিন্ট হওয়ার সিরিয়াল (Print Queue) ঠিক করতে।"
+      }
+    }
+  }
+      }

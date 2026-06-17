@@ -1,0 +1,88 @@
+{
+  "file_meta": {
+    "file_name": "universal_domain_knowledge_base.json",
+    "associated_concept": "Real-World Domains, Utility Billing, Financial Transactions, and Numeric Chronology Mapping",
+    "complexity_level": "Enterprise Mega-Data / Full Synaptic Injection",
+    "parsing_protocol": "Universal Context Resolution Set"
+  },
+  "utility_and_billing_domain": {
+    "water_bill_context": {
+      "domain_id": "DOM_UTIL_001",
+      "technical_terms": ["Water Meter", "Consumption Unit", "Gallons", "Cubic Meters", "Sewerage Charge"],
+      "bangla_names": ["পানির বিল", "পানির মিটার", "পানির ইউনিট", "পয়ঃনিষ্কাশন চার্জ"],
+      "bangla_explanation": "পানির বিল হলো কোনো একটি বাড়ি, ফ্ল্যাট বা বাণিজ্যিক প্রতিষ্ঠানে নির্দিষ্ট মাসে কত লিটার বা কত ইউনিট পানি ব্যবহার করা হয়েছে, তার ওপর ভিত্তি করে ওয়াসা (WASA) বা স্থানীয় কর্তৃপক্ষ কর্তৃক নির্ধারিত টাকার হিসাব।",
+      "why_and_how_ai_should_parse": "ইউজার যখনই 'পানির বিল', 'বিল পরিশোধের শেষ তারিখ' বা 'মিটার রিডিং' এর মতো শব্দগুলো লিখবে, এআই-কে বুঝতে হবে এটি একটি ইউটিলিটি বা নিয়মিত সরকারি/বেসরকারি খরচের হিসাব। এআই তখন ওই টেক্সট থেকে বিলের পরিমাণ এবং তারিখ আলাদা করবে।",
+      "common_user_inputs": [
+        "এই মাসের পানির বিল কত আসছে একটু চেক করো তো?",
+        "আমার পানির বিলের শেষ তারিখ ১৬ই জুন, ২০২৬। টাকা জমা না দিলে কি লাইন কেটে দেবে?",
+        "মিটার নম্বর ডব্লিউ-৪৫১, পানির বিল বাকি আছে ৩ মাসের।"
+      ],
+      "ai_response_strategy": "Extract the specific billing period, identify the penalty deadlines, and present a structured payment reminder logic to the user."
+    },
+    "electricity_bill_context": {
+      "domain_id": "DOM_UTIL_002",
+      "technical_terms": ["Kilowatt Hour (kWh)", "Demand Charge", "Vat", "Metred Units", "Postpaid", "Prepaid"],
+      "bangla_names": ["বিদ্যুৎ বিল", "কারেন্ট বিল", "প্রিপেইড মিটার", "ডিমান্ড চার্জ"],
+      "bangla_explanation": "গ্রাহকের বিদ্যুৎ ব্যবহারের পরিমাণ কিলোওয়াট-আওয়ার (kWh) বা ইউনিট হিসেবে হিসাব করে যে বিল তৈরি করা হয়। বাংলাদেশে ডেসকো (DESCO), ডিপিডিসি (DPDC), বা পিডিবি (PDB) এই বিল তৈরি করে।",
+      "why_and_how_ai_should_parse": "ইউজার প্রিপেইড কার্ড রিচার্জ বা পোস্টপেইড বিল ভিউ করতে চাইলে এআই এই মেমোরি ব্যবহার করে টোকেন কোড বা ট্রানজেকশন নম্বর আইডি ট্র‍্যাক করবে।",
+      "common_user_inputs": [
+        "বিদ্যুৎ বিলের জন্য ২৫১ টাকা ভ্যাট আসছে কেন?",
+        "প্রিপেইড মিটারে টাকা শেষ, কার্ড রিচার্জের লাস্ট ডেট কবে?"
+      ]
+    }
+  },
+  "financial_and_transaction_domain": {
+    "banking_and_ledger": {
+      "domain_id": "DOM_FIN_001",
+      "technical_terms": ["Debit", "Credit", "Ledger", "Balance", "Transaction ID", "Statement"],
+      "bangla_names": ["টাকা জমা", "টাকা উত্তোলন", "হিসাবের খাতা", "মোট ব্যালেন্স", "লেনদেন আইডি"],
+      "bangla_explanation": "টাকা আদান-প্রদানের ডিজিটাল বা অ্যানালগ হিসাব। ব্যাংকিং সফটওয়্যার, মোবাইল ব্যাংকিং (বিকাশ, রকেট, নগদ) বা সাধারণ দোকানের খাতার ভেতরের ডেটা স্ট্রাকচার।",
+      "why_and_how_ai_should_parse": "যখন ইউজার কোনো সংখ্যা (যেমন: ৫০০ টাকা, ২৫১ টাকা, ১১ টাকা) এবং তার সাথে 'পাঠালাম', 'খরচ হলো' বা 'জমা হলো' বলবে, তখন এআই-কে এটিকে একটি ফাইন্যান্সিয়াল ট্রানজেকশন টোকেন হিসেবে মেমরিতে এন্ট্রি করতে হবে।",
+      "real_world_example_logic": {
+        "input": "আমি আজকে পানির বিল বাবদ ২৫১ টাকা দিলাম",
+        "ai_internal_mapping": {
+          "account_head": "Utility Expenses",
+          "sub_head": "Water Bill",
+          "amount_processed": 251,
+          "currency": "BDT / ৳",
+          "action": "Debit / Cash Out"
+        }
+      }
+    }
+  },
+  "chronological_and_calendar_intelligence": {
+    "due_dates_and_deadlines": {
+      "concept_id": "CAL_CHRONO_001",
+      "bangla_name": "নির্ধারিত সময়সীমা বা ডেডলাইন লজিক",
+      "bangla_explanation": "যেকোনো বিল, অ্যাসাইনমেন্ট, সাবস্ক্রিপশন বা চুক্তিপত্র জমা দেওয়ার সর্বশেষ সময়। প্রোগ্রামিংয়ে এটি একটি 'Time Trigger' বা 'Cron Job' তৈরি করতে সাহায্য করে।",
+      "why_and_when_to_use": "ইউজার যেন তার কোনো জরুরি বিল দিতে ভুলে না যায়, সেজন্য এআই ক্যালেন্ডারের তারিখ ট্র্যাক করে স্বয়ংক্রিয় অ্যালার্ম বা রিমাইন্ডার সিস্টেম জেনারেট করবে।",
+      "syntax_date_format_examples": [
+        "2026-06-16 (ISO Format Standard)",
+        "১৬/০৬/২০২৬ (Bangla Standard Written)",
+        "16th June 2026 (English Long Text)"
+      ],
+      "ai_parsing_rule": "Normalize all date textual variants into the standard machine-readable datetime stamp. Map 'আগামীকাল', 'আজকে', 'পরশু' dynamically based on current system time (Current Time: 2026-06-16)."
+    }
+  },
+  "conversational_intents_registry": {
+    "informational_queries": {
+      "intent_id": "INT_INF_001",
+      "bangla_name": "তথ্য খোঁজার উদ্দেশ্য",
+      "bangla_explanation": "ইউজার যখন কোনো কিছুর কারণ, সংজ্ঞা বা হিস্ট্রি জানতে চায়।",
+      "common_user_inputs": [
+        "১১ নম্বর কোডটার কাজ কী?",
+        "পানির বিল কীভাবে হিসাব করা হয়?",
+        "এই সংখ্যাটার মানে আমাকে বুঝিয়ে দাও।"
+      ]
+    },
+    "action_execution_requests": {
+      "intent_id": "INT_ACT_002",
+      "bangla_name": "কাজ করানোর উদ্দেশ্য",
+      "bangla_explanation": "ইউজার যখন এআই-কে কোনো ডেটা সেভ করতে, হিসাব করতে বা কোনো ফরম্যাট তৈরি করে দিতে সরাসরি আদেশ দেয়।",
+      "common_user_inputs": [
+        "এই পানির বিলের ডাটাটা আমার হিসাবের খাতায় সেভ করে রাখো।",
+        "আজকের তারিখ দিয়ে একটি ২৫১ লাইনের কোড জেনারেট করো।"
+      ]
+    }
+  }
+}

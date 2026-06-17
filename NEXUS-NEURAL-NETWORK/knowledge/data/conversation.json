@@ -1,0 +1,205 @@
+{
+  "meta": {
+    "name": "NEXUS Conversation Knowledge",
+    "version": "1.0.0",
+    "last_updated": "2024"
+  },
+  "greetings": {
+    "bangla": {
+      "formal": ["নমস্কার", "আসসালামু আলাইকুম", "আদাব"],
+      "informal": ["হ্যালো", "হাই", "কেমন আছো?"],
+      "time_based": {
+        "morning": "সুপ্রভাত",
+        "afternoon": "শুভ অপরাহ্ন",
+        "evening": "শুভ সন্ধ্যা",
+        "night": "শুভ রাত্রি"
+      },
+      "response": ["আমি ভালো আছি, ধন্যবাদ", "বেশ ভালোই", "আপনি/তুমি কেমন আছেন/আছো?"]
+    },
+    "english": {
+      "formal": ["Good morning", "Good afternoon", "Good evening", "How do you do?"],
+      "informal": ["Hi", "Hey", "What's up?"],
+      "response": ["I'm fine, thank you", "Doing great!", "How about you?"]
+    }
+  },
+  "farewell": {
+    "bangla": ["বিদায়", "চলে যাচ্ছি", "আবার দেখা হবে", "আল্লাহ হাফেজ", "আসসালাম", "ধীরে ধীরে"],
+    "english": ["Goodbye", "Bye", "See you", "Take care", "Later", "Have a nice day"]
+  },
+  "gratitude": {
+    "bangla": {
+      "thanks": ["ধন্যবাদ", "অনেক ধন্যবাদ", "জাযাকাল্লাহ খাইরান", "আপনাকে অনেক ধন্যবাদ"],
+      "response": ["আপনাকে স্বাগত", "এটা আমার কাজ", "সবসময় সাহায্য করতে প্রস্তুত"]
+    },
+    "english": {
+      "thanks": ["Thank you", "Thanks a lot", "I appreciate it", "Much appreciated"],
+      "response": ["You're welcome", "No problem", "Happy to help", "My pleasure"]
+    }
+  },
+  "apology": {
+    "bangla": {
+      "apologize": ["দুঃখিত", "মাফ করবেন", "ক্ষমা করবেন", "আমি অনুতপ্ত"],
+      "response": ["কোনো ব্যাপার না", "আর কিছু না", "কোনো সমস্যা নেই", "মাফ করে দিচ্ছি"]
+    },
+    "english": {
+      "apologize": ["Sorry", "I apologize", "Excuse me", "Pardon me"],
+      "response": ["No problem", "It's okay", "Don't worry", "No worries"]
+    }
+  },
+  "agreement_disagreement": {
+    "agree": {
+      "bangla": ["হ্যাঁ, ঠিক বলেছেন", "অবশ্যই", "আমিও তাই মনে করি", "সম্পূর্ণ একমত"],
+      "english": ["Yes, exactly", "I agree", "That's right", "Absolutely", "I couldn't agree more"]
+    },
+    "disagree": {
+      "bangla": ["আমি একমত না", "মনে হয় না", "আমার অন্য মতামত", "হয়তো ভিন্নভাবে বলা উচিত"],
+      "english": ["I disagree", "I don't think so", "I beg to differ", "I'm not sure about that"]
+    }
+  },
+  "questions": {
+    "bangla": {
+      "what": "কী?/কি?",
+      "where": "কোথায়?",
+      "when": "কখন?",
+      "who": "কে?",
+      "why": "কেন?",
+      "how": "কিভাবে?/কেমন?"
+    },
+    "english": {
+      "what": "What?",
+      "where": "Where?",
+      "when": "When?",
+      "who": "Who?",
+      "why": "Why?",
+      "how": "How?"
+    }
+  },
+  "common_conversations": {
+    "introduction": {
+      "bangla": {
+        "ask": "আপনার সাথে পরিচয় হলো",
+        "tell": "আমার নাম [নাম]",
+        "response": "খুবই খুশি হলাম"
+      },
+      "english": {
+        "ask": "Nice to meet you",
+        "tell": "My name is [name]",
+        "response": "Pleased to meet you"
+      }
+    },
+    "asking_help": {
+      "bangla": {
+        "ask": "আপনি কি আমাকে সাহায্য করতে পারবেন?",
+        "tell": "আমার একটু সাহায্য দরকার",
+        "response": "অবশ্যই, কি করতে পারি?"
+      },
+      "english": {
+        "ask": "Can you help me?",
+        "tell": "I need some help",
+        "response": "Of course, what can I do for you?"
+      }
+    },
+    "making_plans": {
+      "bangla": {
+        "suggest": "আমরা কি করবো?",
+        "accept": "চলো করি",
+        "decline": "আপাতত সময় হবে না"
+      },
+      "english": {
+        "suggest": "What shall we do?",
+        "accept": "Let's do it",
+        "decline": "Not right now, maybe later"
+      }
+    }
+  },
+  "politeness": {
+    "bangla": {
+      "please": "দয়া করে",
+      "thank_you": "ধন্যবাদ",
+      "welcome": "আপনাকে স্বাগত"
+    },
+    "english": {
+      "please": "Please",
+      "thank_you": "Thank you",
+      "welcome": "You're welcome"
+    }
+  },
+  "emotions": {
+    "bangla": {
+      "happy": ["আনন্দিত", "খুশি", "মজা লাগছে"],
+      "sad": ["উদ্বিগ্ন", "দুঃখিত", "মন খারাপ"],
+      "angry": ["রাগ", "ক্ষুব্ধ"],
+      "excited": ["উত্তেজিত", "আগ্রহী"]
+    },
+    "english": {
+      "happy": ["Happy", "Glad", "Pleased", "Delighted"],
+      "sad": ["Sad", "Unhappy", "Down"],
+      "angry": ["Angry", "Upset", "Annoyed"],
+      "excited": ["Excited", "Thrilled", "Eager"]
+    }
+  },
+  "idioms": {
+    "bangla": {
+      "app": ["আপেলের মতো সতেজ", "চোখের বিল হওয়া", "হাত পাখা না দেখে উপায় নেই"],
+      "proverbs": {
+        "unity": "একলা চলো না",
+        "patience": "ধৈর্যের ফল মিষ্টি",
+        "hardwork": "পরিশ্রম সৌভাগ্যের চাবিকাঠি"
+      }
+    },
+    "english": {
+      "idioms": {
+        "time": "Time flies",
+        "luck": "Break a leg",
+        "change": "Piece of cake",
+        "effort": "Bite the bullet",
+        "attention": "Break the ice"
+      },
+      "proverbs": {
+        "time": "Time and tide wait for no man",
+        "action": "Actions speak louder than words",
+        "patience": "Patience is a virtue"
+      }
+    }
+  },
+  "numbers_bangla": {
+    "0": "শূন্য",
+    "1": "এক",
+    "2": "দুই",
+    "3": "তিন",
+    "4": "চার",
+    "5": "পাঁচ",
+    "6": "ছয়",
+    "7": "সাত",
+    "8": "আট",
+    "9": "নয়",
+    "10": "দশ",
+    "100": "একশো",
+    "1000": "এক হাজার",
+    "100000": "এক লক্ষ",
+    "10000000": "এক কোটি"
+  },
+  "days_bangla": {
+    "saturday": "শনিবার",
+    "sunday": "রবিবার",
+    "monday": "সোমবার",
+    "tuesday": "মঙ্গলবার",
+    "wednesday": "বুধবার",
+    "thursday": "বৃহস্পতিবার",
+    "friday": "শুক্রবার"
+  },
+  "months_bangla": {
+    "january": "জানুয়ারি",
+    "february": "ফেব্রুয়ারি",
+    "march": "মার্চ",
+    "april": "এপ্রিল",
+    "may": "মে",
+    "june": "জুন",
+    "july": "জুলাই",
+    "august": "আগস্ট",
+    "september": "সেপ্টেম্বর",
+    "october": "অক্টোবর",
+    "november": "নভেম্বর",
+    "december": "ডিসেম্বর"
+  }
+}

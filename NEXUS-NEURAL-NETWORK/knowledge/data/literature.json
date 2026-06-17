@@ -1,0 +1,402 @@
+{
+  "meta": {
+    "name": "NEXUS Literature & History Knowledge",
+    "version": "1.0.0",
+    "last_updated": "2024"
+  },
+  "bangla_literature": {
+    "poets_writers": {
+      "rabindranath_tagore": {
+        "name": "রবীন্দ্রনাথ ঠাকুর",
+        "born": "1861",
+        "died": "1941",
+        "achievements": ["নোবেল পুরস্কার ১৯১৩ (গীতাঞ্জলি)", "সাহিত্যে অবদান অসীম", "জাতীয় সঙ্গীত রচয়িতা"],
+        "works": {
+          "poetry": ["গীতাঞ্জলি", "গীতালি", "সোনার তরী", "বলাকা", "পুনশ্চ", "খেয়া", "ফাগুন", "নির্ঝর"],
+          "novels": ["গোরা", "ঘরে বাইরে", "চতুরঙ্গ", "যমুনাবতী", "শেষের কবিতা", "চোখের বালি", "দুই বোন", "নৌকাডুবি"],
+          "short_stories": ["কাবুলিওয়ালা", "পোস্টমাস্টার", "হত্যা", "সূর্যদ্বার", "নিষ্কৃতি", "একটি কাল্পনিক পত্র", "ঘরে ফেরা"],
+          "plays": ["রাজা ও রাজি", "ডাকঘর", "অচলায়তন", "রক্তকরবী", "মায়ার খেলা"]
+        },
+        "famous_lines": [
+          "ওরে ওই অশান্ত দোষী, ওরে ওই পাপী তুমি বড় বিপদে পড়েছ",
+          "আমি চিরদিন তোমার দাসী, এই জীবন তোমার দান",
+          "আমারে আমারে ডাক দেয়েছে বন্দীর তরে আমি যে চিরবন্দী",
+          "যখন পড়বে না জয়গান, তখন আমার বিজয় হবে"
+        ]
+      },
+      "kazi_nazrul_islam": {
+        "name": "কাজী নজরুল ইসলাম",
+        "born": "1899",
+        "died": "1976",
+        "nickname": "বিদ্রোহী কবি",
+        "achievements": ["বিদ্রোহী কবি হিসেবে খ্যাত", "স্বাধীনতা আন্দোলনে অবদান", "বাংলা সংগীত জগতে বিপ্লব"],
+        "works": {
+          "poetry": ["বিষের বাঁশি", "অগ্নিবীণা", "ভাঙ্গার গান", "দুর্দিনের দিনে", "প্রেমের পালা", "সাম্যবাদী"],
+          "songs": ["আমার সোনার বাংলা", "এই দেশে শান্তি নাই", "মোরা এখন ঐ জিজ্ঞাসা"],
+          "rebels": ["ধূমকেতু", "সংগ্রামী", "অনন্ত"]
+        },
+        "famous_lines": [
+          "আমি চিরদিন তোমার অধীন, এই জীবন তোমার দান",
+          "হাজার বছর ধরে আমি পৃথিবীতে কাজ করেছি জেগে"
+        ]
+      },
+      "bankim_chandra_chattopadhyay": {
+        "name": "বঙ্কিমচন্দ্র চট্টোপাধ্যায়",
+        "born": "1838",
+        "died": "1894",
+        "title": "আধুনিক বাংলা উপন্যাসের জনক",
+        "works": {
+          "novels": ["কপালকুণ্ডলা (১৮৬৬) - প্রথম বাংলা উপন্যাস", "মৃণালিনী", "বিষবৃক্ষ", "চন্দ্রনাথ", "রাধারাণী", "দুর্গেশনন্দিনী"],
+          "essays": ["বঙ্গদর্শন পত্রিকা", "কমলাকান্তের দপ্তর"]
+        },
+        "contribution": "বঙ্গদর্শন পত্রিকা প্রতিষ্ঠা, 'বন্দে মাতরম' গান লেখা"
+      },
+      "sharatchandra_chattopadhyay": {
+        "name": "শরৎচন্দ্র চট্টোপাধ্যায়",
+        "born": "1878",
+        "died": "1938",
+        "works": {
+          "novels": ["পথের দাবী", "গৃহদাহ", "শেষ প্রশ্ন", "পরিণীতা", "চন্দ্রনাথ", "দেবদাস", "গ্রন্থিকা"],
+          "short_stories": ["স্ত্রীর পত্র", "পতিত", "মন্দির", "বৈকুণ্ঠের উইল"]
+        }
+      },
+      "humayun_ahmed": {
+        "name": "হুমায়ূন আহমেদ",
+        "born": "1948",
+        "died": "2012",
+        "profession": ["লেখক", "চিত্রনাট্যকার", "নাট্য পরিচালক"],
+        "works": {
+          "novels": ["বহুব্রীহি", "দেবী", "অয়ি ও আমি", "নন্দিত মরুদ্যান", "আমার এই তন্দ্রা", "নিশীথে নিভৃতে", "এই সব ভুলো মন"],
+          "dramas": ["গাঙ্কার", "এই সব ভুলো মন", "মাতা", "শত্রু", "বহুব্রীহি"]
+        }
+      },
+      "michael_madhusudan_dutt": {
+        "name": "মাইকেল মধুসূদন দত্ত",
+        "born": "1824",
+        "died": "1873",
+        "title": "অমিত্রাক্ষর ছন্দের জনক",
+        "works": {
+          "poetry": ["মেঘনাদবধ কাব্য", "পদ্মাবতী"],
+          "drama": ["কৃষ্ণকুমারী", "শর্মিষ্ঠা"]
+        }
+      },
+      "sarat_chandra Chattopadhyay": {
+        "name": "সরল চন্দ্র চট্টোপাধ্যায়",
+        "born": "1876",
+        "died": "1938",
+        "works": {
+          "novels": ["পল্লীসমাজ", "গৃহস্থ", "ছোট কাঠমাস্টার", "দেনা পাওনা", "পুত্রকন্যা"]
+        }
+      }
+    },
+    "eras": {
+      "ancient": {
+        "period": "প্রাচীন যুগ (১০ম-১৮শ শতক)",
+        "works": ["চর্যাপদ (১০ম-১২শ শতক) - প্রথম বাংলা কবিতা", "শ্রীকৃষ্ণকীর্তন", "অন্নদামঙ্গল"]
+      },
+      "medieval": {
+        "period": "মধ্যযুগ (১৮শ-১৯শ শতক)",
+        "writers": ["ঈশ্বরচন্দ্র বিদ্যাসাগর", "মাইকেল মধুসূদন দত্ত", "রামনিধি গুপ্ত"]
+      },
+      "modern": {
+        "period": "আধুনিক যুগ (১৯শ-বর্তমান)",
+        "movements": ["ভাববাদ", "অভিজ্ঞতাবাদ", "প্রগতিবাদ", "অতিআধুনিকতাবাদ"]
+      }
+    }
+  },
+  "world_literature": {
+    "greek": {
+      "homer": {
+        "works": ["Iliad (ইলিয়ড) - Trojan War", "Odyssey (ওডিসি) - Odysseus-এর যাত্রা"]
+      },
+      "sophocles": {
+        "works": ["Oedipus Rex", "Antigone"]
+      },
+      "plato": {
+        "works": ["Republic (রিপাবলিক)", "Symposium", "Phaedo"]
+      },
+      "aristotle": {
+        "works": ["Poetics (কাব্য শাস্ত্র)", "Politics", "Nicomachean Ethics"]
+      }
+    },
+    "english": {
+      "shakespeare": {
+        "name": "William Shakespeare",
+        "born": "1564",
+        "died": "1616",
+        "title": "All the world's a stage",
+        "tragedies": ["Hamlet (হ্যামলেট)", "Macbeth (ম্যাকবেথ)", "Othello (ওথেলো)", "King Lear (কিং লিয়ার)", "Romeo and Juliet (রোমিও অ্যান্ড জুলিয়েট)"],
+        "comedies": ["A Midsummer Night's Dream", "Twelfth Night", "Much Ado About Nothing", "The Merchant of Venice"],
+        "histories": ["Henry V", "Richard III"]
+      },
+      "charles_dickens": {
+        "works": ["Oliver Twist", "A Tale of Two Cities", "Great Expectations", "David Copperfield", "Bleak House"]
+      },
+      "jane_austen": {
+        "works": ["Pride and Prejudice", "Sense and Sensibility", "Emma", "Persuasion"]
+      },
+      "george_orwell": {
+        "works": ["1984", "Animal Farm", "Homage to Catalonia"]
+      },
+      "jrr_tolkien": {
+        "works": ["The Lord of the Rings", "The Hobbit", "The Silmarillion"]
+      }
+    },
+    "russian": {
+      "leo_tolstoy": {
+        "works": ["War and Peace (যুদ্ধ ও শান্তি)", "Anna Karenina (আন্না কারেনিনা)"]
+      },
+      "fyodor_dostoevsky": {
+        "works": ["Crime and Punishment (অপরাধ ও দণ্ড)", "The Brothers Karamazov (কারামাজভ ভাইয়েরা)", "Notes from Underground"]
+      },
+      "anton_chekhov": {
+        "works": ["The Seagull", "Uncle Vanya", "Three Sisters", "The Cherry Orchard"]
+      },
+      "nikolai_gogol": {
+        "works": ["Dead Souls", "The Overcoat", "The Government Inspector"]
+      }
+    },
+    "american": {
+      "ernest_hemingway": {
+        "works": ["The Old Man and the Sea (বৃদ্ধ মানুষ ও সমুদ্র)", "A Farewell to Arms", "For Whom the Bell Tolls"]
+      },
+      "mark_twain": {
+        "works": ["The Adventures of Tom Sawyer", "Adventures of Huckleberry Finn"]
+      },
+      "scott_fitzgerald": {
+        "works": ["The Great Gatsby"]
+      }
+    },
+    "french": {
+      "victor_hugo": {
+        "works": ["Les Misérables (দরিদ্র)", "The Hunchback of Notre Dame"]
+      },
+      "emile_zola": {
+        "works": ["Germinal", "Nana"]
+      }
+    },
+    "german": {
+      "goethe": {
+        "works": ["Faust (ফস্ট)", "The Sorrows of Young Werther"]
+      },
+      "franz_kafka": {
+        "works": ["The Metamorphosis (রূপান্তর)", "The Trial (বিচার)", "The Castle (দুর্গ)"]
+      }
+    }
+  },
+  "world_history": {
+    "ancient_civilizations": {
+      "mesopotamia": {
+        "period": "3500 BCE - 539 BCE",
+        "location": "আজকের ইরাক (টাইগ্রিস-ইউফ্রেটিস নদীর মাঝে)",
+        "achievements": ["লেখার আবিষ্কার (Cuneiform)", "হুইল", "কৃষি ব্যবস্থা", "Code of Hammurabi (প্রথম লিখিত আইন)", "Ziggurat (মন্দির স্থাপনা)"],
+        "empires": ["Sumer", "Akkadian", "Babylonian", "Assyrian"]
+      },
+      "egypt": {
+        "period": "3100 BCE - 30 BCE",
+        "achievements": ["পিরামিড (Giza)", "হায়ারোগ্লিফ লেখা", "ফারাও সভ্যতা", "মমি", "আকাশগঙ্গা নদীর সভ্যতা", "প্যাপিরাস"],
+        "dynasties": "৩১টি রাজবংশ",
+        "pharaohs": ["Tutankhamun", "Ramesses II", "Cleopatra"]
+      },
+      "indus_valley": {
+        "period": "3300 BCE - 1300 BCE",
+        "location": "আজকের পাকিস্তান ও ভারত (সিন্ধু নদীর উপত্যকা)",
+        "achievements": ["শহর পরিকল্পনা (Mohenjo-daro, Harappa)", "ধর্ম", "বাণিজ্য"],
+        "script": "আবিষ্কৃত কিন্তু অনুবাদিত হয়নি"
+      },
+      "china": {
+        "period": "1600 BCE onwards",
+        "achievements": ["চীনা লেখা (চীনা অক্ষর)", "রেশম", "কাগজ", "কম্পাস", "বারুদ", "ছাপাখানা"],
+        "dynasties": ["Shang", "Zhou", "Qin", "Han", "Tang", "Song", "Ming", "Qing"]
+      },
+      "greece": {
+        "period": "800 BCE - 31 BCE",
+        "achievements": ["গণতন্ত্রের জন্ম (Athens)", "অলিম্পিক গেমস", "দর্শন (Socrates, Plato, Aristotle)", "স্থাপত্য (Parthenon)", "সাহিত্য (Homer)", "বিজ্ঞান"],
+        "empires": ["Athens", "Sparta", "Macedonia"]
+      },
+      "rome": {
+        "period": "753 BCE - 476 CE",
+        "achievements": ["পাথরের রাস্তা (Roman Roads)", "আইন ও বিচার ব্যবস্থা", "শক্তিশালী সেনাবাহিনী", "জল সরবরাহ ব্যবস্থা", "গম্বুজ ও আর্চ"],
+        "empire_period": "27 BCE - 476 CE (Western), 1453 CE (Eastern/Bzantine)",
+        "famous_emperors": ["Augustus", "Nero", "Marcus Aurelius", "Constantine"]
+      }
+    },
+    "middle_ages": {
+      "byzantine_empire": {
+        "period": "330-1453 CE",
+        "capital": "Constantinople (আজকের ইস্তাম্বুল)",
+        "achievements": ["Orthodox Christianity", "Justinian's Code of Law", "Hagia Sophia"]
+      },
+      "islamic_golden_age": {
+        "period": "750-1258 CE",
+        "centers": ["Baghdad - House of Wisdom", "Cordoba", "Cairo"],
+        "achievements": ["Algebra (আল-খোয়ারিজমি)", "Optics", "Medicine (Ibn Sina/Avicenna)", "Philosophy (Ibn Rushd/Averroes)", "Astronomy"]
+      },
+      "medieval_europe": {
+        "feudal_system": "Lord → Vassal → Serf",
+        "crusades": "1095-1291 CE (খ্রিস্টান যুদ্ধ)",
+        "black_death": "1347-1351 CE (প্লেগ মহামারি)"
+      },
+      "mongol_empire": {
+        "period": "1206-1368 CE",
+        "founder": "Chengiz Khan (চেঙ্গিজ খান)",
+        "achievements": ["বিশ্বের সবচেয়ে বড় স্থল সাম্রাজ্য", "Silk Road নিরাপদ"]
+      }
+    },
+    "modern_history": {
+      "renaissance": {
+        "period": "14th-17th century",
+        "origin": "Italy",
+        "themes": ["Humanism", "Art", "Science", "Literature"],
+        "artists": ["Leonardo da Vinci", "Michelangelo", "Raphael"]
+      },
+      "industrial_revolution": {
+        "period": "1760-1840",
+        "origin": "Britain",
+        "inventions": ["Steam Engine (James Watt)", "Power Loom", "Spinning Jenny"],
+        "effects": ["Urbanization", "Factory system", "Social changes"]
+      },
+      "world_war_1": {
+        "period": "1914-1918",
+        "causes": ["Militarism", "Alliances", "Imperialism", "Nationalism"],
+        "result": "Central Powers defeated",
+        "treaty": "Treaty of Versailles"
+      },
+      "world_war_2": {
+        "period": "1939-1945",
+        "causes": ["Treaty of Versailles", "Rise of fascism", "Economic depression"],
+        "result": "Allies defeated Axis",
+        "organizations": ["UN (United Nations) - 1945"]
+      },
+      "cold_war": {
+        "period": "1947-1991",
+        "powers": ["USA (West)", "USSR (East)"],
+        "conflicts": ["Korean War", "Vietnam War", "Cuban Missile Crisis", "Space Race"]
+      }
+    },
+    "famous_events": {
+      "french_revolution": "1789 - 'Liberté, égalité, fraternité'",
+      "american_revolution": "1775-1783 - Independence from Britain",
+      "russian_revolution": "1917 - Communist revolution",
+      "moon_landing": "1969 - Neil Armstrong"
+    }
+  },
+  "bangladesh_history": {
+    "ancient": {
+      "period": "প্রাচীন যুগ",
+      "name": "বঙ্গ দেশ, গাঙ্গেয় সভ্যতা",
+      "janapadas": ["Bangla (বঙ্গল)", "Pundravardhana (পৌন্ড্রবর্ধন)"]
+    },
+    "sultanate": {
+      "period": "1204-1576",
+      "capital": "গৌড়, হজরত বাল্লালপুর",
+      "rulers": ["Ikhtiyar Uddin Muhammad bin Bakhtiyar Khalji", "Sultanate of Bengal"]
+    },
+    "mughal": {
+      "period": "1576-1757",
+      "subahdars": "মুঘল সুবেদার",
+      "important_centers": ["Dhaka (জাহাঙ্গীরনগর)", "Rajmahal"]
+    },
+    "british_rule": {
+      "period": "1757-1947",
+      "battle_of_plassey": "১৭৫৭ - বাংলার স্বাধীনতার শেষ প্রচেষ্টা",
+      "partitions": ["1905 Partition (বিভক্ত)", "1947 Partition (ভারত-পাকিস্তান বিভাগ)"]
+    },
+    "language_movement": {
+      "year": "1948-1952",
+      "significance": "মাতৃভাষার অধিকার প্রতিষ্ঠা",
+      "martyrs_21_february": ["Abul Barkat", "Ahmed Jabbar", " Abdul Jabbar", "Shafiur Rahman", "সালাম, বার্নেট, জাফর, হাসান"],
+      "international_recognition": "UNESCO - International Mother Language Day (21 Feb)"
+    },
+    "liberation_war": {
+      "year": "1971",
+      "independence_day": "২৬ মার্চ",
+      "victory_day": "১৬ ডিসেম্বর",
+      "supreme_leader": "বঙ্গবন্ধু শেখ মুজিবুর রহমান",
+      "genocide": "মুক্তিযুদ্ধকালীন গণহত্যা (৩০ লক্ষ শহীদ)",
+      "war_criminals": "যুদ্ধাপরাধীদের বিচার",
+      "recognition": "বিশ্বের অনেক দেশ কর্তৃক স্বীকৃতি"
+    },
+    "post_independence": {
+      "1972": "স্বাধীনতার পর প্রথম সংবিধান",
+      "1975": "বঙ্গবন্ধু হত্যাকাণ্ড, জাতীয় শোক দিবস",
+      "1991": "সংসদীয় গণতন্ত্র পুনরুদ্ধার"
+    }
+  },
+  "geography": {
+    "bangladesh": {
+      "capital": "ঢাকা",
+      "area": "147,570 km²",
+      "population": "১৭+ কোটি",
+      "rivers": ["পদ্মা", "মেঘনা", "ব্রহ্মপুত্র", "সুরমা", "কর্ণফুমী", "তিস্তা", "যমুনা"],
+      "divisions": ["ঢাকা", "চট্টগ্রাম", "রাজশাহী", "খুলনা", "সিলেট", "বরিশাল", "রংপুর", "ময়মনসিংহ"],
+      "borders": ["ভারত (উত্তর, পূর্ব, পশ্চিম)", "মায়ানমার (দক্ষিণ-পূর্ব)"],
+      "bays": "বঙ্গোপসাগর (দক্ষিণ)",
+      "exports": ["পোশাক (RMG)", "চা", "চিংড়ি", "পাট ও পাটজাত পণ্য"],
+      "famous_places": ["সুন্দরবন", "কক্সবাজার", "সোনার গাঁও", "মহাস্থানগড়", "বিলুপ্ত স্থান"]
+    },
+    "world_countries": {
+      "largest_countries": {
+        "1": "Russia (রাশিয়া) - ১৭.১ মিলিয়ন km²",
+        "2": "Canada (কানাডা)",
+        "3": "USA (যুক্তরাষ্ট্র)",
+        "4": "China (চীন)",
+        "5": "Brazil (ব্রাজিল)"
+      },
+      "most_populated": {
+        "1": "China (চীন) - ১৪০+ কোটি",
+        "2": "India (ভারত) - ১৪০+ কোটি",
+        "3": "USA (যুক্তরাষ্ট্র)",
+        "4": "Indonesia (ইন্দোনেশিয়া)",
+        "5": "Pakistan (পাকিস্তান)"
+      },
+      "bangladesh_neighbors": {
+        "india": {
+          "capital": "New Delhi",
+          "population": "১৪০+ কোটি",
+          "currency": "Rupee (₹)",
+          "language": "Hindi, English"
+        },
+        "myanmar": {
+          "capital": "Naypyidaw",
+          "population": "৫৫+ মিলিয়ন",
+          "currency": "Kyat",
+          "language": "Burmese"
+        }
+      }
+    },
+    "continents": {
+      "asia": {"area": "44.58M km²", "population": "৪৭৫+ কোটি", "countries": 49},
+      "africa": {"area": "30.37M km²", "population": "১৩০+ কোটি", "countries": 54},
+      "north_america": {"area": "24.71M km²", "population": "৬০+ কোটি", "countries": 23},
+      "south_america": {"area": "17.84M km²", "population": "৪৩+ কোটি", "countries": 12},
+      "antarctica": {"area": "14.2M km²", "population": "০ (কোনো স্থায়ী)", "note": "Research stations only"},
+      "europe": {"area": "10.18M km²", "population": "৭৫+ কোটি", "countries": 44},
+      "australia": {"area": "8.53M km²", "population": "৪.৩+ কোটি", "countries": 14}
+    },
+    "oceans": {
+      "pacific": {"area": "১৬৫+ মিলিয়ন km²", "deepest": "Mariana Trench (১১,০৩৪m)"},
+      "atlantic": {"area": "৮৫+ মিলিয়ন km²"},
+      "indian": {"area": "৭০+ মিলিয়ন km²"},
+      "arctic": {"area": "১৪+ মিলিয়ন km²", "coldest": true},
+      "southern": {"area": "২০+ মিলিয়ন km²"}
+    },
+    "mountains": {
+      "highest": {
+        "name": "Mount Everest",
+        "height": "৮,৮৪৮.৮৬ মিটার",
+        "location": "Nepal/China (Himalayas)",
+        "first_climb": "1953 - Edmund Hillary & Tenzing Norgay"
+      },
+      "famous": ["K2 (Pakistan/China)", "Kangchenjunga (Nepal/India)", "Lhotse", "Makalu", "Cho Oyu"]
+    },
+    "rivers": {
+      "longest_world": {
+        "1": "Nile (নীল) - ৬,৬৫০ km - Africa",
+        "2": "Amazon (আমাজন) - ৬,৪০০ km - South America",
+        "3": "Yangtze (যমুনা/চ্যাং) - ৬,৩০০ km - China",
+        "4": "Mississippi - ৬,২৭৫ km - USA"
+      }
+    }
+  }
+}
