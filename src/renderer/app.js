@@ -9,9 +9,11 @@ const AppState = {
     isListening: false,
     isProcessing: false,
     isSpeaking: false,
+    isActivated: false, // নেক্সাস সক্রিয় কিনা
     lastTranscript: '',
     conversationHistory: [],
-    knowledgeReady: false
+    knowledgeReady: false,
+    logs: [] // সব লগ এখানে সংরক্ষণ
 };
 
 // Knowledge Base Instance
@@ -38,7 +40,7 @@ document.addEventListener('DOMContentLoaded', async () => {
 
 // Initialize Knowledge Base
 async function initKnowledgeBase() {
-    console.log('[NEXUS] 🧠 Knowledge Base লোড হচ্ছে...');
+    addLog('info', '🧠 Knowledge Base লোড হচ্ছে...');
     
     try {
         // NEXUS Knowledge Base লোড
@@ -47,13 +49,198 @@ async function initKnowledgeBase() {
             // Wait for async loading
             setTimeout(() => {
                 AppState.knowledgeReady = true;
-                console.log('[NEXUS] ✅ Knowledge Base Ready!');
+                addLog('success', 'Knowledge Base Ready!');
             }, 500);
         } else {
-            console.warn('[NEXUS] Knowledge Base not found, using API only');
+            addLog('warn', 'Knowledge Base not found, using API only');
         }
     } catch (e) {
-        console.error('[NEXUS] Knowledge Base Error:', e);
+        addLog('error', 'Knowledge Base Error: ' + e.message);
+    }
+}
+
+// Set Activation State
+function setActivated(activated) {
+    AppState.isActivated = activated;
+    const wakeIndicator = document.getElementById('wakeIndicator');
+    const statusBadge = document.getElementById('statusBadge');
+    
+    if (activated) {
+        if (wakeIndicator) {
+            wakeIndicator.classList.add('active');
+            wakeIndicator.querySelector('span').textContent = 'নেক্সাস সক্রিয়!';
+        }
+        if (statusBadge) {
+            statusBadge.classList.add('activated');
+        }
+        addLog('info', 'নেক্সাস সক্রিয় হয়েছে');
+    } else {
+        if (wakeIndicator) {
+            wakeIndicator.classList.remove('active');
+            wakeIndicator.querySelector('span').textContent = 'শুনছি...';
+        }
+        if (statusBadge) {
+            statusBadge.classList.remove('activated');
+        }
+        addLog('info', 'নেক্সাস বন্ধ হয়েছে');
+    }
+}
+
+// Add Log Entry (লগিং সিস্টেম)
+function addLog(type, message) {
+    const timestamp = new Date().toLocaleTimeString('bn-BD');
+    const logEntry = { type, message, timestamp };
+    AppState.logs.push(logEntry);
+    
+    // সর্বোচ্চ 500 লগ রাখবে
+    if (AppState.logs.length > 500) {
+        AppState.logs.shift();
+    }
+    
+    // UI তে দেখাও
+    const logContainer = document.getElementById('actionLog');
+    if (logContainer) {
+        const entry = document.createElement('div');
+        entry.className = `log-entry ${type}`;
+        entry.innerHTML = `
+            <div class="log-time">${timestamp}</div>
+            <div class="log-text">${message}</div>
+        `;
+        logContainer.appendChild(entry);
+        logContainer.scrollTop = logContainer.scrollHeight;
+        
+        // সর্বোচ্চ 50 লগ দেখাও
+        while (logContainer.children.length > 50) {
+            logContainer.removeChild(logContainer.firstChild);
+        }
+    }
+}
+
+// Open Logs Page
+function openLogsPage() {
+    const logsModal = document.getElementById('logsModal');
+    if (logsModal) {
+        logsModal.classList.add('active');
+        updateLogsDisplay();
+    }
+}
+
+// Close Logs Page
+function closeLogsPage() {
+    const logsModal = document.getElementById('logsModal');
+    if (logsModal) {
+        logsModal.classList.remove('active');
+    }
+}
+
+// Update Logs Display
+function updateLogsDisplay() {
+    const logsContainer = document.getElementById('logsContainer');
+    if (!logsContainer) return;
+    
+    logsContainer.innerHTML = '';
+    
+    // সর্বশেষ লগ প্রথমে দেখাও
+    const reversedLogs = [...AppState.logs].reverse();
+    
+    reversedLogs.forEach(log => {
+        const entry = document.createElement('div');
+        entry.className = `log-entry ${log.type}`;
+        entry.innerHTML = `
+            <div class="log-time">${log.timestamp}</div>
+            <div class="log-text">${log.message}</div>
+        `;
+        logsContainer.appendChild(entry);
+    });
+    
+    if (reversedLogs.length === 0) {
+        logsContainer.innerHTML = '<div class="log-entry"><div class="log-time">--:--:--</div><div class="log-text">কোনো লগ নেই</div></div>';
+    }
+}
+
+// Clear Logs
+function clearLogs() {
+    AppState.logs = [];
+    updateLogsDisplay();
+    addLog('info', 'সব লগ মুছে ফেলা হয়েছে');
+}
+
+// Export Logs
+function exportLogs() {
+    const logsText = AppState.logs.map(log => `[${log.timestamp}] [${log.type.toUpperCase()}] ${log.message}`).join('\n');
+    const blob = new Blob([logsText], { type: 'text/plain' });
+    const url = URL.createObjectURL(blob);
+    const a = document.createElement('a');
+    a.href = url;
+    a.download = `nexus-ai-logs-${new Date().toISOString().slice(0, 10)}.txt`;
+    a.click();
+    URL.revokeObjectURL(url);
+    addLog('info', 'লগ ফাইল ডাউনলোড হচ্ছে...');
+}
+
+// ==================== PASSWORD PROTECTION ====================
+const LOGS_PASSWORD = 'SAYIDI'; // পাসওয়ার্ড
+
+// Open Logs Page with Password
+function openLogsPage() {
+    const passwordModal = document.getElementById('passwordModal');
+    const logsModal = document.getElementById('logsModal');
+    
+    // প্রথমে পাসওয়ার্ড মডাল দেখাও
+    if (passwordModal) {
+        passwordModal.classList.add('active');
+        const passwordInput = document.getElementById('passwordInput');
+        if (passwordInput) {
+            passwordInput.value = '';
+            passwordInput.focus();
+        }
+        const passwordError = document.getElementById('passwordError');
+        if (passwordError) passwordError.textContent = '';
+    }
+}
+
+// Close Password Modal
+function closePasswordModal() {
+    const passwordModal = document.getElementById('passwordModal');
+    if (passwordModal) {
+        passwordModal.classList.remove('active');
+    }
+}
+
+// Check Password
+function checkPassword() {
+    const passwordInput = document.getElementById('passwordInput');
+    const passwordError = document.getElementById('passwordError');
+    const passwordModal = document.getElementById('passwordModal');
+    const logsModal = document.getElementById('logsModal');
+    
+    if (!passwordInput) return;
+    
+    const enteredPassword = passwordInput.value.trim().toUpperCase();
+    
+    if (enteredPassword === LOGS_PASSWORD) {
+        // পাসওয়ার্ড সঠিক
+        if (passwordModal) passwordModal.classList.remove('active');
+        if (logsModal) {
+            logsModal.classList.add('active');
+            updateLogsDisplay();
+        }
+        addLog('info', 'লগ পেজ খোলা হয়েছে');
+    } else {
+        // পাসওয়ার্ড ভুল
+        if (passwordError) {
+            passwordError.textContent = '❌ পাসওয়ার্ড ভুল! আবার চেষ্টা করুন।';
+        }
+        passwordInput.value = '';
+        passwordInput.focus();
+        addLog('warn', 'ভুল পাসওয়ার্ড দেওয়া হয়েছে');
+    }
+}
+
+// Handle Enter key in password input
+function handlePasswordKeypress(event) {
+    if (event.key === 'Enter') {
+        checkPassword();
     }
 }
 

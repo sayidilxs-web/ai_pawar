@@ -228,113 +228,83 @@ ipcMain.handle('get-screen-size', () => {
 ipcMain.handle('mouse-move', async (event, x, y) => {
     log.debug('Moving mouse to:', x, y);
     try {
-        const { mouse } = require('@nut-tree/nut-js');
-        await mouse.setPosition(parseInt(x), parseInt(y));
+        const { screen } = require('electron');
+        const point = { x: parseInt(x), y: parseInt(y) };
+        const currentDisplay = screen.getDisplayNearestPoint(point);
+        mainWindow.webContents.sendInputMouseMove(point);
         return true;
     } catch (error) {
         log.error('Mouse move error:', error);
-        // Fallback using RobotJS
-        try {
-            const robot = require('robotjs');
-            robot.moveMouse(parseInt(x), parseInt(y));
-            return true;
-        } catch (robotError) {
-            log.error('RobotJS move error:', robotError);
-            return false;
-        }
+        return false;
     }
 });
 
 ipcMain.handle('mouse-click', async (event, button = 'left') => {
     log.debug('Mouse click:', button);
     try {
-        const { mouse, Button } = require('@nut-tree/nut-js');
-        const btn = button === 'right' ? Button.RIGHT : Button.LEFT;
-        await mouse.click(btn);
+        if (button === 'right') {
+            mainWindow.webContents.sendInputMouseClick({ x: 0, y: 0 }, 'right');
+        } else {
+            mainWindow.webContents.sendInputMouseClick({ x: 0, y: 0 }, 'left');
+        }
         return true;
     } catch (error) {
         log.error('Mouse click error:', error);
-        // Fallback using RobotJS
-        try {
-            const robot = require('robotjs');
-            if (button === 'right') {
-                robot.mouseClick('right');
-            } else {
-                robot.mouseClick('left');
-            }
-            return true;
-        } catch (robotError) {
-            log.error('RobotJS click error:', robotError);
-            return false;
-        }
+        return false;
     }
 });
 
 ipcMain.handle('mouse-double-click', async () => {
     log.debug('Mouse double click');
     try {
-        const { mouse, Button } = require('@nut-tree/nut-js');
-        await mouse.click(Button.LEFT);
+        mainWindow.webContents.sendInputMouseClick({ x: 0, y: 0 }, 'left');
         await new Promise(r => setTimeout(r, 100));
-        await mouse.click(Button.LEFT);
+        mainWindow.webContents.sendInputMouseClick({ x: 0, y: 0 }, 'left');
         return true;
     } catch (error) {
         log.error('Mouse double click error:', error);
-        try {
-            const robot = require('robotjs');
-            robot.mouseClick();
-            robot.mouseClick();
-            return true;
-        } catch (robotError) {
-            log.error('RobotJS double click error:', robotError);
-            return false;
-        }
+        return false;
     }
 });
 
 ipcMain.handle('key-type', async (event, text) => {
     log.debug('Typing text:', text.substring(0, 50));
     try {
-        const { keyboard } = require('@nut-tree/nut-js');
-        await keyboard.type(text);
+        // Use clipboard and paste for text input
+        const { clipboard } = require('electron');
+        const originalClipboard = clipboard.readText();
+        clipboard.writeText(text);
+        mainWindow.webContents.sendInputKey({ key: 'v', modifiers: ['control'] });
+        await new Promise(r => setTimeout(r, 100));
+        clipboard.writeText(originalClipboard);
         return true;
     } catch (error) {
         log.error('Key type error:', error);
-        try {
-            const robot = require('robotjs');
-            robot.typeString(text);
-            return true;
-        } catch (robotError) {
-            log.error('RobotJS type error:', robotError);
-            return false;
-        }
+        return false;
     }
 });
 
 ipcMain.handle('key-press', async (event, key) => {
     log.debug('Pressing key:', key);
     try {
-        const { keyboard, Key } = require('@nut-tree/nut-js');
         const keyMap = {
-            'enter': Key.Enter,
-            'tab': Key.Tab,
-            'escape': Key.Escape,
-            'backspace': Key.Backspace,
-            'delete': Key.Delete,
-            'ctrl': Key.LeftControl,
-            'alt': Key.LeftAlt,
-            'shift': Key.LeftShift,
-            'cmd': Key.LeftSuper,
-            'up': Key.Up,
-            'down': Key.Down,
-            'left': Key.Left,
-            'right': Key.Right
+            'enter': 'Return',
+            'tab': 'Tab',
+            'escape': 'Escape',
+            'backspace': 'Backspace',
+            'delete': 'Delete',
+            'ctrl': 'Control',
+            'alt': 'Alt',
+            'shift': 'Shift',
+            'cmd': 'Meta',
+            'up': 'ArrowUp',
+            'down': 'ArrowDown',
+            'left': 'ArrowLeft',
+            'right': 'ArrowRight'
         };
         
         if (keyMap[key]) {
-            await keyboard.pressKey(keyMap[key]);
-            await new Promise(r => setTimeout(r, 50));
-            await keyboard.releaseKey(keyMap[key]);
+            mainWindow.webContents.sendInputKey(keyMap[key]);
             return true;
         }
         return false;
@@ -347,10 +317,7 @@ ipcMain.handle('key-press', async (event, key) => {
 ipcMain.handle('key-combination', async (event, keys) => {
     log.debug('Pressing key combination:', keys);
     try {
-        const { keyboard, Key } = require('@nut-tree/nut-js');
-        await keyboard.pressKey(...keys);
-        await new Promise(r => setTimeout(r, 50));
-        await keyboard.releaseKey(...keys);
+        mainWindow.webContents.sendInputKey(...keys);
         return true;
     } catch (error) {
         log.error('Key combination error:', error);
@@ -410,6 +377,9 @@ ipcMain.handle('write-file', async (event, filePath, content) => {
 });
 
 // App lifecycle
+app.commandLine.appendSwitch('no-sandbox');
+app.commandLine.appendSwitch('disable-gpu');
+
 app.whenReady().then(() => {
     log.info('App ready, initializing...');
     createWindow();

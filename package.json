@@ -7,7 +7,8 @@
     "start": "electron .",
     "dev": "electron . --enable-logging",
     "build": "electron-builder",
-    "pack": "electron-builder --dir"
+    "pack": "electron-builder --dir",
+    "postinstall": "electron-builder install-app-deps"
   },
   "author": "NEXUS AI",
   "license": "MIT",
@@ -16,11 +17,7 @@
     "electron-builder": "^24.9.1"
   },
   "dependencies": {
-    "@nut-tree/finder": "^1.0.2",
-    "@nut-tree/nut-js": "^3.1.0",
-    "electron-log": "^5.0.0",
-    "screenshot-desktop": "^1.15.0",
-    "robotjs": "^0.6.0"
+    "electron-log": "^5.0.0"
   },
   "build": {
     "appId": "com.nexus.ai.assistant",
@@ -30,16 +27,43 @@
     },
     "files": [
       "src/**/*",
+      "NEXUS-NEURAL-NETWORK/**/*",
       "node_modules/**/*"
     ],
+    "extraResources": [
+      {
+        "from": "assets",
+        "to": "assets"
+      }
+    ],
     "win": {
-      "target": "nsis"
+      "target": [
+        {
+          "target": "nsis",
+          "arch": ["x64"]
+        }
+      ],
+      "icon": "assets/icon.ico"
+    },
+    "nsis": {
+      "oneClick": false,
+      "perMachine": false,
+      "allowToChangeInstallationDirectory": true,
+      "createDesktopShortcut": true,
+      "createStartMenuShortcut": true,
+      "shortcutName": "NEXUS AI"
     },
     "mac": {
-      "target": "dmg"
+      "target": "dmg",
+      "icon": "assets/icon.icns"
     },
     "linux": {
-      "target": "AppImage"
-    }
+      "target": "AppImage",
+      "icon": "assets/icon.png"
+    },
+    "asar": true,
+    "asarUnpack": [
+      "node_modules/**/*"
+    ]
   }
 }
