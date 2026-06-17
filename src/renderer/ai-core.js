@@ -52,6 +52,13 @@ class AICore {
         this.isProcessing = true;
         
         try {
+            // প্রথমে লাইভ ডেটা চেক করি
+            const liveDataResult = await this.checkLiveData(userInput);
+            if (liveDataResult) {
+                this.isProcessing = false;
+                return liveDataResult;
+            }
+            
             // Build context prompt
             let contextPrompt = '';
             
@@ -95,6 +102,78 @@ class AICore {
         } finally {
             this.isProcessing = false;
         }
+    }
+    
+    // 🎯 লাইভ ডেটা চেক করা
+    async checkLiveData(query) {
+        const lowerQuery = query.toLowerCase();
+        
+        // আবহাওয়া
+        if (lowerQuery.includes('আবহাওয়া') || lowerQuery.includes('বৃষ্টি') || lowerQuery.includes('তাপমাত্রা') || 
+            lowerQuery.includes('weather') || lowerQuery.includes('কেমন') || lowerQuery.includes('গরম') || lowerQuery.includes('ঠান্ডা')) {
+            
+            let city = 'Dhaka';
+            if (lowerQuery.includes('চট্টগ্রাম')) city = 'Chittagong';
+            else if (lowerQuery.includes('সিলেট')) city = 'Sylhet';
+            else if (lowerQuery.includes('খুলনা')) city = 'Khulna';
+            else if (lowerQuery.includes('রাজশাহী')) city = 'Rajshahi';
+            else if (lowerQuery.includes('বরিশাল')) city = 'Barisal';
+            else if (lowerQuery.includes('ঢাকা')) city = 'Dhaka';
+            
+            const weatherData = await liveData.getWeather(city);
+            return liveData.formatOutput(weatherData, 'weather');
+        }
+        
+        // নিউজ
+        if (lowerQuery.includes('নিউজ') || lowerQuery.includes('খবর') || lowerQuery.includes('সংবাদ') || 
+            lowerQuery.includes('news') || lowerQuery.includes('today') || lowerQuery.includes('আজকের')) {
+            
+            let category = 'top';
+            if (lowerQuery.includes('বাংলাদেশ')) category = 'bangladesh';
+            else if (lowerQuery.includes('আন্তর্জাতিক') || lowerQuery.includes('বিদেশ')) category = 'international';
+            else if (lowerQuery.includes('ক্রীড়া') || lowerQuery.includes('খেলা')) category = 'sports';
+            else if (lowerQuery.includes('টেক') || lowerQuery.includes('প্রযুক্তি')) category = 'technology';
+            
+            const newsData = await liveData.getNews(category);
+            return liveData.formatOutput(newsData, 'news');
+        }
+        
+        // কারেন্সি/টাকা
+        if (lowerQuery.includes('দাম') || lowerQuery.includes('রেট') || lowerQuery.includes('কারেন্সি') || 
+            lowerQuery.includes('টাকা') || lowerQuery.includes('ডলার') || lowerQuery.includes('ইউরো') || 
+            lowerQuery.includes('পাউন্ড') || lowerQuery.includes('currency')) {
+            
+            const currencyData = await liveData.getAllCurrencies('USD');
+            return liveData.formatOutput(currencyData, 'currency');
+        }
+        
+        // তারিখ/সময়
+        if (lowerQuery.includes('তারিখ') || lowerQuery.includes('সময়') || lowerQuery.includes('দিন') || 
+            lowerQuery.includes('date') || lowerQuery.includes('time') || lowerQuery.includes('এখন') || 
+            lowerQuery.includes('আজ') || lowerQuery.includes('কোন দিন')) {
+            
+            const dateTimeData = liveData.getDateTime();
+            return liveData.formatOutput(dateTimeData, 'datetime');
+        }
+        
+        // Wikipedia সার্চ
+        if (lowerQuery.includes('সার্চ') || lowerQuery.includes('খুঁজ') || lowerQuery.includes('জান') || 
+            lowerQuery.includes('what is') || lowerQuery.includes('কি') || lowerQuery.includes('কে') || 
+            lowerQuery.includes('কোথায়') || lowerQuery.includes('কখন') || lowerQuery.includes('কিভাবে') || 
+            lowerQuery.includes('কেন') || lowerQuery.includes('বল') || lowerQuery.includes('এর')) {
+            
+            let searchQuery = lowerQuery
+                .replace(/সার্চ\s*/gi, '').replace(/খুঁজে\s*দেখ\s*/gi, '').replace(/বল\s*/gi, '')
+                .replace(/জান\s*/gi, '').replace(/কি\s*(এই|হয়|আছে|হলো|করে|সম্পর্কে)/gi, '')
+                .replace(/what is\s*/gi, '').replace(/এর\s*/gi, '').trim();
+            
+            if (searchQuery.length > 2 && !searchQuery.includes('?')) {
+                const searchData = await liveData.getWikipediaInfo(searchQuery);
+                return liveData.formatOutput(searchData, 'search');
+            }
+        }
+        
+        return null;
     }
     
     // Build prompt for Gemini
