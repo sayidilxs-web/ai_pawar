@@ -17,7 +17,8 @@
     "electron-builder": "^24.9.1"
   },
   "dependencies": {
-    "electron-log": "^5.0.0"
+    "electron-log": "^5.0.0",
+    "robotjs": "^0.6.0"
   },
   "build": {
     "appId": "com.nexus.ai.assistant",

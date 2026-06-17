@@ -59,6 +59,13 @@ class AICore {
                 return liveDataResult;
             }
             
+            // অ্যাপ অটোমেশন চেক করি (WhatsApp, Messenger, etc.)
+            const appResult = await this.checkAppAutomation(userInput);
+            if (appResult) {
+                this.isProcessing = false;
+                return appResult;
+            }
+            
             // Build context prompt
             let contextPrompt = '';
             
@@ -176,6 +183,118 @@ class AICore {
         return null;
     }
     
+    // 🎯 অ্যাপ অটোমেশন চেক করা
+    async checkAppAutomation(query) {
+        const lowerQuery = query.toLowerCase();
+        
+        // WhatsApp-এ মেসেজ পাঠানো
+        if (lowerQuery.includes('whatsapp') || lowerQuery.includes('হোয়াটসঅ্যাপ') ||
+            lowerQuery.includes('হোয়াটস') || lowerQuery.includes('whatapp')) {
+            
+            // নম্বর এবং মেসেজ এক্সট্রাক্ট
+            const message = this.extractMessageForApp(query, ['whatsapp', 'হোয়াটসঅ্যাপ', 'হোয়াটস', 'whatapp']);
+            
+            if (message) {
+                if (window.electronAPI && window.electronAPI.openApp) {
+                    await window.electronAPI.openApp('WhatsApp');
+                    await new Promise(r => setTimeout(r, 3000));
+                    await window.electronAPI.typeText(message);
+                    await window.electronAPI.pressKey('enter');
+                    return '📱 WhatsApp-এ মেসেজ পাঠানো হচ্ছে...';
+                }
+                return '📱 WhatsApp-এ মেসেজ পাঠানোর জন্য Electron API প্রয়োজন।';
+            }
+        }
+        
+        // মেসেঞ্জার-এ মেসেজ
+        if (lowerQuery.includes('মেসেঞ্জার') || lowerQuery.includes('messenger') ||
+            lowerQuery.includes('facebook') || lowerQuery.includes('ফেসবুক')) {
+            
+            const message = this.extractMessageForApp(query, ['মেসেঞ্জার', 'messenger', 'facebook', 'ফেসবুক']);
+            
+            if (message) {
+                if (window.electronAPI && window.electronAPI.openApp) {
+                    await window.electronAPI.openApp('Messenger');
+                    await new Promise(r => setTimeout(r, 3000));
+                    await window.electronAPI.typeText(message);
+                    await window.electronAPI.pressKey('enter');
+                    return '💬 Messenger-এ মেসেজ পাঠানো হচ্ছে...';
+                }
+            }
+        }
+        
+        // Telegram-এ মেসেজ
+        if (lowerQuery.includes('টেলিগ্রাম') || lowerQuery.includes('telegram')) {
+            const message = this.extractMessageForApp(query, ['টেলিগ্রাম', 'telegram']);
+            
+            if (message && telegramBot.isConfigured()) {
+                const result = await telegramBot.sendMessage(message);
+                return result.success ? '✅ Telegram-এ মেসেজ পাঠানো হয়েছে!' : result.error;
+            } else if (message) {
+                if (window.electronAPI && window.electronAPI.openApp) {
+                    await window.electronAPI.openApp('Telegram');
+                    return '📨 Telegram খোলা হচ্ছে...';
+                }
+            }
+        }
+        
+        // অ্যাপ খোলা
+        const appNames = ['chrome', 'google chrome', 'ব্রাউজার', 'vscode', 'code', 'notepad', 'calculator', 'ক্যালকুলেটর', 'file explorer', 'ফাইল', 'spotify', 'discord', 'slack', 'zoom', 'teams'];
+        for (const app of appNames) {
+            if (lowerQuery.includes(app + ' খোলো') || lowerQuery.includes('open ' + app) ||
+                lowerQuery.includes(app + ' চালু')) {
+                
+                if (window.electronAPI && window.electronAPI.openApp) {
+                    const result = await window.electronAPI.openApp(app);
+                    return result.message || '✅ অ্যাপ খোলা হচ্ছে...';
+                }
+            }
+        }
+        
+        // স্ক্রিনশট
+        if (lowerQuery.includes('স্ক্রিনশট') || lowerQuery.includes('screenshot')) {
+            if (window.electronAPI && window.electronAPI.takeScreenshot) {
+                const result = await window.electronAPI.takeScreenshot();
+                if (result.success) {
+                    return '📸 স্ক্রিনশট নেওয়া হয়েছে!';
+                }
+                return result.error || 'স্ক্রিনশট নেওয়া যায়নি।';
+            }
+        }
+        
+        // ইউটিউব খোলা
+        if (lowerQuery.includes('ইউটিউব') || lowerQuery.includes('youtube')) {
+            if (window.electronAPI && window.electronAPI.openUrl) {
+                const searchTerm = query.replace(/ইউটিউব\s*/gi, '').replace(/youtube\s*/gi, '').replace(/খোলো\s*/gi, '').replace(/search\s*/gi, '').trim();
+                const url = searchTerm ? `https://www.youtube.com/results?search_query=${encodeURIComponent(searchTerm)}` : 'https://www.youtube.com';
+                await window.electronAPI.openUrl(url);
+                return '🎬 YouTube খোলা হচ্ছে...';
+            }
+        }
+        
+        // গুগল খোলা
+        if (lowerQuery.includes('গুগল') || lowerQuery.includes('google')) {
+            if (window.electronAPI && window.electronAPI.openUrl) {
+                const searchTerm = query.replace(/গুগল\s*/gi, '').replace(/google\s*/gi, '').replace(/খোলো\s*/gi, '').replace(/search\s*/gi, '').trim();
+                const url = searchTerm ? `https://www.google.com/search?q=${encodeURIComponent(searchTerm)}` : 'https://www.google.com';
+                await window.electronAPI.openUrl(url);
+                return '🔍 Google খোলা হচ্ছে...';
+            }
+        }
+        
+        return null;
+    }
+    
+    // মেসেজ এক্সট্রাক্ট করা
+    extractMessageForApp(query, keywords) {
+        let result = query;
+        for (const keyword of keywords) {
+            result = result.replace(new RegExp(keyword, 'gi'), '');
+        }
+        result = result.replace(/মেসেজ\s*/gi, '').replace(/পাঠাও\s*/gi, '').replace(/send\s*/gi, '').replace(/লিখো\s*/gi, '').trim();
+        return result.length > 0 ? result : null;
+    }
+    
     // Build prompt for Gemini
     buildPrompt(userInput, context = '') {
         return `তুমি একজন অত্যন্ত বুদ্ধিমান এবং সহায়ক AI সহকারী যার নাম "নেক্সাস"। তুমি বাংলায় কথা বলো।
@@ -186,7 +305,19 @@ class AICore {
 3. তুমি বাংলায় স্বাভাবিক এবং প্রাকৃতিকভাবে কথা বলো
 4. তুমি সংক্ষেপে কিন্তু সম্পূর্ণ তথ্য সহ উত্তর দাও
 5. তুমি মজার এবং বন্ধুত্বপূর্ণ, কিন্তু পেশাদার
-6. তুমি কম্পিউটারে কাজ করতে পারো (মাউস ক্লিক, কিবোর্ড টাইপ ইত্যাদি)
+
+## তোমার ক্ষমতা:
+- 🌤️ আবহাওয়া জানা (যেকোনো শহর)
+- 📰 সর্বশেষ নিউজ পড়া
+- 💱 কারেন্সি রেট বলা
+- 📅 তারিখ ও সময় জানা
+- 🔍 Wikipedia-তে যেকোনো বিষয়ে তথ্য
+- 📱 WhatsApp/Messenger-এ মেসেজ পাঠানো
+- 🌐 গুগল, ইউটিউব, যেকোনো ওয়েবসাইট খোলা
+- 💻 VS Code, Calculator সহ যেকোনো অ্যাপ খোলা
+- 📸 স্ক্রিনশট নেওয়া
+- ⌨️ কিবোর্ড ও মাউস কন্ট্রোল
+- 🎤 ভয়েস কমান্ড বোঝা
 
 ## কাজ করার ক্ষমতা:
 - মাউস ক্লিক এবং ডাবল ক্লিক করা
